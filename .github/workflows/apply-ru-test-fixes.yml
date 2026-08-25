@@ -16,81 +16,28 @@ jobs:
         with:
           fetch-depth: 1
 
-      - name: Apply verified localization expectation fixes
+      - name: Align test expectations with current Russian UI
         shell: python
         run: |
           from pathlib import Path
 
-          def replace_one(path, variants, new):
+          def replace_text(path, old, new):
               p = Path(path)
               s = p.read_text(encoding='utf-8')
-              for old in variants:
-                  if old in s:
-                      p.write_text(s.replace(old, new), encoding='utf-8')
-                      print(f'patched {path}: {old!r}')
-                      return
-              raise SystemExit(f'no known variant found: {path}: {variants!r}')
+              if old not in s:
+                  raise SystemExit(f'missing expected text in {path}: {old!r}')
+              p.write_text(s.replace(old, new), encoding='utf-8')
+              print(f'patched {path}: {old!r}')
 
-          replace_one(
-              'src/cockpitMarkup.test.mjs',
-              ["assert.match(body, /'BRG —'/);", "assert.match(body, /'АЗИМУТ —'/);"] ,
-              "assert.match(body, /'АЗИМУТ —'/);",
-          )
-          replace_one(
-              'src/data/aisStreamAdapter.test.mjs',
-              ["assert.match(adapter.snapshot().error, /ws emitter semantics/);"],
-              "assert.match(adapter.snapshot().error, /ws emitter semantics|интерфейс событий WebSocket/);",
-          )
-          replace_one(
-              'src/data/layerState.test.mjs',
-              ["label: 'military flight',"],
-              "label: 'военный полёт',",
-          )
-          replace_one(
-              'src/data/militaryAwareness.test.mjs',
-              [
-                  r'/Mapped installations<\\/strong><b aria-live="polite">\\?<\\/b>/',
-                  r'/Mapped installations<\\/strong><b aria-live="polite">\?<\\/b>/',
-                  r'/Mapped installations<\\/strong><b aria-live="polite">\?<\\/b>/',
-              ],
-              r'/Нанесённые на карту объекты<\\/strong><b aria-live="polite">\?<\\/b>/',
-          )
-          replace_one(
-              'src/data/militaryAwareness.test.mjs',
-              [
-                  r'/AIS vessels<\\/strong><b aria-live="polite">\\?<\\/b>/',
-                  r'/AIS vessels<\\/strong><b aria-live="polite">\?<\\/b>/',
-              ],
-              r'/Суда AIS<\\/strong><b aria-live="polite">\?<\\/b>/',
-          )
-          replace_one(
-              'src/data/militaryAwareness.test.mjs',
-              [
-                  r'/AIS vessels<\\/strong><b aria-live="polite">0<\\/b>/',
-                  r'/AIS vessels<\\/strong><b aria-live="polite">0<\\/b>/',
-              ],
-              r'/Суда AIS<\\/strong><b aria-live="polite">0<\\/b>/',
-          )
-          replace_one(
-              'src/data/rocketLaunches.test.mjs',
-              ["      'STAGE RE-ENTRY',\n      'EST. ORBIT POSITION',"],
-              "      'ЭТАП · ВХОД В АТМОСФЕРУ',\n      'EST. ORBIT POSITION',",
-          )
-          replace_one(
-              'src/overlays/worldOverlay.test.mjs',
-              ['Focusing Focus vessel TEST, MMSI 123'],
-              'Фокус на Focus vessel TEST, MMSI 123',
-          )
-          replace_one(
-              'src/voice/gevRealtime.test.mjs',
-              ['Hold Space to speak · click mic to toggle voice'],
-              'Удерживайте пробел для речи · нажмите микрофон для переключения голоса',
-          )
-          replace_one(
-              'src/voice/gevRealtime.test.mjs',
-              ['Release Space to send'],
-              'Отпустите пробел для отправки',
-          )
+          replace_text('src/cockpitMarkup.test.mjs', "assert.match(body, /'BRG —'/);", "assert.match(body, /'АЗИМУТ —'/);")
+          replace_text('src/data/aisStreamAdapter.test.mjs', "assert.match(adapter.snapshot().error, /ws emitter semantics/);", "assert.match(adapter.snapshot().error, /ws emitter semantics|интерфейс событий WebSocket/);")
+          replace_text('src/data/layerState.test.mjs', "label: 'military flight',", "label: 'военный полёт',")
+          replace_text('src/data/militaryAwareness.test.mjs', 'Mapped installations', 'Нанесённые на карту объекты')
+          replace_text('src/data/militaryAwareness.test.mjs', 'AIS vessels', 'Суда AIS')
+          replace_text('src/data/rocketLaunches.test.mjs', "'STAGE RE-ENTRY'", "'ЭТАП · ВХОД В АТМОСФЕРУ'")
+          replace_text('src/overlays/worldOverlay.test.mjs', 'Focusing Focus vessel TEST, MMSI 123', 'Фокус на Focus vessel TEST, MMSI 123')
+          replace_text('src/voice/gevRealtime.test.mjs', 'Hold Space to speak · click mic to toggle voice', 'Удерживайте пробел для речи · нажмите микрофон для переключения голоса')
+          replace_text('src/voice/gevRealtime.test.mjs', 'Release Space to send', 'Отпустите пробел для отправки')
 
       - name: Run full unit suite
         run: |
