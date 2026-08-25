@@ -38,7 +38,7 @@ const replacements = {
     ['Liftoff', 'Взлёт'],
     ['Ascent replay', 'Повтор траектории взлёта'],
     ['Orbit replay', 'Повтор орбиты'],
-    [', paused', ', пауза'],
+    ["? ', paused' : ''", "? ', пауза' : ''"],
     ['FLIGHT ${stage.flightNumber}', 'РЕЙС ${stage.flightNumber}'],
     ['REUSED', 'ПОВТОРНО ИСПОЛЬЗОВАНА'],
   ],
