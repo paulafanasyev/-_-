@@ -1,20 +1,21 @@
 name: Repair rocket export identifiers
 
 on:
-  push:
-    branches: [main]
+  pull_request:
+    types: [opened, synchronize]
 
 permissions:
   contents: write
 
 jobs:
   repair:
+    if: github.event.pull_request.head.repo.full_name == github.repository
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-          ref: main
+          ref: ${{ github.event.pull_request.head.ref }}
       - uses: actions/setup-node@v4
         with:
           node-version: 24.14.0
@@ -42,7 +43,7 @@ jobs:
         run: npm ci
       - name: Run full test suite
         run: npm test
-      - name: Commit repair
+      - name: Commit repair to PR branch
         shell: bash
         run: |
           set -euo pipefail
@@ -54,4 +55,4 @@ jobs:
             exit 0
           fi
           git commit -m 'fix: restore rocket mission public identifiers'
-          git push origin HEAD:main
+          git push origin HEAD:${{ github.event.pull_request.head.ref }}
