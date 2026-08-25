@@ -20,7 +20,7 @@ jobs:
         with:
           node-version: 24.14.0
           cache: npm
-      - name: Normalize mission overlay labels
+      - name: Normalize mission overlay labels and technical identifiers
         shell: bash
         run: |
           set -euo pipefail
@@ -28,6 +28,8 @@ jobs:
           from pathlib import Path
 
           replacements = {
+            'ROCKET_МИССИЯ_': 'ROCKET_MISSION_',
+            'паузаAt': 'pausedAt',
             'LAUNCH SITE · ': 'МЕСТО ЗАПУСКА · ',
             'EST. ORBIT POSITION': 'РАСЧ. ПОЛОЖЕНИЕ ОРБИТЫ',
             'EST. ОРБИТА POSITION': 'РАСЧ. ПОЛОЖЕНИЕ ОРБИТЫ',
