@@ -50,7 +50,7 @@ jobs:
           exit "$status"
 
       - name: Upload test output on failure
-        if: steps.tests.outcome == 'failure'
+        if: ${{ !cancelled() && steps.tests.outcome == 'failure' }}
         uses: actions/upload-artifact@v4
         with:
           name: gev-test-output-${{ github.run_id }}
@@ -59,5 +59,5 @@ jobs:
           retention-days: 14
 
       - name: Fail when tests fail
-        if: steps.tests.outcome == 'failure'
+        if: ${{ !cancelled() && steps.tests.outcome == 'failure' }}
         run: exit 1
