@@ -790,17 +790,17 @@ test('mission overlay factories preserve all four source-formatted label roles a
 
   const selected = createRocketMissionMarkerOverlayEntry(launch, position, true);
   assert.equal(selected.title, 'FALCON 9');
-  assert.deepEqual(selected.details, ['LAUNCH SITE · 39A']);
+  assert.deepEqual(selected.details, ['МЕСТО ЗАПУСКА · 39A']);
   assert.equal(selected.paintLane, 'selected');
   assert.equal(selected.protected, true);
 
   const roles = [
     ['reentry', 'ЭТАП · ВХОД В АТМОСФЕРУ', '#ffd166', ['ЭТАП · ВХОД В АТМОСФЕРУ', []]],
-    ['payload', 'EST. ORBIT POSITION\n2026-07-20\n10:00:00 UTC', '#ffd166', [
-      'EST. ORBIT POSITION',
+    ['payload', 'РАСЧ. ПОЛОЖЕНИЕ ОРБИТЫ\n2026-07-20\n10:00:00 UTC', '#ffd166', [
+      'РАСЧ. ПОЛОЖЕНИЕ ОРБИТЫ',
       ['2026-07-20', '10:00:00 UTC'],
     ]],
-    ['orbit', 'PROJECTED ORBIT', '#c084fc', ['PROJECTED ORBIT', []]],
+    ['orbit', 'ПРОГНОЗИРУЕМАЯ ОРБИТА', '#c084fc', ['ПРОГНОЗИРУЕМАЯ ОРБИТА', []]],
   ];
   for (const [id, text, accent, [title, details]] of roles) {
     const entry = createRocketMissionElementOverlayEntry({ id, position, text, accent });
@@ -1055,10 +1055,10 @@ test('real mission build, select, refresh, deselect, disable, and destroy paths 
     assert.deepEqual(selectedPublication[2].map(({ title }) => title), [
       'FALCON 9',
       'ЭТАП · ВХОД В АТМОСФЕРУ',
-      'EST. ORBIT POSITION',
-      'PROJECTED ORBIT',
+      'РАСЧ. ПОЛОЖЕНИЕ ОРБИТЫ',
+      'ПРОГНОЗИРУЕМАЯ ОРБИТА',
     ]);
-    assert.deepEqual(selectedPublication[2][0].details, ['LAUNCH SITE · 39A']);
+    assert.deepEqual(selectedPublication[2][0].details, ['МЕСТО ЗАПУСКА · 39A']);
     assert.match(selectedPublication[2][2].details[0], /^\d{4}-\d{2}-\d{2}$/);
     assert.match(selectedPublication[2][2].details[1], /^\d{2}:\d{2}:\d{2} UTC$/);
     assert.ok(selectedPublication[2].every((entry) => (
@@ -1135,7 +1135,7 @@ test('real mission build, select, refresh, deselect, disable, and destroy paths 
       type === 'entries' && sourceId === ROCKET_MISSION_SELECTED_OVERLAY_SOURCE_ID
     ));
     assert.equal(refreshPublication[2][0].title, 'MISSION REFRESH');
-    assert.deepEqual(refreshPublication[2][0].details, ['LAUNCH SITE · 39A']);
+    assert.deepEqual(refreshPublication[2][0].details, ['МЕСТО ЗАПУСКА · 39A']);
 
     _setSelectedRocketMissionForTest(null);
     const deselectedPublication = hostCalls.findLast(([type, sourceId]) => (
