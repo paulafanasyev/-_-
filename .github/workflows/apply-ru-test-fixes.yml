@@ -1,55 +1,23 @@
-name: Apply RU test expectation fixes
+name: GEV full test suite
 
 on:
   push:
     branches: [main]
+  workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
 
 jobs:
-  fix:
-    if: github.actor != 'github-actions[bot]'
+  test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 1
 
-      - name: Align test expectations with current Russian UI
-        shell: python
-        run: |
-          from pathlib import Path
-
-          def replace_text(path, old, new):
-              p = Path(path)
-              s = p.read_text(encoding='utf-8')
-              if old not in s:
-                  raise SystemExit(f'missing expected text in {path}: {old!r}')
-              p.write_text(s.replace(old, new), encoding='utf-8')
-              print(f'patched {path}: {old!r}')
-
-          replace_text('src/cockpitMarkup.test.mjs', "assert.match(body, /'BRG —'/);", "assert.match(body, /'АЗИМУТ —'/);")
-          replace_text('src/data/aisStreamAdapter.test.mjs', "assert.match(adapter.snapshot().error, /ws emitter semantics/);", "assert.match(adapter.snapshot().error, /ws emitter semantics|интерфейс событий WebSocket/);")
-          replace_text('src/data/layerState.test.mjs', "label: 'military flight',", "label: 'военный полёт',")
-          replace_text('src/data/militaryAwareness.test.mjs', 'Mapped installations', 'Нанесённые на карту объекты')
-          replace_text('src/data/militaryAwareness.test.mjs', 'AIS vessels', 'Суда AIS')
-          replace_text('src/data/rocketLaunches.test.mjs', "'STAGE RE-ENTRY'", "'ЭТАП · ВХОД В АТМОСФЕРУ'")
-          replace_text('src/overlays/worldOverlay.test.mjs', 'Focusing Focus vessel TEST, MMSI 123', 'Фокус на Focus vessel TEST, MMSI 123')
-          replace_text('src/voice/gevRealtime.test.mjs', 'Hold Space to speak · click mic to toggle voice', 'Удерживайте пробел для речи · нажмите микрофон для переключения голоса')
-          replace_text('src/voice/gevRealtime.test.mjs', 'Release Space to send', 'Отпустите пробел для отправки')
+      - name: Install dependencies
+        run: npm install --no-audit --no-fund
 
       - name: Run full unit suite
-        run: |
-          npm install --no-audit --no-fund
-          npm test
-
-      - name: Commit fixes and remove one-shot workflow
-        run: |
-          git config user.name 'github-actions[bot]'
-          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add src .github/workflows/apply-ru-test-fixes.yml
-          git rm .github/workflows/apply-ru-test-fixes.yml
-          git diff --cached --quiet && exit 0 || true
-          git commit -m 'fix: align tests with Russian UI labels'
-          git push
+        run: npm test
