@@ -32,10 +32,10 @@ jobs:
           from pathlib import Path
           path = Path('src/voice/gevRealtime.js')
           text = path.read_text(encoding='utf-8')
-          old = "? 'Release Space to send'\\n    : 'Удерживайте пробел для речи · нажмите микрофон для переключения';"
-          new = "? 'Отпустите пробел для отправки'\\n    : 'Удерживайте пробел для речи · нажмите микрофон для переключения';"
+          old = 'Release Space to send'
+          new = 'Отпустите пробел для отправки'
           if old not in text:
-              raise SystemExit('expected resolveVoiceControlHint expression not found')
+              raise SystemExit('expected English push-to-talk hint not found')
           path.write_text(text.replace(old, new, 1), encoding='utf-8')
           print('patched resolveVoiceControlHint')
 
