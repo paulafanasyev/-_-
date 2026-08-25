@@ -8,9 +8,12 @@ on:
 permissions:
   contents: read
 
+# Do not cancel a full-suite run when another run starts. We need a complete,
+# independently observable PASS/FAIL result rather than a concurrency-induced
+# cancellation in the middle of `npm test`.
 concurrency:
   group: gev-full-test-suite-main
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   test:
