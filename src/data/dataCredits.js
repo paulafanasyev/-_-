@@ -124,7 +124,7 @@ export const DATA_CREDITS = [
     key: 'tfl-cctv',
     html:
       'CCTV cameras &amp; frames (London): ' +
-      '<a href="https://tfl.gov.uk/info-for/open-data-users/" target="_blank" rel="noopener">Powered by TfL Open Data</a>. ' +
+      '<a href="https://tfl.gov.uk/info-for/open-data-users/" target="_blank" rel="noopener">Данные предоставлены TfL Open Data</a>. ' +
       'Contains OS data © Crown copyright and database rights.',
   },
   {

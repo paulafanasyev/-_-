@@ -132,7 +132,7 @@ function recipeToScene(recipe) {
   const path = recipe.cameraPath || [];
   const shots = path.map((keyframe, idx) => ({
     id: uid('shot'),
-    title: `Shot ${idx + 1}`,
+    title: `Сцена ${idx + 1}`,
     durationSec: Math.max(0.2, keyframe.duration || DEFAULT_SHOT_DURATION_SEC),
     holdSec: Math.max(0, keyframe.hold || 0),
     camera: {
@@ -304,11 +304,11 @@ export class SceneDirector {
     this._running = false;
     /** @type {{ cancelled: boolean }|null} Cancellation token for the active run */
     this._runToken = null;
-    /** @type {number} Monotonic LOAD counter — only the newest LOAD may land */
+    /** @type {number} Monotonic ЗАГРУЗИТЬ counter — only the newest ЗАГРУЗИТЬ may land */
     this._loadGeneration = 0;
     /** @type {AbortController|null} Aborts the active run's layer transitions */
     this._runAbort = null;
-    /** @type {AbortController|null} Aborts the in-flight LOAD's layer transitions */
+    /** @type {AbortController|null} Aborts the in-flight ЗАГРУЗИТЬ's layer transitions */
     this._loadAbort = null;
     /** @type {number|null} setInterval ID for the progress bar ticker */
     this._progressTimer = null;
@@ -475,7 +475,7 @@ export class SceneDirector {
   /**
    * Rebuild the shot list DOM for the currently selected scene.
    * Each shot row shows title, style/detection/duration metadata, and
-   * LOAD/DEL action buttons. Supports click-to-select and double-click rename.
+   * ЗАГРУЗИТЬ/УДАЛИТЬ action buttons. Supports click-to-select and double-click rename.
    */
   _renderShotList() {
     if (!this._sceneShotList) return;
@@ -512,7 +512,7 @@ export class SceneDirector {
         this._renderShotList();
       });
       label.addEventListener('dblclick', () => {
-        const nextTitle = window.prompt('Shot title', shot.title);
+        const nextTitle = window.prompt('Название сцены', shot.title);
         if (!nextTitle) return;
         shot.title = nextTitle.trim() || shot.title;
         this._saveProject();
@@ -524,14 +524,14 @@ export class SceneDirector {
 
       const loadBtn = document.createElement('button');
       loadBtn.className = 'scene-shot-btn';
-      loadBtn.textContent = 'LOAD';
+      loadBtn.textContent = 'ЗАГРУЗИТЬ';
       loadBtn.addEventListener('click', () => {
         this.loadShot(scene.id, shot.id);
       });
 
       const deleteBtn = document.createElement('button');
       deleteBtn.className = 'scene-shot-btn scene-shot-danger';
-      deleteBtn.textContent = 'DEL';
+      deleteBtn.textContent = 'УДАЛИТЬ';
       deleteBtn.addEventListener('click', () => {
         this.deleteShot(scene.id, shot.id);
       });
@@ -708,7 +708,7 @@ export class SceneDirector {
    * Load a single shot: apply its visual state, enable/disable layers, and fly
    * the camera to the shot's position. Blocked while a scene run is active.
    *
-   * The newest LOAD wins. Two shot rows clicked in quick succession (or a
+   * The newest ЗАГРУЗИТЬ wins. Two shot rows clicked in quick succession (or a
    * voice load landing on top of a click) both suspend on the visual and layer
    * awaits below; without a generation the OLDER request can complete second
    * and overwrite the operator's newer intent — the camera ends on shot A
@@ -726,7 +726,7 @@ export class SceneDirector {
 
     if (!this._claimCameraOwnership()) return;
 
-    // Supersede the previous LOAD before reserving this one: aborting first
+    // Supersede the previous ЗАГРУЗИТЬ before reserving this one: aborting first
     // means an in-flight layer transition is cancelled (and rolled back by the
     // manager) rather than merely ignored once it has already committed.
     this._loadAbort?.abort();
@@ -752,12 +752,12 @@ export class SceneDirector {
   }
 
   /**
-   * Cancellation token for one LOAD, reading "a newer LOAD (or a scene run)
+   * Cancellation token for one ЗАГРУЗИТЬ, reading "a newer ЗАГРУЗИТЬ (or a scene run)
    * has since been requested". Live rather than latched, so a supersession
    * that happens mid-await is seen the moment the await resolves; the signal
    * lets the awaited work itself be cancelled instead of merely disowned.
-   * @param {number} generation - The generation this LOAD reserved
-   * @param {AbortSignal} [signal] - Abort signal for this LOAD's manager calls
+   * @param {number} generation - The generation this ЗАГРУЗИТЬ reserved
+   * @param {AbortSignal} [signal] - Abort signal for this ЗАГРУЗИТЬ's manager calls
    * @returns {{ cancelled: boolean, signal: AbortSignal|undefined }}
    */
   _loadToken(generation, signal = undefined) {
@@ -892,7 +892,7 @@ export class SceneDirector {
       return { started: false, reason: 'camera-unavailable' };
     }
 
-    // A run supersedes any LOAD still suspended on its own awaits, so that
+    // A run supersedes any ЗАГРУЗИТЬ still suspended on its own awaits, so that
     // load cannot land a stale shot's layers on top of the run's first shot.
     // Aborting cancels a layer transition already in flight; bumping the
     // generation disowns everything the load has not yet started.
@@ -928,7 +928,7 @@ export class SceneDirector {
     // Initialize telemetry accumulator for this run
     this._activeRun = {
       recipeId: `project-${PROJECT_VERSION}`,
-      title: 'Editable Scene Run',
+      title: 'Редактируемый запуск сцены',
       startedAt: new Date().toISOString(),
       estimatedDurationSec,
       scenesRun: queue.length,

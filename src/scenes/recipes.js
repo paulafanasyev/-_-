@@ -6,7 +6,7 @@
 export const SCENE_RECIPES = [
   {
     id: 'flights-radar',
-    title: 'Global Flights Radar',
+    title: 'Глобальный радар полётов',
     durationSec: 30,
     style: 'retro',
     ui: { hidePanels: true, hudMode: 'minimal', safeFrame: '16:9' },
@@ -31,7 +31,7 @@ export const SCENE_RECIPES = [
   },
   {
     id: 'orbital-watch',
-    title: 'Orbital Watch',
+    title: 'Орбитальное наблюдение',
     durationSec: 32,
     style: 'surveillance',
     ui: { hidePanels: true, hudMode: 'full', safeFrame: '16:9' },
@@ -64,7 +64,7 @@ export const SCENE_RECIPES = [
   },
   {
     id: 'thermal-threats',
-    title: 'Thermal Threat Board',
+    title: 'Тепловая карта угроз',
     durationSec: 26,
     style: 'thermal',
     ui: { hidePanels: true, hudMode: 'full', safeFrame: '16:9' },
@@ -96,7 +96,7 @@ export const SCENE_RECIPES = [
   },
   {
     id: 'city-overload',
-    title: 'City Overload',
+    title: 'Перегрузка города',
     durationSec: 30,
     style: 'surveillance',
     ui: { hidePanels: true, hudMode: 'minimal', safeFrame: '9:16' },
@@ -129,7 +129,7 @@ export const SCENE_RECIPES = [
   },
   {
     id: 'omniscience-pullback',
-    title: 'Omniscience Pullback',
+    title: 'Отдаление с обзором всего мира',
     durationSec: 36,
     style: 'retro',
     ui: { hidePanels: true, hudMode: 'full', safeFrame: '16:9' },

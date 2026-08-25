@@ -153,7 +153,7 @@ async function init() {
     viewer.scene.skyAtmosphere.saturationShift = -0.12;
     viewer.scene.skyAtmosphere.brightnessShift = -0.08;
 
-    loaderStatus.textContent = 'Loading Google 3D Tiles...';
+    loaderStatus.textContent = 'Загрузка Google 3D Tiles...';
     let tileset = null;
     try {
       // Load Google Photorealistic 3D Tiles
@@ -167,7 +167,7 @@ async function init() {
     } catch (tileError) {
       console.warn('[Init] Google 3D Tiles unavailable, falling back to Cesium globe:', tileError);
       const tileErrorDetail = describeError(tileError);
-      loaderStatus.textContent = `Google 3D Tiles unavailable (${tileErrorDetail}). Continuing in fallback mode...`;
+      loaderStatus.textContent = `Google 3D Tiles недоступны (${tileErrorDetail}). Продолжение в резервном режиме...`;
       // Keep Cesium globe visible as fallback instead of aborting the app.
       viewer.scene.globe.show = true;
     }

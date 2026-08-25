@@ -34,8 +34,8 @@ export const ENVIRONMENTAL_LABEL_CHOICE = 'ENVIRONMENTAL';
 
 const ENVIRONMENTAL_LABELS = Object.freeze({
   ENVIRONMENTAL: Object.freeze({ title: 'ENVIRONMENTAL' }),
-  EARTH_WATCH: Object.freeze({ title: 'EARTH WATCH' }),
-  ACTIVE_EVENTS: Object.freeze({ title: 'ACTIVE EVENTS' }),
+  EARTH_WATCH: Object.freeze({ title: 'НАБЛЮДЕНИЕ ЗА ЗЕМЛЁЙ' }),
+  ACTIVE_EVENTS: Object.freeze({ title: 'АКТИВНЫЕ СОБЫТИЯ' }),
 });
 
 /**

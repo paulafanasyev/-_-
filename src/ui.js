@@ -1819,7 +1819,7 @@ class CockpitViewController {
       }));
     }
 
-    const placeLabel = payload?.place?.label || payload?.place?.country || 'REGION UNAVAILABLE';
+    const placeLabel = payload?.place?.label || payload?.place?.country || 'РЕГИОН НЕДОСТУПЕН';
     if (this.localPlace) this.localPlace.textContent = placeLabel.toUpperCase();
     this.updateLocalPosition(info);
     const weather = payload?.weather;

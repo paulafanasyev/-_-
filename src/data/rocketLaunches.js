@@ -876,8 +876,8 @@ export function normalizeReplaySpeed(value) {
  * @param {number} resumedAt Resume epoch in milliseconds.
  * @returns {number} Shifted start epoch.
  */
-export function replayStartAfterPause(startedAt, pausedAt, resumedAt) {
-  if (![startedAt, pausedAt, resumedAt].every(Number.isFinite)) return startedAt;
+export function replayStartAfterPause(startedAt, паузаAt, resumedAt) {
+  if (![startedAt, паузаAt, resumedAt].every(Number.isFinite)) return startedAt;
   return startedAt + Math.max(0, resumedAt - pausedAt);
 }
 
@@ -1848,11 +1848,11 @@ function syncReplayCountdownButton(state) {
   const phase = state.countdownActive
     ? `T minus ${state.countdownSeconds}`
     : state.preCountdownActive
-      ? 'Preparing launch site'
+      ? 'Подготовка места запуска'
     : state.elapsedSinceStart < 1
-      ? 'Liftoff'
-      : state.ascending ? 'Ascent replay' : 'Orbit replay';
-  transport.setAttribute('aria-label', `${phase}${_replayPaused ? ', paused' : ''}`);
+      ? 'Взлёт'
+      : state.ascending ? 'Повтор траектории взлёта' : 'Повтор орбиты';
+  transport.setAttribute('aria-label', `${phase}${_replayPaused ? ', пауза' : ''}`);
 }
 
 function syncReplaySpeedControl() {
@@ -2297,8 +2297,8 @@ function renderMissionPanel() {
       ? `${endpoint.lat.toFixed(2)}, ${endpoint.lon.toFixed(2)} · ${endpoint.accuracy}`
       : stage.downrangeKm > 0 ? `${stage.downrangeKm.toLocaleString()} KM DOWNRANGE` : 'ПОЗИЦИЯ НЕДОСТУПНА';
     const stageDetail = [
-      Number.isFinite(stage.flightNumber) ? `FLIGHT ${stage.flightNumber}` : null,
-      stage.reused ? 'REUSED' : null,
+      Number.isFinite(stage.flightNumber) ? `РЕЙС ${stage.flightNumber}` : null,
+      stage.reused ? 'ПОВТОРНО ИСПОЛЬЗОВАНА' : null,
       stage.recoveryType,
     ].filter(Boolean).join(' · ');
     return `<tr><td>${escapeMissionText(stage.name)}${stageDetail ? `<small>${escapeMissionText(stageDetail)}</small>` : ''}</td><td>${escapeMissionText(stage.status)}</td><td>${escapeMissionText(destination)}<small>${escapeMissionText(position)}</small></td></tr>`;
@@ -2306,7 +2306,7 @@ function renderMissionPanel() {
   _missionPanel.querySelector('[data-mission-stages]').innerHTML = missionTableRows(
     stageRows,
     3,
-    'NO СТУПЕНЬ RE-ENTRY / RECOVERY DATA',
+    'НЕТ ДАННЫХ О СТУПЕНЯХ / ВХОДЕ В АТМОСФЕРУ / ВОЗВРАТЕ',
   );
   const stageSection = _missionPanel.querySelector('[data-mission-stages-section]');
   if (stageSection) stageSection.hidden = stageRows.length === 0;
@@ -2332,8 +2332,8 @@ function renderMissionRoster() {
   }
   list.innerHTML = entries.map(({ launch, index }) => {
     const color = missionMarkerColor(launch).toCssColorString();
-    const date = launch.launchTime?.slice(0, 10) || 'DATE UNAVAILABLE';
-    const provider = launch.provider || 'UNSPECIFIED OPERATOR';
+    const date = launch.launchTime?.slice(0, 10) || 'ДАТА НЕДОСТУПНА';
+    const provider = launch.provider || 'ОПЕРАТОР НЕ УКАЗАН';
     const label = shortMissionLabel(launch.name, 27).toUpperCase();
     return `<button type="button" class="space-mission-roster-item" data-mission-roster-index="${index}" aria-label="Выбрать ${escapeMissionText(label)}"><span class="space-mission-roster-marker" style="--mission-roster-color:${color}" aria-hidden="true"></span><span class="space-mission-roster-copy"><strong>${escapeMissionText(label)}</strong><small>${escapeMissionText(provider)} · ${escapeMissionText(date)}</small></span><span class="space-mission-roster-chevron" aria-hidden="true">›</span></button>`;
   }).join('');
@@ -2525,8 +2525,8 @@ function createMissionPanel() {
   _missionPanel = document.createElement('aside');
   _missionPanel.id = 'space-mission-panel';
   _missionPanel.className = 'context-space-mission-detail';
-  _missionPanel.setAttribute('aria-label', 'Selected Space Mission');
-  _missionPanel.innerHTML = `<div class="space-mission-view-header"><span>ВЫБРАННАЯ КОСМИЧЕСКАЯ МИССИЯ</span><button type="button" data-mission-close title="Показать все миссии" aria-label="Deselect mission">×</button></div><div class="space-mission-detail"><strong data-mission-title>МИССИЯ</strong><span data-mission-field data-mission-provider></span><span data-mission-field>СТАТУС · <b data-mission-status></b></span><span data-mission-field>МЕСТО ЗАПУСКА · <b data-mission-site></b></span><span data-mission-field>ВРЕМЯ ЗАПУСКА · <b data-mission-time></b></span><span data-mission-field>ОРБИТА · <b data-mission-orbit></b></span><span>ТРАЕКТОРИЯ ВЗЛЁТА · <b data-mission-ascent-source></b></span><span data-mission-field>ТЕКУЩЕЕ РАССТОЯНИЕ ОТ ЗЕМЛИ · <b data-mission-distance></b></span><span data-mission-field>СКОРОСТЬ СПУТНИКА · <b data-mission-speed></b></span></div><section class="mission-data-section"><h4>ПОЛЕЗНАЯ НАГРУЗКА</h4><div class="mission-table-scroll"><table class="mission-data-table"><thead><tr><th>НАЗВАНИЕ</th><th>ТИП</th><th>НАЗНАЧЕНИЕ</th></tr></thead><tbody data-mission-payloads></tbody></table></div></section><section class="mission-data-section" data-mission-stages-section><h4>СТУПЕНЬ / ВХОД В АТМОСФЕРУ / ВОЗВРАТ</h4><div class="mission-table-scroll"><table class="mission-data-table"><thead><tr><th>СТУПЕНЬ</th><th>СТАТУС</th><th>ФИНАЛЬНАЯ ПОЗИЦИЯ</th></tr></thead><tbody data-mission-stages></tbody></table></div></section><div class="mission-replay-speed-control"><div class="mission-replay-speed-header"><label for="space-mission-replay-speed">СКОРОСТЬ ПОВТОРА</label><output class="gev-slider-value" for="space-mission-replay-speed" data-mission-replay-speed-output>1×</output></div><input id="space-mission-replay-speed" class="gev-quantitative-slider" type="range" min="0.25" max="4" step="0.25" value="1" data-mission-replay-speed aria-label="Множитель скорости повтора"><div class="mission-replay-speed-scale" aria-hidden="true"><span>0.25×</span><span>1×</span><span>4×</span></div></div><div class="mission-action-row"><button type="button" class="mission-focus-button" data-mission-focus>ФОКУС</button><button type="button" class="mission-replay-button" data-mission-replay aria-pressed="false">REPLAY ASCENT</button></div><div class="space-mission-nav"><button type="button" class="mission-nav-button" data-mission-prev title="Previous mission"><span aria-hidden="true">‹</span> НАЗАД</button><span class="mission-nav-index" data-mission-index>—</span><button type="button" class="mission-nav-button" data-mission-next title="Next mission">ДАЛЕЕ <span aria-hidden="true">›</span></button></div><button type="button" class="panel-layer-toggle" data-mission-show-all>ПОКАЗАТЬ ВСЕ / СНЯТЬ ВЫБОР</button>`;
+  _missionPanel.setAttribute('aria-label', 'Выбранная космическая миссия');
+  _missionPanel.innerHTML = `<div class="space-mission-view-header"><span>ВЫБРАННАЯ КОСМИЧЕСКАЯ МИССИЯ</span><button type="button" data-mission-close title="Показать все миссии" aria-label="Снять выбор миссии">×</button></div><div class="space-mission-detail"><strong data-mission-title>МИССИЯ</strong><span data-mission-field data-mission-provider></span><span data-mission-field>СТАТУС · <b data-mission-status></b></span><span data-mission-field>МЕСТО ЗАПУСКА · <b data-mission-site></b></span><span data-mission-field>ВРЕМЯ ЗАПУСКА · <b data-mission-time></b></span><span data-mission-field>ОРБИТА · <b data-mission-orbit></b></span><span>ТРАЕКТОРИЯ ВЗЛЁТА · <b data-mission-ascent-source></b></span><span data-mission-field>ТЕКУЩЕЕ РАССТОЯНИЕ ОТ ЗЕМЛИ · <b data-mission-distance></b></span><span data-mission-field>СКОРОСТЬ СПУТНИКА · <b data-mission-speed></b></span></div><section class="mission-data-section"><h4>ПОЛЕЗНАЯ НАГРУЗКА</h4><div class="mission-table-scroll"><table class="mission-data-table"><thead><tr><th>НАЗВАНИЕ</th><th>ТИП</th><th>НАЗНАЧЕНИЕ</th></tr></thead><tbody data-mission-payloads></tbody></table></div></section><section class="mission-data-section" data-mission-stages-section><h4>СТУПЕНЬ / ВХОД В АТМОСФЕРУ / ВОЗВРАТ</h4><div class="mission-table-scroll"><table class="mission-data-table"><thead><tr><th>СТУПЕНЬ</th><th>СТАТУС</th><th>ФИНАЛЬНАЯ ПОЗИЦИЯ</th></tr></thead><tbody data-mission-stages></tbody></table></div></section><div class="mission-replay-speed-control"><div class="mission-replay-speed-header"><label for="space-mission-replay-speed">СКОРОСТЬ ПОВТОРА</label><output class="gev-slider-value" for="space-mission-replay-speed" data-mission-replay-speed-output>1×</output></div><input id="space-mission-replay-speed" class="gev-quantitative-slider" type="range" min="0.25" max="4" step="0.25" value="1" data-mission-replay-speed aria-label="Множитель скорости повтора"><div class="mission-replay-speed-scale" aria-hidden="true"><span>0.25×</span><span>1×</span><span>4×</span></div></div><div class="mission-action-row"><button type="button" class="mission-focus-button" data-mission-focus>ФОКУС</button><button type="button" class="mission-replay-button" data-mission-replay aria-pressed="false">ПОВТОР ВЗЛЁТА</button></div><div class="space-mission-nav"><button type="button" class="mission-nav-button" data-mission-prev title="Предыдущая миссия"><span aria-hidden="true">‹</span> НАЗАД</button><span class="mission-nav-index" data-mission-index>—</span><button type="button" class="mission-nav-button" data-mission-next title="Следующая миссия">ДАЛЕЕ <span aria-hidden="true">›</span></button></div><button type="button" class="panel-layer-toggle" data-mission-show-all>ПОКАЗАТЬ ВСЕ / СНЯТЬ ВЫБОР</button>`;
   _missionPanel.querySelector('.mission-action-row').insertAdjacentHTML(
     'beforeend',
     `<div class="mission-replay-transport" data-mission-replay-transport hidden>
