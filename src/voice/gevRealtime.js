@@ -593,7 +593,7 @@ export class GevRealtimeController {
       this.ui.root.dataset.pushToTalk = 'held';
       if (this.isActive()) {
         this.setMicrophoneEnabled(true);
-        if (this.status === 'listening') this.setStatus('listening', 'Release Space to send');
+        if (this.status === 'listening') this.setStatus('listening', 'Отпустите пробел для отправки');
       } else {
         this.start({ pushToTalk: true });
       }
