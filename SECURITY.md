@@ -26,7 +26,7 @@ The golden rule: **secret-bearing API keys stay on the server side.** The dev/pr
 These are designed to be used directly in the browser (like a Mapbox public token). They are injected into the client bundle via Vite's `define`, so they **will** be visible in browser devtools. Scope and restrict them rather than trying to hide them:
 
 1. **Google Maps API key** — loads the Photorealistic 3D Tiles in the browser. **Restrict it** (HTTP referrer + API restriction to the Map Tiles API) in the Google Cloud Console. An unrestricted key in a public deployment can be abused and billed to you.
-2. **Cesium ion token** (`CESIUM_ION_TOKEN`, optional — only for the Bing world-imagery map stacks) — used as `Cesium.Ion.defaultAccessToken` client-side. Use a public `assets:read` token with **URL restrictions** for any hosted deployment.
+2. **Cesium ion token** (`CESIUM_ION_TOKEN`, optional — only for the Bing world-imagery map stacks) — used as `Cesium.Ion.defaultAccessToken` client-side. Use a public **`assets:read`** token with **URL restrictions** for any hosted deployment.
 
 > The Vite `define` block in `vite.config.js` controls exactly what reaches the client: only these two keys plus two non-secret CCTV feature flags. Everything else stays server-side.
 
