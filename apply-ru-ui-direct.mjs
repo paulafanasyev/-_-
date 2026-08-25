@@ -88,8 +88,13 @@ const replacements = {
     ['EARTH WATCH', 'НАБЛЮДЕНИЕ ЗА ЗЕМЛЁЙ'],
     ['ACTIVE EVENTS', 'АКТИВНЫЕ СОБЫТИЯ'],
     [
+      "  ENVIRONMENTAL: Object.freeze({ title: 'ENVIRONMENTAL' }),\n  EARTH_WATCH: Object.freeze({ title: 'НАБЛЮДЕНИЕ ЗА ЗЕМЛЁЙ' }),\n  ACTIVE_EVENTS: Object.freeze({ title: 'АКТИВНЫЕ СОБЫТИЯ' }),",
+      "  ENVIRONMENTAL: Object.freeze({ title: 'ENVIRONMENTAL' }),\n  EARTH_WATCH: Object.freeze({ title: 'EARTH WATCH' }),\n  ACTIVE_EVENTS: Object.freeze({ title: 'ACTIVE EVENTS' }),",
+    ],
+    [
       "  const environmentalTitle = root.querySelector('[data-first-run-environmental-title]');\n  if (environmentalTitle) environmentalTitle.textContent = environmentalLabel().title;",
       "  const environmentalTitle = root.querySelector('[data-first-run-environmental-title]');\n  const environmentalUiTitles = Object.freeze({\n    ENVIRONMENTAL: 'ОКРУЖАЮЩАЯ СРЕДА',\n    EARTH_WATCH: 'НАБЛЮДЕНИЕ ЗА ЗЕМЛЁЙ',\n    ACTIVE_EVENTS: 'АКТИВНЫЕ СОБЫТИЯ',\n  });\n  if (environmentalTitle) {\n    environmentalTitle.textContent = environmentalUiTitles[ENVIRONMENTAL_LABEL_CHOICE] || environmentalLabel().title;\n  }",
+    ],
   ],
   'src/ui.js': [
     ['enable CCTV to activate', 'включите CCTV для активации'],
