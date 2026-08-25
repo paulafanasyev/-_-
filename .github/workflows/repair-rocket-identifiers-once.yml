@@ -1,0 +1,42 @@
+name: Repair rocket API identifiers once
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  repair:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+
+      - name: Restore Latin rocket mission API identifiers
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          from pathlib import Path
+          path = Path('src/data/rocketLaunches.js')
+          text = path.read_text(encoding='utf-8')
+          old = text
+          text = text.replace('ROCKET_МИССИЯ_', 'ROCKET_MISSION_')
+          if text == old:
+              raise SystemExit('No ROCKET_МИССИЯ_ identifiers found; refusing empty repair commit')
+          path.write_text(text, encoding='utf-8')
+          PY
+          grep -n 'ROCKET_\(МИССИЯ\|MISSION\)_' src/data/rocketLaunches.js | head -40
+
+      - name: Commit repair
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add src/data/rocketLaunches.js
+          git diff --cached --check
+          git diff --cached --name-only | grep -Fx 'src/data/rocketLaunches.js'
+          git commit -m 'fix: restore Latin rocket mission API identifiers'
+          git push origin HEAD:main
