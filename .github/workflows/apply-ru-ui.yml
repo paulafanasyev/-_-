@@ -8,6 +8,7 @@ on:
 permissions:
   contents: write
 
+# One-shot application of the existing translation map, followed by catalog rebuild.
 jobs:
   apply:
     if: ${{ github.actor != 'github-actions[bot]' }}
