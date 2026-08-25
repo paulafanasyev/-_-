@@ -34,8 +34,8 @@ export const ENVIRONMENTAL_LABEL_CHOICE = 'ENVIRONMENTAL';
 
 const ENVIRONMENTAL_LABELS = Object.freeze({
   ENVIRONMENTAL: Object.freeze({ title: 'ENVIRONMENTAL' }),
-  EARTH_WATCH: Object.freeze({ title: 'НАБЛЮДЕНИЕ ЗА ЗЕМЛЁЙ' }),
-  ACTIVE_EVENTS: Object.freeze({ title: 'АКТИВНЫЕ СОБЫТИЯ' }),
+  EARTH_WATCH: Object.freeze({ title: 'EARTH WATCH' }),
+  ACTIVE_EVENTS: Object.freeze({ title: 'ACTIVE EVENTS' }),
 });
 
 /**
@@ -336,7 +336,14 @@ export function initFirstRunExperience({
   // The tile name is configurable from one constant, so paint it from the
   // module rather than trusting the markup to have been edited to match.
   const environmentalTitle = root.querySelector('[data-first-run-environmental-title]');
-  if (environmentalTitle) environmentalTitle.textContent = environmentalLabel().title;
+  const environmentalUiTitles = Object.freeze({
+    ENVIRONMENTAL: 'ОКРУЖАЮЩАЯ СРЕДА',
+    EARTH_WATCH: 'НАБЛЮДЕНИЕ ЗА ЗЕМЛЁЙ',
+    ACTIVE_EVENTS: 'АКТИВНЫЕ СОБЫТИЯ',
+  });
+  if (environmentalTitle) {
+    environmentalTitle.textContent = environmentalUiTitles[ENVIRONMENTAL_LABEL_CHOICE] || environmentalLabel().title;
+  }
 
   const status = root.querySelector('[data-first-run-status]');
   const suppressBox = root.querySelector('[data-first-run-suppress]');
