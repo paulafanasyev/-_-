@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   test:
@@ -20,4 +20,38 @@ jobs:
         run: npm install --no-audit --no-fund
 
       - name: Run full unit suite
-        run: npm test
+        id: tests
+        continue-on-error: true
+        shell: bash
+        run: |
+          set +e
+          npm test > test-output.log 2>&1
+          status=$?
+          echo "TEST_EXIT_CODE=$status" >> "$GITHUB_STEP_SUMMARY"
+          echo "--- FAILING TESTS ---" >> "$GITHUB_STEP_SUMMARY"
+          grep '^not ok ' test-output.log || true
+          grep '^not ok ' test-output.log > failing-tests.txt || true
+          echo "--- FAILURE DETAILS ---" >> "$GITHUB_STEP_SUMMARY"
+          awk '/^not ok / {show=1; n=0} show {print; n++} show && n>=12 {show=0}' test-output.log >> "$GITHUB_STEP_SUMMARY"
+          exit "$status"
+
+      - name: Persist concise failure list
+        if: steps.tests.outcome == 'failure'
+        shell: bash
+        run: |
+          mkdir -p .ci
+          {
+            echo "Generated from commit $GITHUB_SHA"
+            echo "Run: $GITHUB_RUN_ID"
+            echo
+            cat failing-tests.txt
+          } > .ci/latest-test-failures.txt
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add .ci/latest-test-failures.txt
+          git diff --cached --quiet || git commit -m 'ci: record latest failing test names'
+          git push
+
+      - name: Fail when tests fail
+        if: steps.tests.outcome == 'failure'
+        run: exit 1
