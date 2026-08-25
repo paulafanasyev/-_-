@@ -15,20 +15,20 @@ import { holdContinuousRender, releaseContinuousRender } from '../renderGovernor
 const WINDOW_DAYS = 30;
 const API_URL = '/api/launches';
 
-export const ROCKET_MISSION_AMBIENT_OVERLAY_SOURCE_ID = 'rocket-missions';
-export const ROCKET_MISSION_SELECTED_OVERLAY_SOURCE_ID = 'rocket-mission-selected';
-export const ROCKET_MISSION_AMBIENT_OVERLAY_COHORT_LIMIT = 48;
-export const ROCKET_MISSION_AMBIENT_OVERLAY_COLLISION_CAPACITY = 24;
-export const ROCKET_MISSION_SELECTED_OVERLAY_SOURCE_OPTIONS = Object.freeze({
+export const ROCKET_МИССИЯ_AMBIENT_OVERLAY_SOURCE_ID = 'rocket-missions';
+export const ROCKET_МИССИЯ_SELECTED_OVERLAY_SOURCE_ID = 'rocket-mission-selected';
+export const ROCKET_МИССИЯ_AMBIENT_OVERLAY_COHORT_LIMIT = 48;
+export const ROCKET_МИССИЯ_AMBIENT_OVERLAY_COLLISION_CAPACITY = 24;
+export const ROCKET_МИССИЯ_SELECTED_OVERLAY_SOURCE_OPTIONS = Object.freeze({
   cohortLimit: 12,
   collisionCapacity: 0,
   moving: true,
   solveIntervalMs: 0,
 });
 
-const ROCKET_MISSION_AMBIENT_OVERLAY_SOURCE_OPTIONS = Object.freeze({
-  cohortLimit: ROCKET_MISSION_AMBIENT_OVERLAY_COHORT_LIMIT,
-  collisionCapacity: ROCKET_MISSION_AMBIENT_OVERLAY_COLLISION_CAPACITY,
+const ROCKET_МИССИЯ_AMBIENT_OVERLAY_SOURCE_OPTIONS = Object.freeze({
+  cohortLimit: ROCKET_МИССИЯ_AMBIENT_OVERLAY_COHORT_LIMIT,
+  collisionCapacity: ROCKET_МИССИЯ_AMBIENT_OVERLAY_COLLISION_CAPACITY,
   moving: false,
 });
 const DEFAULT_OVERLAY_HOST = Object.freeze({
@@ -95,18 +95,18 @@ const _missionOrbitPrimitives = new Map();
 const REPLAY_ASCENT_FALLBACK_SEC = 12;
 const REPLAY_ASCENT_MIN_SEC = 8;
 const REPLAY_ASCENT_MAX_SEC = 36;
-const REPLAY_ORBIT_DURATION_SEC = 28;
+const REPLAY_ОРБИТА_DURATION_SEC = 28;
 const REPLAY_COUNTDOWN_DURATION_SEC = 10;
 const REPLAY_TILE_SETTLE_DELAY_SEC = 5;
 const REPLAY_INITIAL_RANGE_M = 3500;
 const REPLAY_LOCAL_MAX_RANGE_M = 900000;
 const REPLAY_CONTEXT_MAX_RANGE_M = 2400000;
 const REPLAY_CONTEXT_ALTITUDE_END_M = 420000;
-const REPLAY_ORBIT_GLOBE_RANGE_M = 18000000;
-const REPLAY_ORBIT_PULLBACK_FRACTION = 0.2;
+const REPLAY_ОРБИТА_GLOBE_RANGE_M = 18000000;
+const REPLAY_ОРБИТА_PULLBACK_FRACTION = 0.2;
 const REPLAY_ASCENT_CAMERA_OFFSET_RAD = Cesium.Math.toRadians(30);
-const REPLAY_ORBIT_CAMERA_OFFSET_RAD = Cesium.Math.toRadians(45);
-const REPLAY_ORBIT_FRAME_CENTER_BLEND = 0.45;
+const REPLAY_ОРБИТА_CAMERA_OFFSET_RAD = Cesium.Math.toRadians(45);
+const REPLAY_ОРБИТА_FRAME_CENTER_BLEND = 0.45;
 const REPLAY_SPEED_MIN = 0.25;
 const REPLAY_SPEED_MAX = 4;
 const REPLAY_SPEED_STEP = 0.25;
@@ -120,10 +120,10 @@ const _declutterOccluder = new Cesium.EllipsoidalOccluder(
 const _missionRingDate = new Date(0);
 const EARTH_ROTATION_RAD_PER_SEC = Cesium.Math.TWO_PI / 86164.0905;
 const PROJECTED_ASCENT_ROTATION_SEC = 600;
-const STAGE_REENTRY_ALTITUDE_M = 100000;
-const MISSION_CLOSE_VIEW_RANGE_M = 180000;
-const MISSION_GLOBE_VIEW_RANGE_M = 5000000;
-const MISSION_FOCUS_RANGE_M = 12000;
+const СТУПЕНЬ_REENTRY_ALTITUDE_M = 100000;
+const МИССИЯ_CLOSE_VIEW_RANGE_M = 180000;
+const МИССИЯ_GLOBE_VIEW_RANGE_M = 5000000;
+const МИССИЯ_ФОКУС_RANGE_M = 12000;
 const SATELLITE_STANDALONE_DEFAULTS = {
   catalog: 'core',
   showPoints: true,
@@ -232,13 +232,13 @@ export function releaseAircraftTracking(dataManager) {
   }
   return released;
 }
-const MISSION_ORBIT_PATTERN_GROUPS = 4;
-const MISSION_ORBIT_DASHES_PER_GROUP = 100;
+const МИССИЯ_ОРБИТА_PATTERN_GROUPS = 4;
+const МИССИЯ_ОРБИТА_DASHES_PER_GROUP = 100;
 export const LAUNCH_PAD_ZONE_RADIUS_M = 500;
 const LAUNCH_PAD_ZONE_MAX_CAMERA_HEIGHT_M = 120000;
 const LAUNCH_PAD_ZONE_MAX_CAMERA_DISTANCE_M = 180000;
 
-const TRAJECTORY_STAGE_COLORS = [
+const TRAJECTORY_СТУПЕНЬ_COLORS = [
   '#ff9f43', '#ff66c4', '#a78bfa', '#7bed9f', '#ffd166', '#60a5fa',
 ];
 
@@ -256,8 +256,8 @@ function ensureMissionOrbitPatternRegistered() {
       type: 'GevMissionOrbitTactical',
       uniforms: {
         color: Cesium.Color.CYAN,
-        groupCount: MISSION_ORBIT_PATTERN_GROUPS,
-        dashCount: MISSION_ORBIT_DASHES_PER_GROUP,
+        groupCount: МИССИЯ_ОРБИТА_PATTERN_GROUPS,
+        dashCount: МИССИЯ_ОРБИТА_DASHES_PER_GROUP,
       },
       source: `
         czm_material czm_getMaterial(czm_materialInput materialInput) {
@@ -290,8 +290,8 @@ function createMissionOrbitPatternMaterial(color) {
   ensureMissionOrbitPatternRegistered();
   return Cesium.Material.fromType('GevMissionOrbitTactical', {
     color,
-    groupCount: MISSION_ORBIT_PATTERN_GROUPS,
-    dashCount: MISSION_ORBIT_DASHES_PER_GROUP,
+    groupCount: МИССИЯ_ОРБИТА_PATTERN_GROUPS,
+    dashCount: МИССИЯ_ОРБИТА_DASHES_PER_GROUP,
   });
 }
 
@@ -370,8 +370,8 @@ MissionOrbitPatternMaterialProperty.prototype.getType = function getType() {
 MissionOrbitPatternMaterialProperty.prototype.getValue = function getValue(time, result) {
   if (!Cesium.defined(result)) result = {};
   result.color = this._color;
-  result.groupCount = MISSION_ORBIT_PATTERN_GROUPS;
-  result.dashCount = MISSION_ORBIT_DASHES_PER_GROUP;
+  result.groupCount = МИССИЯ_ОРБИТА_PATTERN_GROUPS;
+  result.dashCount = МИССИЯ_ОРБИТА_DASHES_PER_GROUP;
   return result;
 };
 
@@ -510,8 +510,8 @@ export function createRocketMissionMarkerOverlayEntry(launch, position, selected
   const launchTimeMs = Date.parse(launch?.launchTime);
   const details = selected
     ? [siteName
-      ? `LAUNCH SITE · ${shortMissionLabel(siteName, 20).toUpperCase()}`
-      : 'LAUNCH SITE']
+      ? `МЕСТО ЗАПУСКА · ${shortMissionLabel(siteName, 20).toUpperCase()}`
+      : 'МЕСТО ЗАПУСКА']
     : [];
   return {
     id: `launch:${launch?.id}`,
@@ -590,10 +590,10 @@ export function createRocketMissionElementOverlayEntry({
 /** Keep the newest ambient mission markers with stable identity tie-breaking. */
 export function selectRocketMissionMarkerOverlayCohort(
   entries,
-  limit = ROCKET_MISSION_AMBIENT_OVERLAY_COHORT_LIMIT,
+  limit = ROCKET_МИССИЯ_AMBIENT_OVERLAY_COHORT_LIMIT,
 ) {
   const cap = Math.max(0, Math.min(
-    ROCKET_MISSION_AMBIENT_OVERLAY_COHORT_LIMIT,
+    ROCKET_МИССИЯ_AMBIENT_OVERLAY_COHORT_LIMIT,
     Math.floor(Number(limit) || 0),
   ));
   if (!Array.isArray(entries) || cap === 0) return [];
@@ -781,8 +781,8 @@ export function missionRosterEntries(launches) {
 export function missionHoverPreviewRange(cameraHeight) {
   const height = Number(cameraHeight);
   return Math.max(
-    MISSION_CLOSE_VIEW_RANGE_M,
-    Number.isFinite(height) ? height : MISSION_GLOBE_VIEW_RANGE_M,
+    МИССИЯ_CLOSE_VIEW_RANGE_M,
+    Number.isFinite(height) ? height : МИССИЯ_GLOBE_VIEW_RANGE_M,
   );
 }
 
@@ -1006,10 +1006,10 @@ function entityLaunchId(entity) {
 
 function clearMissionOverlaySources() {
   _selectedMissionOverlayTimeText = null;
-  _missionOverlayHost.clearSource(ROCKET_MISSION_AMBIENT_OVERLAY_SOURCE_ID);
-  _missionOverlayHost.setVisible(ROCKET_MISSION_AMBIENT_OVERLAY_SOURCE_ID, false);
-  _missionOverlayHost.clearSource(ROCKET_MISSION_SELECTED_OVERLAY_SOURCE_ID);
-  _missionOverlayHost.setVisible(ROCKET_MISSION_SELECTED_OVERLAY_SOURCE_ID, false);
+  _missionOverlayHost.clearSource(ROCKET_МИССИЯ_AMBIENT_OVERLAY_SOURCE_ID);
+  _missionOverlayHost.setVisible(ROCKET_МИССИЯ_AMBIENT_OVERLAY_SOURCE_ID, false);
+  _missionOverlayHost.clearSource(ROCKET_МИССИЯ_SELECTED_OVERLAY_SOURCE_ID);
+  _missionOverlayHost.setVisible(ROCKET_МИССИЯ_SELECTED_OVERLAY_SOURCE_ID, false);
 }
 
 function syncMissionOverlayEntries() {
@@ -1021,8 +1021,8 @@ function syncMissionOverlayEntries() {
     ? _missionOverlayRecords.get(_selectedLaunchId)
     : null;
   if (selectedRecord) {
-    _missionOverlayHost.clearSource(ROCKET_MISSION_AMBIENT_OVERLAY_SOURCE_ID);
-    _missionOverlayHost.setVisible(ROCKET_MISSION_AMBIENT_OVERLAY_SOURCE_ID, false);
+    _missionOverlayHost.clearSource(ROCKET_МИССИЯ_AMBIENT_OVERLAY_SOURCE_ID);
+    _missionOverlayHost.setVisible(ROCKET_МИССИЯ_AMBIENT_OVERLAY_SOURCE_ID, false);
     const entries = selectedRecord.elementEntryFactories.map((createEntry) => createEntry());
     if (_replayCameraLaunchId !== selectedRecord.launch.id) {
       entries.unshift(createRocketMissionMarkerOverlayEntry(
@@ -1032,19 +1032,19 @@ function syncMissionOverlayEntries() {
       ));
     }
     _missionOverlayHost.setEntries(
-      ROCKET_MISSION_SELECTED_OVERLAY_SOURCE_ID,
+      ROCKET_МИССИЯ_SELECTED_OVERLAY_SOURCE_ID,
       entries,
-      ROCKET_MISSION_SELECTED_OVERLAY_SOURCE_OPTIONS,
+      ROCKET_МИССИЯ_SELECTED_OVERLAY_SOURCE_OPTIONS,
     );
-    _missionOverlayHost.setVisible(ROCKET_MISSION_SELECTED_OVERLAY_SOURCE_ID, true);
+    _missionOverlayHost.setVisible(ROCKET_МИССИЯ_SELECTED_OVERLAY_SOURCE_ID, true);
     _selectedMissionOverlayTimeText = selectedRecord.liveEventTime
       ? formatMissionEventTime(selectedRecord.liveEventTime())
       : null;
     return;
   }
 
-  _missionOverlayHost.clearSource(ROCKET_MISSION_SELECTED_OVERLAY_SOURCE_ID);
-  _missionOverlayHost.setVisible(ROCKET_MISSION_SELECTED_OVERLAY_SOURCE_ID, false);
+  _missionOverlayHost.clearSource(ROCKET_МИССИЯ_SELECTED_OVERLAY_SOURCE_ID);
+  _missionOverlayHost.setVisible(ROCKET_МИССИЯ_SELECTED_OVERLAY_SOURCE_ID, false);
   _selectedMissionOverlayTimeText = null;
   const entries = selectRocketMissionMarkerOverlayCohort(
     Array.from(_missionOverlayRecords.values(), (record) => {
@@ -1060,11 +1060,11 @@ function syncMissionOverlayEntries() {
     }),
   );
   _missionOverlayHost.setEntries(
-    ROCKET_MISSION_AMBIENT_OVERLAY_SOURCE_ID,
+    ROCKET_МИССИЯ_AMBIENT_OVERLAY_SOURCE_ID,
     entries,
-    ROCKET_MISSION_AMBIENT_OVERLAY_SOURCE_OPTIONS,
+    ROCKET_МИССИЯ_AMBIENT_OVERLAY_SOURCE_OPTIONS,
   );
-  _missionOverlayHost.setVisible(ROCKET_MISSION_AMBIENT_OVERLAY_SOURCE_ID, true);
+  _missionOverlayHost.setVisible(ROCKET_МИССИЯ_AMBIENT_OVERLAY_SOURCE_ID, true);
 }
 
 function refreshSelectedMissionOverlayText() {
@@ -1534,7 +1534,7 @@ export function replayChaseCameraHeading(pathHeading, orbitBlend = 0) {
   return Cesium.Math.zeroToTwoPi(
     pathHeading + Cesium.Math.lerp(
       REPLAY_ASCENT_CAMERA_OFFSET_RAD,
-      REPLAY_ORBIT_CAMERA_OFFSET_RAD,
+      REPLAY_ОРБИТА_CAMERA_OFFSET_RAD,
       blend,
     ),
   );
@@ -1569,8 +1569,8 @@ export function smoothReplayCameraHeading(
 export function missionZoomPitch(rangeM) {
   const range = Math.max(0, Number(rangeM) || 0);
   const blend = Cesium.Math.clamp(
-    (Math.log(Math.max(range, MISSION_CLOSE_VIEW_RANGE_M)) - Math.log(MISSION_CLOSE_VIEW_RANGE_M))
-      / (Math.log(MISSION_GLOBE_VIEW_RANGE_M) - Math.log(MISSION_CLOSE_VIEW_RANGE_M)),
+    (Math.log(Math.max(range, МИССИЯ_CLOSE_VIEW_RANGE_M)) - Math.log(МИССИЯ_CLOSE_VIEW_RANGE_M))
+      / (Math.log(МИССИЯ_GLOBE_VIEW_RANGE_M) - Math.log(МИССИЯ_CLOSE_VIEW_RANGE_M)),
     0,
     1,
   );
@@ -1600,7 +1600,7 @@ export function replayCameraView(state, altitudeM) {
   const contextBlend = rawContextBlend * rawContextBlend * (3 - 2 * rawContextBlend);
   const contextRange = Cesium.Math.clamp(
     180000 + altitude * 3.8,
-    MISSION_CLOSE_VIEW_RANGE_M,
+    МИССИЯ_CLOSE_VIEW_RANGE_M,
     REPLAY_CONTEXT_MAX_RANGE_M,
   );
   const ascentRange = Cesium.Math.lerp(localRange, contextRange, contextBlend);
@@ -1613,13 +1613,13 @@ export function replayCameraView(state, altitudeM) {
     return { range: ascentRange, pitch: ascentPitch };
   }
   const rawBlend = Cesium.Math.clamp(
-    (Number(state?.phaseProgress) || 0) / REPLAY_ORBIT_PULLBACK_FRACTION,
+    (Number(state?.phaseProgress) || 0) / REPLAY_ОРБИТА_PULLBACK_FRACTION,
     0,
     1,
   );
   const blend = rawBlend * rawBlend * (3 - 2 * rawBlend);
   return {
-    range: Cesium.Math.lerp(ascentRange, REPLAY_ORBIT_GLOBE_RANGE_M, blend),
+    range: Cesium.Math.lerp(ascentRange, REPLAY_ОРБИТА_GLOBE_RANGE_M, blend),
     // Keep an oblique tactical view of the complete orbit rather than ending
     // in a nadir view. This also prevents the camera from appearing to
     // return toward the launch site after insertion.
@@ -1664,7 +1664,7 @@ export function replayOrbitCameraTarget(vehicleAnchor, frameCenter, orbitBlend =
   if (!vehicleAnchor) return vehicleAnchor;
   if (!frameCenter) return Cesium.Cartesian3.clone(vehicleAnchor);
   const blend = Cesium.Math.clamp(Number(orbitBlend) || 0, 0, 1)
-    * REPLAY_ORBIT_FRAME_CENTER_BLEND;
+    * REPLAY_ОРБИТА_FRAME_CENTER_BLEND;
   return Cesium.Cartesian3.lerp(
     vehicleAnchor,
     frameCenter,
@@ -1807,7 +1807,7 @@ function startMissionZoomAnchor(launch, initialRange) {
   if (!_viewer || !launch || _replayCameraLaunchId) return;
   stopMissionZoomAnchor();
   const target = Cesium.Cartesian3.fromDegrees(launch.lon, launch.lat);
-  const range = Math.max(2000, Number(initialRange) || MISSION_GLOBE_VIEW_RANGE_M);
+  const range = Math.max(2000, Number(initialRange) || МИССИЯ_GLOBE_VIEW_RANGE_M);
   _missionZoomAnchorId = launch.id;
   _viewer.camera.lookAt(
     target,
@@ -1836,8 +1836,8 @@ function syncReplayButton() {
     if (toggleButton) {
       toggleButton.disabled = !active;
       toggleButton.textContent = _replayPaused ? '▶' : 'Ⅱ';
-      toggleButton.setAttribute('aria-label', _replayPaused ? 'Resume replay' : 'Pause replay');
-      toggleButton.title = _replayPaused ? 'Resume replay' : 'Pause replay';
+      toggleButton.setAttribute('aria-label', _replayPaused ? 'Продолжить повтор' : 'Пауза повтора');
+      toggleButton.title = _replayPaused ? 'Продолжить повтор' : 'Пауза повтора';
     }
   }
 }
@@ -1990,7 +1990,7 @@ function startMissionReplay(launchId) {
     );
     const orbitBlend = !state.ascending
       ? Cesium.Math.clamp(
-        (Number(state.phaseProgress) || 0) / REPLAY_ORBIT_PULLBACK_FRACTION,
+        (Number(state.phaseProgress) || 0) / REPLAY_ОРБИТА_PULLBACK_FRACTION,
         0,
         1,
       )
@@ -2068,7 +2068,7 @@ function startMissionReplay(launchId) {
       }
     }
     if (state.elapsedSinceStart >= ascentDurationSec
-      + REPLAY_ORBIT_DURATION_SEC) {
+      + REPLAY_ОРБИТА_DURATION_SEC) {
       stopMissionReplay();
     }
   });
@@ -2167,7 +2167,7 @@ function normalizeRecoveryStages(launch, payloads) {
       stages.push(normalizeLanding(
         { ...flight, type: payloads[index]?.type || 'Payload', serial_number: payloads[index]?.name },
         payloads[index]?.name || `Payload ${index + 1}`,
-        'PAYLOAD',
+        'ПОЛЕЗНАЯ НАГРУЗКА',
         index,
       ));
     });
@@ -2225,8 +2225,8 @@ function atmosphericReentryIndex(path) {
     if (
       Number.isFinite(previousHeight)
       && Number.isFinite(height)
-      && previousHeight > STAGE_REENTRY_ALTITUDE_M
-      && height <= STAGE_REENTRY_ALTITUDE_M
+      && previousHeight > СТУПЕНЬ_REENTRY_ALTITUDE_M
+      && height <= СТУПЕНЬ_REENTRY_ALTITUDE_M
     ) {
       return index;
     }
@@ -2288,14 +2288,14 @@ function renderMissionPanel() {
   _missionPanel.querySelector('[data-mission-payloads]').innerHTML = missionTableRows(
     payloadRows,
     3,
-    'CLASSIFIED / MULTI-PAYLOAD',
+    'CLASSIFIED / MULTI-ПОЛЕЗНАЯ НАГРУЗКА',
   );
   const stageRows = launch.recoveryStages.map((stage) => {
     const endpoint = stage.endpoint;
     const destination = stage.destination || (endpoint?.accuracy === 'PAD / RTLS' ? launch.launchSite : 'UNAVAILABLE');
     const position = endpoint
       ? `${endpoint.lat.toFixed(2)}, ${endpoint.lon.toFixed(2)} · ${endpoint.accuracy}`
-      : stage.downrangeKm > 0 ? `${stage.downrangeKm.toLocaleString()} KM DOWNRANGE` : 'POSITION UNAVAILABLE';
+      : stage.downrangeKm > 0 ? `${stage.downrangeKm.toLocaleString()} KM DOWNRANGE` : 'ПОЗИЦИЯ НЕДОСТУПНА';
     const stageDetail = [
       Number.isFinite(stage.flightNumber) ? `FLIGHT ${stage.flightNumber}` : null,
       stage.reused ? 'REUSED' : null,
@@ -2306,7 +2306,7 @@ function renderMissionPanel() {
   _missionPanel.querySelector('[data-mission-stages]').innerHTML = missionTableRows(
     stageRows,
     3,
-    'NO STAGE RE-ENTRY / RECOVERY DATA',
+    'NO СТУПЕНЬ RE-ENTRY / RECOVERY DATA',
   );
   const stageSection = _missionPanel.querySelector('[data-mission-stages-section]');
   if (stageSection) stageSection.hidden = stageRows.length === 0;
@@ -2477,13 +2477,13 @@ function focusLaunchSite(launch) {
       offset: new Cesium.HeadingPitchRange(
         0,
         Cesium.Math.toRadians(-42),
-        MISSION_FOCUS_RANGE_M,
+        МИССИЯ_ФОКУС_RANGE_M,
       ),
       duration: 1.4,
       easingFunction: Cesium.EasingFunction.CUBIC_IN_OUT,
       complete: () => {
         if (_selectedLaunchId === launch.id) {
-          startMissionZoomAnchor(launch, MISSION_FOCUS_RANGE_M);
+          startMissionZoomAnchor(launch, МИССИЯ_ФОКУС_RANGE_M);
         }
       },
     },
@@ -2526,7 +2526,7 @@ function createMissionPanel() {
   _missionPanel.id = 'space-mission-panel';
   _missionPanel.className = 'context-space-mission-detail';
   _missionPanel.setAttribute('aria-label', 'Selected Space Mission');
-  _missionPanel.innerHTML = `<div class="space-mission-view-header"><span>SELECTED SPACE MISSION</span><button type="button" data-mission-close title="Показать все миссии" aria-label="Deselect mission">×</button></div><div class="space-mission-detail"><strong data-mission-title>MISSION</strong><span data-mission-field data-mission-provider></span><span data-mission-field>СТАТУС · <b data-mission-status></b></span><span data-mission-field>LAUNCH SITE · <b data-mission-site></b></span><span data-mission-field>LAUNCH TIME · <b data-mission-time></b></span><span data-mission-field>ORBIT · <b data-mission-orbit></b></span><span>ASCENT PATH · <b data-mission-ascent-source></b></span><span data-mission-field>CURRENT DISTANCE FROM EARTH · <b data-mission-distance></b></span><span data-mission-field>SATELLITE SPEED · <b data-mission-speed></b></span></div><section class="mission-data-section"><h4>PAYLOAD</h4><div class="mission-table-scroll"><table class="mission-data-table"><thead><tr><th>NAME</th><th>TYPE</th><th>DESTINATION</th></tr></thead><tbody data-mission-payloads></tbody></table></div></section><section class="mission-data-section" data-mission-stages-section><h4>STAGE / RE-ENTRY / RECOVERY</h4><div class="mission-table-scroll"><table class="mission-data-table"><thead><tr><th>STAGE</th><th>STATUS</th><th>FINAL POSITION</th></tr></thead><tbody data-mission-stages></tbody></table></div></section><div class="mission-replay-speed-control"><div class="mission-replay-speed-header"><label for="space-mission-replay-speed">REPLAY SPEED</label><output class="gev-slider-value" for="space-mission-replay-speed" data-mission-replay-speed-output>1×</output></div><input id="space-mission-replay-speed" class="gev-quantitative-slider" type="range" min="0.25" max="4" step="0.25" value="1" data-mission-replay-speed aria-label="Множитель скорости повтора"><div class="mission-replay-speed-scale" aria-hidden="true"><span>0.25×</span><span>1×</span><span>4×</span></div></div><div class="mission-action-row"><button type="button" class="mission-focus-button" data-mission-focus>FOCUS</button><button type="button" class="mission-replay-button" data-mission-replay aria-pressed="false">REPLAY ASCENT</button></div><div class="space-mission-nav"><button type="button" class="mission-nav-button" data-mission-prev title="Previous mission"><span aria-hidden="true">‹</span> PREV</button><span class="mission-nav-index" data-mission-index>—</span><button type="button" class="mission-nav-button" data-mission-next title="Next mission">NEXT <span aria-hidden="true">›</span></button></div><button type="button" class="panel-layer-toggle" data-mission-show-all>SHOW ALL / DESELECT</button>`;
+  _missionPanel.innerHTML = `<div class="space-mission-view-header"><span>ВЫБРАННАЯ КОСМИЧЕСКАЯ МИССИЯ</span><button type="button" data-mission-close title="Показать все миссии" aria-label="Deselect mission">×</button></div><div class="space-mission-detail"><strong data-mission-title>МИССИЯ</strong><span data-mission-field data-mission-provider></span><span data-mission-field>СТАТУС · <b data-mission-status></b></span><span data-mission-field>МЕСТО ЗАПУСКА · <b data-mission-site></b></span><span data-mission-field>ВРЕМЯ ЗАПУСКА · <b data-mission-time></b></span><span data-mission-field>ОРБИТА · <b data-mission-orbit></b></span><span>ТРАЕКТОРИЯ ВЗЛЁТА · <b data-mission-ascent-source></b></span><span data-mission-field>ТЕКУЩЕЕ РАССТОЯНИЕ ОТ ЗЕМЛИ · <b data-mission-distance></b></span><span data-mission-field>СКОРОСТЬ СПУТНИКА · <b data-mission-speed></b></span></div><section class="mission-data-section"><h4>ПОЛЕЗНАЯ НАГРУЗКА</h4><div class="mission-table-scroll"><table class="mission-data-table"><thead><tr><th>НАЗВАНИЕ</th><th>ТИП</th><th>НАЗНАЧЕНИЕ</th></tr></thead><tbody data-mission-payloads></tbody></table></div></section><section class="mission-data-section" data-mission-stages-section><h4>СТУПЕНЬ / ВХОД В АТМОСФЕРУ / ВОЗВРАТ</h4><div class="mission-table-scroll"><table class="mission-data-table"><thead><tr><th>СТУПЕНЬ</th><th>СТАТУС</th><th>ФИНАЛЬНАЯ ПОЗИЦИЯ</th></tr></thead><tbody data-mission-stages></tbody></table></div></section><div class="mission-replay-speed-control"><div class="mission-replay-speed-header"><label for="space-mission-replay-speed">СКОРОСТЬ ПОВТОРА</label><output class="gev-slider-value" for="space-mission-replay-speed" data-mission-replay-speed-output>1×</output></div><input id="space-mission-replay-speed" class="gev-quantitative-slider" type="range" min="0.25" max="4" step="0.25" value="1" data-mission-replay-speed aria-label="Множитель скорости повтора"><div class="mission-replay-speed-scale" aria-hidden="true"><span>0.25×</span><span>1×</span><span>4×</span></div></div><div class="mission-action-row"><button type="button" class="mission-focus-button" data-mission-focus>ФОКУС</button><button type="button" class="mission-replay-button" data-mission-replay aria-pressed="false">REPLAY ASCENT</button></div><div class="space-mission-nav"><button type="button" class="mission-nav-button" data-mission-prev title="Previous mission"><span aria-hidden="true">‹</span> НАЗАД</button><span class="mission-nav-index" data-mission-index>—</span><button type="button" class="mission-nav-button" data-mission-next title="Next mission">ДАЛЕЕ <span aria-hidden="true">›</span></button></div><button type="button" class="panel-layer-toggle" data-mission-show-all>ПОКАЗАТЬ ВСЕ / СНЯТЬ ВЫБОР</button>`;
   _missionPanel.querySelector('.mission-action-row').insertAdjacentHTML(
     'beforeend',
     `<div class="mission-replay-transport" data-mission-replay-transport hidden>
@@ -2672,8 +2672,8 @@ function updateReplayVehicleOverlay(occluder) {
   const mission = shortMissionLabel(launch.name, 22).toUpperCase();
   const siteName = compactLaunchSiteName(launch.launchSite);
   const siteCallout = siteName
-    ? `LAUNCH SITE · ${shortMissionLabel(siteName, 20).toUpperCase()}`
-    : 'LAUNCH SITE';
+    ? `МЕСТО ЗАПУСКА · ${shortMissionLabel(siteName, 20).toUpperCase()}`
+    : 'МЕСТО ЗАПУСКА';
   let title = mission;
   let detail = siteCallout;
   if (mode === 'countdown') {
@@ -2903,7 +2903,7 @@ function addLaunchEntity(launch, activeTleText = _activeTleText) {
         polyline: {
           positions: surfaceSafePath(segment.positions),
           width: 2,
-          material: Cesium.Color.fromCssColorString(TRAJECTORY_STAGE_COLORS[index % TRAJECTORY_STAGE_COLORS.length]).withAlpha(0.8),
+          material: Cesium.Color.fromCssColorString(TRAJECTORY_СТУПЕНЬ_COLORS[index % TRAJECTORY_СТУПЕНЬ_COLORS.length]).withAlpha(0.8),
           clampToGround: false,
           arcType: Cesium.ArcType.NONE,
         },
@@ -2963,7 +2963,7 @@ function addLaunchEntity(launch, activeTleText = _activeTleText) {
       launch,
       _animationStarts.get(launch.id) || Date.now(),
       ascentDurationSec,
-      REPLAY_ORBIT_DURATION_SEC,
+      REPLAY_ОРБИТА_DURATION_SEC,
       orbitPeriodSec,
       _replaySpeed,
       replayClockNow(launch.id),
@@ -2991,7 +2991,7 @@ function addLaunchEntity(launch, activeTleText = _activeTleText) {
       const reentryIndex = atmosphericReentryIndex(path);
       const reentryPath = path.slice(reentryIndex);
       const color = Cesium.Color.fromCssColorString(
-        TRAJECTORY_STAGE_COLORS[(stageIndex + 1) % TRAJECTORY_STAGE_COLORS.length],
+        TRAJECTORY_СТУПЕНЬ_COLORS[(stageIndex + 1) % TRAJECTORY_СТУПЕНЬ_COLORS.length],
       );
       _dataSource.entities.add({
         id: `rocket-reentry-recovery:${launch.id}:${stageIndex}`,
@@ -3008,7 +3008,7 @@ function addLaunchEntity(launch, activeTleText = _activeTleText) {
         properties: {
           launchId: launch.id,
           stageId: stage.id,
-          phase: 'STAGE_REENTRY_RECOVERY',
+          phase: 'СТУПЕНЬ_REENTRY_RECOVERY',
           accuracy: stage.endpoint.accuracy,
           source: launch.source,
         },
@@ -3030,7 +3030,7 @@ function addLaunchEntity(launch, activeTleText = _activeTleText) {
             launchId: launch.id,
             stageId: stage.id,
             phase: 'ATMOSPHERIC_REENTRY',
-            altitudeM: STAGE_REENTRY_ALTITUDE_M,
+            altitudeM: СТУПЕНЬ_REENTRY_ALTITUDE_M,
             source: 'Estimated 100 km atmospheric interface',
           },
         });
@@ -3131,7 +3131,7 @@ function addLaunchEntity(launch, activeTleText = _activeTleText) {
       properties: {
         launchId: launch.id,
         noradId: satelliteTrack?.noradId || '',
-        phase: satelliteTrack ? 'CURRENT_SATELLITE_POSITION' : 'ESTIMATED_ORBIT_POSITION',
+        phase: satelliteTrack ? 'CURRENT_SATELLITE_POSITION' : 'ESTIMATED_ОРБИТА_POSITION',
         source: satelliteTrack ? 'Satellites layer' : 'Approximate mission orbit',
       },
     });
@@ -3139,7 +3139,7 @@ function addLaunchEntity(launch, activeTleText = _activeTleText) {
     overlayRecord.elementEntryFactories.push(() => {
       const name = satelliteTrack
         ? shortMissionLabel(satelliteTrack.name, 22).toUpperCase()
-        : 'EST. ORBIT POSITION';
+        : 'EST. ОРБИТА POSITION';
       return createRocketMissionElementOverlayEntry({
         id: `payload-position:${launch.id}`,
         position: () => livePosition,
@@ -3190,7 +3190,7 @@ function addLaunchEntity(launch, activeTleText = _activeTleText) {
       createRocketMissionElementOverlayEntry({
         id: `orbit:${launch.id}`,
         position: orbitLabelPosition,
-        text: satelliteTrack ? 'ORBIT' : 'PROJECTED ORBIT',
+        text: satelliteTrack ? 'ОРБИТА' : 'PROJECTED ОРБИТА',
         accent: satelliteTrack ? '#22e6e6' : '#c084fc',
         priority: 800_000,
         gapPx: 8,
@@ -3205,7 +3205,7 @@ function addLaunchEntity(launch, activeTleText = _activeTleText) {
     _dataSource.entities.add({
       id: `rocket-vehicle:${launch.id}`,
       position: replayPosition,
-      properties: { launchId: launch.id, noradId: satelliteTrack?.noradId || '', phase: 'ASCENT_THEN_ORBIT', source: satelliteTrack ? 'Satellite trajectory animation' : 'Approximate trajectory animation' },
+      properties: { launchId: launch.id, noradId: satelliteTrack?.noradId || '', phase: 'ASCENT_THEN_ОРБИТА', source: satelliteTrack ? 'Satellite trajectory animation' : 'Approximate trajectory animation' },
     });
     _dataSource.entities.add({
       id: `rocket-transfer:${launch.id}`,

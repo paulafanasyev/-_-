@@ -6613,8 +6613,8 @@ export class StyleManager {
         this._cctvMeta.textContent = `${activeCamera.city} · HDG ${Math.round(activeCamera.headingDeg)}° · FOV ${Math.round(activeCamera.fovDeg)}° · RANGE ${Math.round(activeCamera.rangeM)}m · ${projLabel}${calBadge ? ` · ${calBadge}` : ''} · ${provider}${statusMsg}`;
       } else if (cameras.length > 0) {
         this._cctvMeta.textContent = enabled
-          ? `${cameras.length} cameras loaded · click a camera to activate`
-          : `${cameras.length} cameras loaded · enable CCTV to activate`;
+          ? `${cameras.length} камер загружено · click a camera to activate`
+          : `${cameras.length} камер загружено · включите CCTV для активации`;
       } else {
         this._cctvMeta.textContent = 'Включите CCTV, чтобы загрузить камеры на перекрёстках';
       }
@@ -6638,7 +6638,7 @@ export class StyleManager {
     }
 
     this._syncCctvSourceBadge(activeCamera, enabled);
-    this._typeCctvSummary(state?.summary || 'Enable CCTV to start camera-linked intelligence summaries.');
+    this._typeCctvSummary(state?.summary || 'Включите CCTV, чтобы запустить сводки аналитики, связанные с камерами.');
   }
 
   /**
