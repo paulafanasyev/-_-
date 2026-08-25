@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
 
 concurrency:
   group: gev-full-test-suite-main
@@ -28,6 +28,33 @@ jobs:
 
       - name: Install dependencies
         run: npm ci --no-audit --no-fund
+
+      - name: Repair localized push-to-talk hint
+        shell: python
+        run: |
+          from pathlib import Path
+          path = Path('src/voice/gevRealtime.js')
+          text = path.read_text(encoding='utf-8')
+          old = "? 'Release Space to send'"
+          new = "? 'Отпустите пробел для отправки'"
+          if old in text:
+              path.write_text(text.replace(old, new, 1), encoding='utf-8')
+              print('patched voice hint')
+          else:
+              print('voice hint already localized')
+
+      - name: Commit localized hint if needed
+        shell: bash
+        run: |
+          if git diff --quiet -- src/voice/gevRealtime.js; then
+            echo 'No source repair needed.'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add src/voice/gevRealtime.js
+          git commit -m 'fix: localize push-to-talk hint'
+          git push origin HEAD:main
 
       - name: Run full unit suite
         id: tests
