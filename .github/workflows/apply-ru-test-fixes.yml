@@ -20,18 +20,25 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Use supported Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24.14.0
+          cache: npm
+
       - name: Install dependencies
-        run: npm install --no-audit --no-fund
+        run: npm ci --no-audit --no-fund
 
       - name: Repair verified localized test fixtures
         shell: bash
         run: |
           set -euo pipefail
 
-          # One previous automated edit accidentally replaced almost the whole
-          # militaryAwareness.test.mjs with its tail. Restore that file from the
-          # known-good parent, then apply ONLY the verified RU expectation.
+          # These restores are temporary working-tree repairs. The resulting
+          # exact files are committed below, so future runs start from main
+          # instead of repeatedly reconstructing them from stale parents.
           git restore --source=3e8aba8eb3c91a473d215a3430100738130a16c3 -- src/data/militaryAwareness.test.mjs
+          git restore --source=ff5c5d94b799bec29a1f7bbf7672ced50f9f4757 -- src/voice/gevRealtime.js
 
           python - <<'PY'
           from pathlib import Path
@@ -52,6 +59,7 @@ jobs:
           replace('src/overlays/worldOverlay.test.mjs', 'Focusing Focus vessel TEST, MMSI 123', 'Фокус на Focus vessel TEST, MMSI 123')
           replace('src/voice/gevRealtime.test.mjs', 'Hold Space to speak · click mic to toggle voice', 'Удерживайте пробел для речи · нажмите микрофон для переключения')
           replace('src/voice/gevRealtime.test.mjs', 'Release Space to send', 'Отпустите пробел для отправки')
+          replace('src/voice/gevRealtime.js', 'Release Space to send', 'Отпустите пробел для отправки')
           PY
 
       - name: Run full unit suite
@@ -67,7 +75,7 @@ jobs:
           grep '^not ok ' test-output.log || true
           grep '^not ok ' test-output.log > failing-tests.txt || true
           echo "--- FAILURE DETAILS ---" >> "$GITHUB_STEP_SUMMARY"
-          awk '/^not ok / {show=1; n=0} show {print; n++} show && n>=12 {show=0}' test-output.log >> "$GITHUB_STEP_SUMMARY"
+          awk '/^not ok / {show=1; n=0} show {print; n++} show && n>=20 {show=0}' test-output.log >> "$GITHUB_STEP_SUMMARY"
           exit "$status"
 
       - name: Commit verified fixture repairs and failure evidence
@@ -93,16 +101,14 @@ jobs:
             src/data/rocketLaunches.test.mjs \
             src/overlays/worldOverlay.test.mjs \
             src/voice/gevRealtime.test.mjs \
+            src/voice/gevRealtime.js \
             .ci/latest-test-failures.txt
           if git diff --cached --quiet; then
             echo 'No repository changes to commit.'
             exit 0
           fi
-          git commit -m 'fix: align localized test expectations and restore awareness suite'
+          git commit -m 'fix: restore voice runtime and run tests on Node 24'
 
-          # The previous workflow pushed without first integrating remote CI
-          # commits. Serialize runs above and still rebase defensively so a
-          # fetch-first race cannot turn a correct fix into a red CI job.
           for attempt in 1 2 3; do
             git fetch origin main
             if git rebase origin/main; then
