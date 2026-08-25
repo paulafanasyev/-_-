@@ -26,22 +26,18 @@ jobs:
           node-version: 24.14.0
           cache: npm
 
-      - name: Install dependencies
-        run: npm ci --no-audit --no-fund
-
       - name: Repair localized push-to-talk hint
         shell: python
         run: |
           from pathlib import Path
           path = Path('src/voice/gevRealtime.js')
           text = path.read_text(encoding='utf-8')
-          old = "? 'Release Space to send'"
-          new = "? 'Отпустите пробел для отправки'"
-          if old in text:
-              path.write_text(text.replace(old, new, 1), encoding='utf-8')
-              print('patched voice hint')
-          else:
-              print('voice hint already localized')
+          old = "? 'Release Space to send'\\n    : 'Удерживайте пробел для речи · нажмите микрофон для переключения';"
+          new = "? 'Отпустите пробел для отправки'\\n    : 'Удерживайте пробел для речи · нажмите микрофон для переключения';"
+          if old not in text:
+              raise SystemExit('expected resolveVoiceControlHint expression not found')
+          path.write_text(text.replace(old, new, 1), encoding='utf-8')
+          print('patched resolveVoiceControlHint')
 
       - name: Commit localized hint if needed
         shell: bash
