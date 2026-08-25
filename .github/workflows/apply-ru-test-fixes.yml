@@ -21,27 +21,76 @@ jobs:
         run: |
           from pathlib import Path
 
-          def replace(path, old, new, count=None):
+          def replace_one(path, variants, new):
               p = Path(path)
               s = p.read_text(encoding='utf-8')
-              if old not in s:
-                  raise SystemExit(f'expected text not found: {path}: {old!r}')
-              if count is None:
-                  s2 = s.replace(old, new)
-              else:
-                  s2 = s.replace(old, new, count)
-              p.write_text(s2, encoding='utf-8')
+              for old in variants:
+                  if old in s:
+                      p.write_text(s.replace(old, new), encoding='utf-8')
+                      print(f'patched {path}: {old!r}')
+                      return
+              raise SystemExit(f'no known variant found: {path}: {variants!r}')
 
-          replace('src/cockpitMarkup.test.mjs', "assert.match(body, /'BRG —'/);", "assert.match(body, /'АЗИМУТ —'/);")
-          replace('src/data/aisStreamAdapter.js', 'AIS-сокет не предоставляет интерфейс событий WebSocket', 'AIS socket does not provide ws emitter semantics')
-          replace('src/data/layerState.test.mjs', "label: 'military flight',", "label: 'военный полёт',")
-          replace('src/data/militaryAwareness.test.mjs', 'Mapped installations</strong><b aria-live="polite">?</b>', 'Нанесённые на карту объекты</strong><b aria-live="polite">?</b>')
-          replace('src/data/militaryAwareness.test.mjs', 'AIS vessels</strong><b aria-live="polite">?</b>', 'Суда AIS</strong><b aria-live="polite">?</b>')
-          replace('src/data/militaryAwareness.test.mjs', 'AIS vessels</strong><b aria-live="polite">0</b>', 'Суда AIS</strong><b aria-live="polite">0</b>')
-          replace('src/data/rocketLaunches.test.mjs', "      'STAGE RE-ENTRY',\n      'EST. ORBIT POSITION',", "      'ЭТАП · ВХОД В АТМОСФЕРУ',\n      'EST. ORBIT POSITION',")
-          replace('src/overlays/worldOverlay.test.mjs', 'Focusing Focus vessel TEST, MMSI 123', 'Фокус на Focus vessel TEST, MMSI 123')
-          replace('src/voice/gevRealtime.test.mjs', 'Hold Space to speak · click mic to toggle voice', 'Удерживайте пробел для речи · нажмите микрофон для переключения голоса')
-          replace('src/voice/gevRealtime.test.mjs', 'Release Space to send', 'Отпустите пробел для отправки')
+          replace_one(
+              'src/cockpitMarkup.test.mjs',
+              ["assert.match(body, /'BRG —'/);", "assert.match(body, /'АЗИМУТ —'/);"] ,
+              "assert.match(body, /'АЗИМУТ —'/);",
+          )
+          replace_one(
+              'src/data/aisStreamAdapter.test.mjs',
+              ["assert.match(adapter.snapshot().error, /ws emitter semantics/);"],
+              "assert.match(adapter.snapshot().error, /ws emitter semantics|интерфейс событий WebSocket/);",
+          )
+          replace_one(
+              'src/data/layerState.test.mjs',
+              ["label: 'military flight',"],
+              "label: 'военный полёт',",
+          )
+          replace_one(
+              'src/data/militaryAwareness.test.mjs',
+              [
+                  r'/Mapped installations<\\/strong><b aria-live="polite">\\?<\\/b>/',
+                  r'/Mapped installations<\\/strong><b aria-live="polite">\?<\\/b>/',
+                  r'/Mapped installations<\\/strong><b aria-live="polite">\?<\\/b>/',
+              ],
+              r'/Нанесённые на карту объекты<\\/strong><b aria-live="polite">\?<\\/b>/',
+          )
+          replace_one(
+              'src/data/militaryAwareness.test.mjs',
+              [
+                  r'/AIS vessels<\\/strong><b aria-live="polite">\\?<\\/b>/',
+                  r'/AIS vessels<\\/strong><b aria-live="polite">\?<\\/b>/',
+              ],
+              r'/Суда AIS<\\/strong><b aria-live="polite">\?<\\/b>/',
+          )
+          replace_one(
+              'src/data/militaryAwareness.test.mjs',
+              [
+                  r'/AIS vessels<\\/strong><b aria-live="polite">0<\\/b>/',
+                  r'/AIS vessels<\\/strong><b aria-live="polite">0<\\/b>/',
+              ],
+              r'/Суда AIS<\\/strong><b aria-live="polite">0<\\/b>/',
+          )
+          replace_one(
+              'src/data/rocketLaunches.test.mjs',
+              ["      'STAGE RE-ENTRY',\n      'EST. ORBIT POSITION',"],
+              "      'ЭТАП · ВХОД В АТМОСФЕРУ',\n      'EST. ORBIT POSITION',",
+          )
+          replace_one(
+              'src/overlays/worldOverlay.test.mjs',
+              ['Focusing Focus vessel TEST, MMSI 123'],
+              'Фокус на Focus vessel TEST, MMSI 123',
+          )
+          replace_one(
+              'src/voice/gevRealtime.test.mjs',
+              ['Hold Space to speak · click mic to toggle voice'],
+              'Удерживайте пробел для речи · нажмите микрофон для переключения голоса',
+          )
+          replace_one(
+              'src/voice/gevRealtime.test.mjs',
+              ['Release Space to send'],
+              'Отпустите пробел для отправки',
+          )
 
       - name: Run full unit suite
         run: |
@@ -52,7 +101,7 @@ jobs:
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add src package.json .github/workflows/apply-ru-test-fixes.yml
+          git add src .github/workflows/apply-ru-test-fixes.yml
           git rm .github/workflows/apply-ru-test-fixes.yml
           git diff --cached --quiet && exit 0 || true
           git commit -m 'fix: align tests with Russian UI labels'
