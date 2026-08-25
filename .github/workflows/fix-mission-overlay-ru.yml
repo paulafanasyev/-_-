@@ -1,0 +1,58 @@
+name: Normalize mission overlay Russian labels
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  fix:
+    if: github.actor == 'github-actions[bot]' || github.actor == 'paulafanasyev'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: main
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24.14.0
+          cache: npm
+      - name: Normalize mission overlay labels
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          from pathlib import Path
+
+          replacements = {
+            'LAUNCH SITE · ': 'МЕСТО ЗАПУСКА · ',
+            'EST. ORBIT POSITION': 'РАСЧ. ПОЛОЖЕНИЕ ОРБИТЫ',
+            'EST. ОРБИТА POSITION': 'РАСЧ. ПОЛОЖЕНИЕ ОРБИТЫ',
+            'PROJECTED ORBIT': 'ПРОГНОЗИРУЕМАЯ ОРБИТА',
+            'PROJECTED ОРБИТА': 'ПРОГНОЗИРУЕМАЯ ОРБИТА',
+          }
+          for name in ('src/data/rocketLaunches.js', 'src/data/rocketLaunches.test.mjs'):
+            p = Path(name)
+            s = p.read_text()
+            for old, new in replacements.items():
+              s = s.replace(old, new)
+            p.write_text(s)
+          PY
+      - name: Install dependencies
+        run: npm ci
+      - name: Full test suite
+        run: npm test
+      - name: Commit fix and remove one-shot workflow
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add src/data/rocketLaunches.js src/data/rocketLaunches.test.mjs .github/workflows/fix-mission-overlay-ru.yml
+          git commit -m 'i18n: finish mission overlay Russian labels'
+          git rm .github/workflows/fix-mission-overlay-ru.yml
+          git commit -m 'chore: remove one-shot mission label fixer'
+          git push origin HEAD:main
