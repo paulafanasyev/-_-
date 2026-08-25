@@ -449,7 +449,7 @@ export class GevRealtimeController {
       this.dc = dataChannel;
       dataChannel.addEventListener('open', () => {
         const detail = this.pushToTalkMode
-          ? (this.pushToTalkKeyHeld ? 'Release Space to send' : 'Hold Space to talk')
+          ? (this.pushToTalkKeyHeld ? 'Отпустите пробел для отправки' : 'Hold Space to talk')
           : 'Ask or command';
         this.setStatus('listening', detail);
         this.debugLog('data_channel.open', { connection: this.connectionDiagnostics(dataChannel) });
