@@ -1,6 +1,4 @@
-Generated from commit d33161db83e86c464aa7239ec86ea0c26bd83880
-Run: 32837942074
+Generated from commit 8cefff0f7e854b1e4e3397abddedc72271bcaff2
+Run: 32838257702
 
-not ok 1186 - a vessel feed still connecting after the lifecycle settles reads as unknown, not an all-clear
-not ok 1187 - a settled vessel feed reporting a real empty viewport recovers to 0
-not ok 2352 - voice control help tray reflects the push-to-talk key state
+ALL TESTS PASSED
