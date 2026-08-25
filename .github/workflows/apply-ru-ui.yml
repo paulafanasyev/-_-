@@ -8,7 +8,7 @@ on:
 permissions:
   contents: write
 
-# One-shot application of the existing translation map, followed by catalog rebuild.
+# Apply the translation map plus direct runtime UI replacements, then rebuild the catalog.
 jobs:
   apply:
     if: ${{ github.actor != 'github-actions[bot]' }}
@@ -29,6 +29,9 @@ jobs:
       - name: Apply Russian UI map
         run: node apply-ru-ui-map.mjs
 
+      - name: Apply direct runtime UI replacements
+        run: node apply-ru-ui-direct.mjs
+
       - name: Rebuild translation catalog
         run: node build-translation-catalog.mjs
 
@@ -37,7 +40,7 @@ jobs:
         run: |
           set -euo pipefail
           git config user.name 'github-actions[bot]'
-          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git config user.email '41898282+users.noreply.github.com'
           git add src localization
           if git diff --cached --quiet; then
             echo 'No Russian UI changes to commit.'
