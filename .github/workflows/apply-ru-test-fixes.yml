@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
 
 concurrency:
   group: gev-full-test-suite-main
@@ -18,7 +18,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          fetch-depth: 0
+          fetch-depth: 1
 
       - name: Use supported Node.js
         uses: actions/setup-node@v4
@@ -29,99 +29,34 @@ jobs:
       - name: Install dependencies
         run: npm ci --no-audit --no-fund
 
-      - name: Repair verified localized test fixtures
-        shell: bash
-        run: |
-          set -euo pipefail
-
-          # These restores are temporary working-tree repairs. The resulting
-          # exact files are committed below, so future runs start from main
-          # instead of repeatedly reconstructing them from stale parents.
-          git restore --source=3e8aba8eb3c91a473d215a3430100738130a16c3 -- src/data/militaryAwareness.test.mjs
-          git restore --source=ff5c5d94b799bec29a1f7bbf7672ced50f9f4757 -- src/voice/gevRealtime.js
-
-          python - <<'PY'
-          from pathlib import Path
-
-          def replace(path, old, new):
-              p = Path(path)
-              s = p.read_text(encoding='utf-8')
-              if old not in s:
-                  raise SystemExit(f'expected text not found: {path}: {old!r}')
-              p.write_text(s.replace(old, new), encoding='utf-8')
-              print(f'patched {path}: {old!r} -> {new!r}')
-
-          replace('src/cockpitMarkup.test.mjs', "assert.match(body, /'BRG —'/);", "assert.match(body, /'АЗИМУТ —'/);")
-          replace('src/data/aisStreamAdapter.test.mjs', "assert.match(adapter.snapshot().error, /ws emitter semantics/);", "assert.match(adapter.snapshot().error, /ws emitter semantics|интерфейс событий WebSocket/);")
-          replace('src/data/layerState.test.mjs', "label: 'military flight',", "label: 'военный полёт',")
-          replace('src/data/militaryAwareness.test.mjs', 'Mapped installations', 'Нанесённые на карту объекты')
-          replace('src/data/rocketLaunches.test.mjs', "'STAGE RE-ENTRY'", "'ЭТАП · ВХОД В АТМОСФЕРУ'")
-          replace('src/overlays/worldOverlay.test.mjs', 'Focusing Focus vessel TEST, MMSI 123', 'Фокус на Focus vessel TEST, MMSI 123')
-          replace('src/voice/gevRealtime.test.mjs', 'Hold Space to speak · click mic to toggle voice', 'Удерживайте пробел для речи · нажмите микрофон для переключения')
-          replace('src/voice/gevRealtime.test.mjs', 'Release Space to send', 'Отпустите пробел для отправки')
-          replace('src/voice/gevRealtime.js', 'Release Space to send', 'Отпустите пробел для отправки')
-          PY
-
       - name: Run full unit suite
         id: tests
-        continue-on-error: true
         shell: bash
         run: |
           set +e
           npm test > test-output.log 2>&1
           status=$?
-          echo "TEST_EXIT_CODE=$status" >> "$GITHUB_STEP_SUMMARY"
-          echo "--- FAILING TESTS ---" >> "$GITHUB_STEP_SUMMARY"
-          grep '^not ok ' test-output.log || true
-          grep '^not ok ' test-output.log > failing-tests.txt || true
-          echo "--- FAILURE DETAILS ---" >> "$GITHUB_STEP_SUMMARY"
-          awk '/^not ok / {show=1; n=0} show {print; n++} show && n>=20 {show=0}' test-output.log >> "$GITHUB_STEP_SUMMARY"
+          {
+            echo "## GEV full test suite"
+            echo
+            echo "Exit code: $status"
+            echo
+            echo "### Failing tests"
+            if grep '^not ok ' test-output.log; then :; else echo 'None'; fi
+            echo
+            echo "### Failure details"
+            awk '/^not ok / {show=1; n=0} show {print; n++} show && n>=30 {show=0}' test-output.log
+          } >> "$GITHUB_STEP_SUMMARY"
           exit "$status"
 
-      - name: Commit verified fixture repairs and failure evidence
-        if: always()
-        shell: bash
-        run: |
-          set -euo pipefail
-          mkdir -p .ci
-          {
-            echo "Generated from commit $GITHUB_SHA"
-            echo "Run: $GITHUB_RUN_ID"
-            echo
-            if [ -s failing-tests.txt ]; then cat failing-tests.txt; else echo "ALL TESTS PASSED"; fi
-          } > .ci/latest-test-failures.txt
-
-          git config user.name 'github-actions[bot]'
-          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add \
-            src/cockpitMarkup.test.mjs \
-            src/data/aisStreamAdapter.test.mjs \
-            src/data/layerState.test.mjs \
-            src/data/militaryAwareness.test.mjs \
-            src/data/rocketLaunches.test.mjs \
-            src/overlays/worldOverlay.test.mjs \
-            src/voice/gevRealtime.test.mjs \
-            src/voice/gevRealtime.js \
-            .ci/latest-test-failures.txt
-          if git diff --cached --quiet; then
-            echo 'No repository changes to commit.'
-            exit 0
-          fi
-          git commit -m 'fix: restore voice runtime and run tests on Node 24'
-
-          for attempt in 1 2 3; do
-            git fetch origin main
-            if git rebase origin/main; then
-              if git push origin HEAD:main; then
-                exit 0
-              fi
-            else
-              git rebase --abort || true
-            fi
-            sleep $((attempt * 2))
-          done
-          echo 'Unable to push after 3 fetch/rebase attempts.' >&2
-          exit 1
+      - name: Upload test output on failure
+        if: steps.tests.outcome == 'failure'
+        uses: actions/upload-artifact@v4
+        with:
+          name: gev-test-output-${{ github.run_id }}
+          path: test-output.log
+          if-no-files-found: error
+          retention-days: 14
 
       - name: Fail when tests fail
         if: steps.tests.outcome == 'failure'
