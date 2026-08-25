@@ -2,6 +2,7 @@ import fs from 'fs';
 
 const replacements = {
   'src/data/rocketLaunches.js': [
+    ['ROCKET_МИССИЯ_', 'ROCKET_MISSION_'],
     ['паузаAt', 'pausedAt'],
     ['Resume replay', 'Продолжить повтор'],
     ['Pause replay', 'Пауза повтора'],
@@ -66,8 +67,6 @@ const replacements = {
   'src/data/dataCredits.js': [
     ['Weather data by Open-Meteo.com', 'Данные о погоде предоставлены Open-Meteo.com'],
     ['Powered by TfL Open Data', 'Данные предоставлены TfL Open Data'],
-    ['Google News RSS', 'Google News RSS'],
-    ['GDELT Project', 'GDELT Project'],
   ],
   'src/scenes/director.js': [
     ['Shot ${idx + 1}', 'Сцена ${idx + 1}'],
@@ -88,6 +87,9 @@ const replacements = {
   'src/firstRunExperience.js': [
     ['EARTH WATCH', 'НАБЛЮДЕНИЕ ЗА ЗЕМЛЁЙ'],
     ['ACTIVE EVENTS', 'АКТИВНЫЕ СОБЫТИЯ'],
+    [
+      "  const environmentalTitle = root.querySelector('[data-first-run-environmental-title]');\n  if (environmentalTitle) environmentalTitle.textContent = environmentalLabel().title;",
+      "  const environmentalTitle = root.querySelector('[data-first-run-environmental-title]');\n  const environmentalUiTitles = Object.freeze({\n    ENVIRONMENTAL: 'ОКРУЖАЮЩАЯ СРЕДА',\n    EARTH_WATCH: 'НАБЛЮДЕНИЕ ЗА ЗЕМЛЁЙ',\n    ACTIVE_EVENTS: 'АКТИВНЫЕ СОБЫТИЯ',\n  });\n  if (environmentalTitle) {\n    environmentalTitle.textContent = environmentalUiTitles[ENVIRONMENTAL_LABEL_CHOICE] || environmentalLabel().title;\n  }",
   ],
   'src/ui.js': [
     ['enable CCTV to activate', 'включите CCTV для активации'],
