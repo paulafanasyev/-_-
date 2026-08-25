@@ -474,12 +474,12 @@ test('a vessel feed still connecting after the lifecycle settles reads as unknow
     assert.match(vessels?.reason || '', /unavailable/i);
     assert.match(
       runtime.panel()?.innerHTML || '',
-      /AIS vessels<\/strong><b aria-live="polite">\?<\/b>/,
+      /Суда AIS<\/strong><b aria-live="polite">\?<\/b>/,
       'the panel prints ? for the whole settled-but-connecting window',
     );
     assert.doesNotMatch(
       runtime.panel()?.innerHTML || '',
-      /AIS vessels<\/strong><b aria-live="polite">0<\/b>/,
+      /Суда AIS<\/strong><b aria-live="polite">0<\/b>/,
       'the panel must never print an all-clear 0 before the feed has answered once',
     );
   } finally {
@@ -509,7 +509,7 @@ test('a settled vessel feed reporting a real empty viewport recovers to 0', asyn
     assert.equal(vessels?.count, 0, 'an answered empty viewport is a real observation');
     assert.match(
       runtime.panel()?.innerHTML || '',
-      /AIS vessels<\/strong><b aria-live="polite">0<\/b>/,
+      /Суда AIS<\/strong><b aria-live="polite">0<\/b>/,
       'the operator sees the real count once the feed answers',
     );
   } finally {
@@ -2426,7 +2426,7 @@ test('the contacts window reports exactly the counts the panel renders', () => {
     cohorts: [
       { id: 'flights', label: 'Flights', source: 'OpenSky', summary: { relationship: 'nearby', count: 42, reason: 'observed', nearest: [] } },
       { id: 'military', label: 'Military flights', source: 'adsb.lol', summary: { relationship: 'nearby', count: 13, reason: 'observed', nearest: [] } },
-      { id: 'ais-live-vessels', label: 'AIS vessels', source: 'AISStream', summary: { relationship: 'unknown', count: null, reason: 'feed unavailable', nearest: [] } },
+      { id: 'ais-live-vessels', label: 'Суда AIS', source: 'AISStream', summary: { relationship: 'unknown', count: null, reason: 'feed unavailable', nearest: [] } },
     ],
   };
   const snapshot = buildAwarenessContextSnapshot(results, {});

@@ -449,7 +449,7 @@ export class GevRealtimeController {
       this.dc = dataChannel;
       dataChannel.addEventListener('open', () => {
         const detail = this.pushToTalkMode
-          ? (this.pushToTalkKeyHeld ? 'Отпустите пробел для отправки' : 'Hold Space to talk')
+          ? (this.pushToTalkKeyHeld ? 'Отпустите пробел для отправки' : 'Удерживайте пробел для речи')
           : 'Ask or command';
         this.setStatus('listening', detail);
         this.debugLog('data_channel.open', { connection: this.connectionDiagnostics(dataChannel) });
@@ -632,7 +632,7 @@ export class GevRealtimeController {
     delete this.ui.root.dataset.pushToTalk;
     if (!this.pushToTalkMode) return;
     this.setMicrophoneEnabled(false);
-    if (this.status === 'listening') this.setStatus('listening', 'Hold Space to talk');
+    if (this.status === 'listening') this.setStatus('listening', 'Удерживайте пробел для речи');
     else this.updateVoiceButtonLabel();
   }
 
@@ -1441,7 +1441,7 @@ export class GevRealtimeController {
     this.updateVoiceButtonLabel();
     this.ui.status.textContent = STATUS[status] || STATUS.idle;
     const resolvedDetail = status === 'listening' && this.pushToTalkMode
-      ? (this.pushToTalkKeyHeld ? 'Release Space to send' : 'Hold Space to talk')
+      ? (this.pushToTalkKeyHeld ? 'Отпустите пробел для отправки' : 'Удерживайте пробел для речи')
       : detail;
     const primaryDetail = status === 'error'
       ? 'VOICE UNAVAILABLE'
@@ -2509,7 +2509,7 @@ export function resolveVoiceVisualizerSpeaker(currentSpeaker, nextSpeaker, keepC
  */
 export function resolveVoiceControlHint(pushToTalkMode, pushToTalkKeyHeld) {
   return pushToTalkMode && pushToTalkKeyHeld
-    ? 'Release Space to send'
+    ? 'Отпустите пробел для отправки'
     : 'Удерживайте пробел для речи · нажмите микрофон для переключения';
 }
 
