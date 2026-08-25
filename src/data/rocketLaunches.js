@@ -876,8 +876,8 @@ export function normalizeReplaySpeed(value) {
  * @param {number} resumedAt Resume epoch in milliseconds.
  * @returns {number} Shifted start epoch.
  */
-export function replayStartAfterPause(startedAt, паузаAt, resumedAt) {
-  if (![startedAt, паузаAt, resumedAt].every(Number.isFinite)) return startedAt;
+export function replayStartAfterPause(startedAt, pausedAt, resumedAt) {
+  if (![startedAt, pausedAt, resumedAt].every(Number.isFinite)) return startedAt;
   return startedAt + Math.max(0, resumedAt - pausedAt);
 }
 
