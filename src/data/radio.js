@@ -808,10 +808,10 @@ export function buildRadioCategories(stations) {
     { id: 'all', label: 'All' },
     { id: 'news', label: 'News' },
     { id: 'talk', label: 'Talk' },
-    { id: 'weather', label: 'Weather / Emergency' },
-    { id: 'public-safety', label: 'Public Safety' },
-    { id: 'aviation-marine', label: 'Aviation / Marine' },
-    { id: 'traffic-transit', label: 'Traffic / Transit' },
+    { id: 'weather', label: 'Погода / чрезвычайные ситуации' },
+    { id: 'public-safety', label: 'Общественная безопасность' },
+    { id: 'aviation-marine', label: 'Авиация / морской транспорт' },
+    { id: 'traffic-transit', label: 'Дорожное движение / транспорт' },
     { id: 'music', label: 'Music' },
   ];
 

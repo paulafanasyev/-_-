@@ -86,7 +86,7 @@ export class IntelHUD {
     this._lastSummarySignature = '';
     this._summaryRevision = 0;
     // One-shot guards so the very first summary lands immediately instead of
-    // waiting for the 15s interval tick: B) swap the "Awaiting telemetry..."
+    // waiting for the 15s interval tick: B) swap the "Ожидание телеметрии..."
     // placeholder for the deterministic line as soon as metrics exist, then
     // A) kick a real AI summary once the intro fly-to settles.
     this._firstMetricsShown = false;
@@ -116,7 +116,7 @@ export class IntelHUD {
         this._setSummaryText(this._composeSummary(), false);
       }
       // First settled view: request the AI summary now rather than waiting for
-      // the periodic tick (saves up to ~15s of "Awaiting telemetry...").
+      // the periodic tick (saves up to ~15s of "Ожидание телеметрии...").
       if (!this._firstSummaryKicked && this._visible && this._latestMetrics) {
         this._firstSummaryKicked = true;
         void this._updateSummary(true, true);
@@ -145,7 +145,7 @@ export class IntelHUD {
 
     this._el.innerHTML = `
       <div class="hud-top-bar">
-        <span class="hud-top-bar-left">TOP SECRET // SI-TK // NOFORN</span>
+        <span class="hud-top-bar-left">СОВЕРШЕННО СЕКРЕТНО // SI-TK // NOFORN</span>
         <span class="hud-top-bar-center">${this._missionId}</span>
         <span class="hud-top-bar-right">PAGE 1/1</span>
       </div>
@@ -153,12 +153,12 @@ export class IntelHUD {
       <div class="hud-corner hud-top-left">
         <div class="hud-bracket">┌</div>
         <div class="hud-content">
-          <div class="hud-classification">TOP SECRET // SI-TK // NOFORN</div>
+          <div class="hud-classification">СОВЕРШЕННО СЕКРЕТНО // SI-TK // NOFORN</div>
           <div class="hud-system">${this._missionId}  ${this._sensorId}</div>
           <div class="hud-mode" id="hud-mode">NORMAL</div>
           <div class="hud-summary-wrap">
             <div class="hud-summary-label">SUMMARY</div>
-            <div class="hud-summary" id="hud-summary">Awaiting telemetry...</div>
+            <div class="hud-summary" id="hud-summary">Ожидание телеметрии...</div>
           </div>
         </div>
       </div>
@@ -181,7 +181,7 @@ export class IntelHUD {
 
       <div class="hud-corner hud-bottom-right">
         <div class="hud-content" style="text-align:right">
-          <div id="hud-gsd">GSD: --m  NIIRS: --</div>
+          <div id="hud-gsd">GSD: -- м  NIIRS: --</div>
           <div id="hud-alt">ALT: --m   SUN: --° EL</div>
           <div id="hud-ais-vessel" class="hud-ais-vessel">AIS: --</div>
         </div>
@@ -317,7 +317,7 @@ export class IntelHUD {
     if (llEl) llEl.textContent = `${latDMS} ${lonDMS}`;
     const bottomEl = document.getElementById('hud-bottom-line');
     if (bottomEl) {
-      bottomEl.textContent = `MGRS: ${mgrsLabel}  LAT: ${latDMS}  LON: ${lonDMS}`;
+      bottomEl.textContent = `MGRS: ${mgrsLabel}  ШИР: ${latDMS}  ДОЛ: ${lonDMS}`;
     }
 
     // GSD (Ground Sample Distance): approximate resolution in meters per pixel
@@ -328,7 +328,7 @@ export class IntelHUD {
     const gsdInches = gsd * 39.37;
     const niirs = Math.max(0, Math.min(9, 10.25 - 3.32 * Math.log10(gsdInches)));
     const gsdEl = document.getElementById('hud-gsd');
-    if (gsdEl) gsdEl.textContent = `GSD: ${gsd.toFixed(2)}m  NIIRS: ${niirs.toFixed(1)}`;
+    if (gsdEl) gsdEl.textContent = `GSD: ${gsd.toFixed(2)} м  NIIRS: ${niirs.toFixed(1)}`;
 
     // Altitude — reported as height above MEAN SEA LEVEL. `altM` is the raw
     // ellipsoidal camera height, which reads far below zero wherever the geoid
@@ -348,7 +348,7 @@ export class IntelHUD {
       const h = String(now.getUTCHours()).padStart(2, '0');
       const m = String(now.getUTCMinutes()).padStart(2, '0');
       const s = String(now.getUTCSeconds()).padStart(2, '0');
-      collEl.textContent = `COLL: ${h}:${m}:${s}Z`;
+      collEl.textContent = `СБЛИЖЕНИЕ: ${h}:${m}:${s}Z`;
     }
 
     // Off-nadir angle (ONA): camera pitch of -90 deg is nadir (straight down),
@@ -370,7 +370,7 @@ export class IntelHUD {
       ona,
     };
 
-    // First time we have real telemetry: replace the "Awaiting telemetry..."
+    // First time we have real telemetry: replace the "Ожидание телеметрии..."
     // placeholder with the deterministic summary line instantly (no network),
     // so there's always meaningful context on screen. The AI summary upgrades
     // this within a second via the moveEnd kick / periodic refresh.
@@ -563,7 +563,7 @@ export class IntelHUD {
    */
   _composeSummary() {
     const m = this._latestMetrics;
-    if (!m) return 'Awaiting telemetry...';
+    if (!m) return 'Ожидание телеметрии...';
 
     const modeEl = document.getElementById('hud-mode');
     const modeLabel = modeEl?.textContent || 'NORMAL';

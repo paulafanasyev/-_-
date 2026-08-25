@@ -11,7 +11,7 @@ export const MAP_STACKS = [
   },
   {
     id: 'bing-aerial',
-    label: 'Bing Aerial',
+    label: 'Bing — спутниковый вид',
     shortLabel: 'Aerial',
     kind: 'ion',
     style: Cesium.IonWorldImageryStyle.AERIAL,
@@ -19,7 +19,7 @@ export const MAP_STACKS = [
   },
   {
     id: 'bing-labels',
-    label: 'Bing Labels',
+    label: 'Bing — подписи',
     shortLabel: 'Labels',
     kind: 'ion',
     style: Cesium.IonWorldImageryStyle.AERIAL_WITH_LABELS,

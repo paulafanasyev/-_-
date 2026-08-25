@@ -1,0 +1,2006 @@
+[
+  {
+    "file": "src/annotations/annotationEngine.js",
+    "line": 630,
+    "kind": "html-text",
+    "value": "a && b && Math.abs(a.lon - b.lon)"
+  },
+  {
+    "file": "src/annotations/annotationEngine.js",
+    "line": 889,
+    "kind": "label",
+    "value": "Palace of Fine Arts"
+  },
+  {
+    "file": "src/annotations/annotationEngine.js",
+    "line": 890,
+    "kind": "label",
+    "value": "The Presidio (former Army base)"
+  },
+  {
+    "file": "src/annotations/annotationEngine.js",
+    "line": 891,
+    "kind": "label",
+    "value": "ILM / Lucasfilm"
+  },
+  {
+    "file": "src/annotations/annotationEngine.js",
+    "line": 892,
+    "kind": "label",
+    "value": "next to the Marina"
+  },
+  {
+    "file": "src/annotations/annotationEngine.js",
+    "line": 905,
+    "kind": "label",
+    "value": "Palace of Fine Arts"
+  },
+  {
+    "file": "src/annotations/annotationEngine.js",
+    "line": 907,
+    "kind": "label",
+    "value": "next to the Marina"
+  },
+  {
+    "file": "src/annotations/annotationEngine.js",
+    "line": 911,
+    "kind": "label",
+    "value": "The Presidio — a former Army base"
+  },
+  {
+    "file": "src/annotations/annotationEngine.js",
+    "line": 913,
+    "kind": "label",
+    "value": "ILM / Lucasfilm"
+  },
+  {
+    "file": "src/annotations/annotationEngine.js",
+    "line": 915,
+    "kind": "label",
+    "value": "Crissy Field shoreline"
+  },
+  {
+    "file": "src/annotations/annotationResolver.js",
+    "line": 1103,
+    "kind": "html-text",
+    "value": "approximateDistanceM(a[1], a[0], b[1], b[0])"
+  },
+  {
+    "file": "src/annotations/annotationResolver.js",
+    "line": 1622,
+    "kind": "html-text",
+    "value": "endpointGapM(c)"
+  },
+  {
+    "file": "src/annotations/screenAnnotationRenderer.js",
+    "line": 283,
+    "kind": "html-text",
+    "value": "2 * w || win.y"
+  },
+  {
+    "file": "src/cameraVerbs.js",
+    "line": 951,
+    "kind": "html-text",
+    "value": "PITCH_MAX || next"
+  },
+  {
+    "file": "src/cameraVerbs.js",
+    "line": 1088,
+    "kind": "html-text",
+    "value": "1 zooms out (radius grows),"
+  },
+  {
+    "file": "src/celestialRing.js",
+    "line": 461,
+    "kind": "html-text",
+    "value": "0) || !cartographic || !Number.isFinite(fovy) || fovy"
+  },
+  {
+    "file": "src/cockpitMath.js",
+    "line": 309,
+    "kind": "html-text",
+    "value": "= laneRight || rect.bottom"
+  },
+  {
+    "file": "src/contextModePolicy.js",
+    "line": 216,
+    "kind": "html-text",
+    "value": ", userRemoved?: Set"
+  },
+  {
+    "file": "src/contextModePolicy.js",
+    "line": 320,
+    "kind": "html-text",
+    "value": ", userAdded?: Iterable"
+  },
+  {
+    "file": "src/contextModePolicy.js",
+    "line": 320,
+    "kind": "html-text",
+    "value": ", userRemoved?: Iterable"
+  },
+  {
+    "file": "src/data/aisLiveVessels.js",
+    "line": 211,
+    "kind": "html-text",
+    "value": ", acceptedRows: Array"
+  },
+  {
+    "file": "src/data/aisLiveVessels.js",
+    "line": 1802,
+    "kind": "textContent",
+    "value": "AIS: --"
+  },
+  {
+    "file": "src/data/aisStreamAdapter.js",
+    "line": 75,
+    "kind": "message",
+    "value": "AISStream rejected the API key (HTTP ${status})"
+  },
+  {
+    "file": "src/data/aisStreamAdapter.js",
+    "line": 80,
+    "kind": "message",
+    "value": "AISStream rate-limited this key (HTTP 429)"
+  },
+  {
+    "file": "src/data/aisStreamAdapter.js",
+    "line": 85,
+    "kind": "message",
+    "value": "AISStream upgrade failed (HTTP ${status})"
+  },
+  {
+    "file": "src/data/aisStreamAdapter.js",
+    "line": 356,
+    "kind": "message",
+    "value": "socket factory returned nothing"
+  },
+  {
+    "file": "src/data/aisStreamAdapter.js",
+    "line": 370,
+    "kind": "message",
+    "value": "AIS socket does not expose ws emitter semantics"
+  },
+  {
+    "file": "src/data/cctv.js",
+    "line": 148,
+    "kind": "html-text",
+    "value": ", source: 'manual', savedAt:"
+  },
+  {
+    "file": "src/data/cctv.js",
+    "line": 230,
+    "kind": "label",
+    "value": "Midtown West @ 34th"
+  },
+  {
+    "file": "src/data/cctv.js",
+    "line": 231,
+    "kind": "label",
+    "value": "WTC North Plaza"
+  },
+  {
+    "file": "src/data/cctv.js",
+    "line": 232,
+    "kind": "label",
+    "value": "Times Sq Northeast"
+  },
+  {
+    "file": "src/data/cctv.js",
+    "line": 234,
+    "kind": "label",
+    "value": "Market & 5th"
+  },
+  {
+    "file": "src/data/cctv.js",
+    "line": 235,
+    "kind": "label",
+    "value": "SF Financial Core"
+  },
+  {
+    "file": "src/data/cctv.js",
+    "line": 237,
+    "kind": "label",
+    "value": "Shibuya Crossing"
+  },
+  {
+    "file": "src/data/cctv.js",
+    "line": 238,
+    "kind": "label",
+    "value": "Ginza Core"
+  },
+  {
+    "file": "src/data/cctv.js",
+    "line": 239,
+    "kind": "label",
+    "value": "Asakusa North Gate"
+  },
+  {
+    "file": "src/data/cctv.js",
+    "line": 241,
+    "kind": "label",
+    "value": "City Cluster A1"
+  },
+  {
+    "file": "src/data/cctv.js",
+    "line": 242,
+    "kind": "label",
+    "value": "Soho Core"
+  },
+  {
+    "file": "src/data/cctv.js",
+    "line": 244,
+    "kind": "label",
+    "value": "Rue de Rivoli"
+  },
+  {
+    "file": "src/data/cctv.js",
+    "line": 245,
+    "kind": "label",
+    "value": "Champs-Élysées North"
+  },
+  {
+    "file": "src/data/cctv.js",
+    "line": 247,
+    "kind": "label",
+    "value": "National Mall Center"
+  },
+  {
+    "file": "src/data/cctv.js",
+    "line": 248,
+    "kind": "label",
+    "value": "Pentagon South"
+  },
+  {
+    "file": "src/data/cctv.js",
+    "line": 250,
+    "kind": "label",
+    "value": "DIFC Loop"
+  },
+  {
+    "file": "src/data/cctv.js",
+    "line": 251,
+    "kind": "label",
+    "value": "Downtown East"
+  },
+  {
+    "file": "src/data/cctv.js",
+    "line": 253,
+    "kind": "label",
+    "value": "Congress Southbound"
+  },
+  {
+    "file": "src/data/cctv.js",
+    "line": 254,
+    "kind": "label",
+    "value": "Downtown West"
+  },
+  {
+    "file": "src/data/cctv.js",
+    "line": 571,
+    "kind": "html-text",
+    "value": "element rather than an"
+  },
+  {
+    "file": "src/data/cctv.js",
+    "line": 2790,
+    "kind": "html-text",
+    "value": "= -marginX && screen.x"
+  },
+  {
+    "file": "src/data/cctv.js",
+    "line": 2791,
+    "kind": "html-text",
+    "value": "= -marginY && screen.y"
+  },
+  {
+    "file": "src/data/cctvLod.js",
+    "line": 245,
+    "kind": "html-text",
+    "value": "|Set"
+  },
+  {
+    "file": "src/data/dataCredits.js",
+    "line": 62,
+    "kind": "html-text",
+    "value": "Launch Library 2 — The Space Devs"
+  },
+  {
+    "file": "src/data/dataCredits.js",
+    "line": 73,
+    "kind": "html-text",
+    "value": "© OpenStreetMap contributors"
+  },
+  {
+    "file": "src/data/dataCredits.js",
+    "line": 80,
+    "kind": "html-text",
+    "value": "© OpenStreetMap contributors"
+  },
+  {
+    "file": "src/data/dataCredits.js",
+    "line": 87,
+    "kind": "html-text",
+    "value": "© OpenStreetMap contributors"
+  },
+  {
+    "file": "src/data/dataCredits.js",
+    "line": 94,
+    "kind": "html-text",
+    "value": "Weather data by Open-Meteo.com"
+  },
+  {
+    "file": "src/data/dataCredits.js",
+    "line": 101,
+    "kind": "html-text",
+    "value": "Google News RSS"
+  },
+  {
+    "file": "src/data/dataCredits.js",
+    "line": 108,
+    "kind": "html-text",
+    "value": "GDELT Project"
+  },
+  {
+    "file": "src/data/dataCredits.js",
+    "line": 127,
+    "kind": "html-text",
+    "value": "Powered by TfL Open Data"
+  },
+  {
+    "file": "src/data/dataCredits.js",
+    "line": 138,
+    "kind": "html-text",
+    "value": "Radio Browser"
+  },
+  {
+    "file": "src/data/dataCredits.js",
+    "line": 145,
+    "kind": "html-text",
+    "value": "Re:Earth Terrain"
+  },
+  {
+    "file": "src/data/dataCredits.js",
+    "line": 153,
+    "kind": "html-text",
+    "value": "© OpenStreetMap contributors"
+  },
+  {
+    "file": "src/data/dataCredits.js",
+    "line": 160,
+    "kind": "html-text",
+    "value": "© OpenStreetMap contributors"
+  },
+  {
+    "file": "src/data/dataCredits.js",
+    "line": 201,
+    "kind": "html-text",
+    "value": "Natural Earth"
+  },
+  {
+    "file": "src/data/detection.js",
+    "line": 1225,
+    "kind": "html-text",
+    "value": "width + halfW || sy"
+  },
+  {
+    "file": "src/data/detectionRenderDemand.js",
+    "line": 124,
+    "kind": "html-text",
+    "value": "= 0 && age"
+  },
+  {
+    "file": "src/data/firmsCsv.js",
+    "line": 126,
+    "kind": "html-text",
+    "value": "12 || day"
+  },
+  {
+    "file": "src/data/firmsCsv.js",
+    "line": 151,
+    "kind": "html-text",
+    "value": "= oldest && ms"
+  },
+  {
+    "file": "src/data/firmsHeatmap.js",
+    "line": 341,
+    "kind": "label",
+    "value": "Fire · FRP ${formatFrp(strongest.frp)} MW"
+  },
+  {
+    "file": "src/data/firmsHeatmap.js",
+    "line": 990,
+    "kind": "label",
+    "value": "Fire · FRP ${formatFrp(fire.frp)} MW"
+  },
+  {
+    "file": "src/data/firmsHeatmap.js",
+    "line": 1138,
+    "kind": "html-text",
+    "value": "lastWidth * 1.3 || width"
+  },
+  {
+    "file": "src/data/firmsHeatmap.js",
+    "line": 1139,
+    "kind": "html-text",
+    "value": "lastHeight * 1.3 || height"
+  },
+  {
+    "file": "src/data/firmsHeatmap.js",
+    "line": 1242,
+    "kind": "html-text",
+    "value": "= bounds.west || lon"
+  },
+  {
+    "file": "src/data/firmsHeatmap.js",
+    "line": 1243,
+    "kind": "html-text",
+    "value": "= bounds.west && lon"
+  },
+  {
+    "file": "src/data/firmsHeatmap.js",
+    "line": 1251,
+    "kind": "html-text",
+    "value": "= bounds.west || west"
+  },
+  {
+    "file": "src/data/firmsHeatmap.js",
+    "line": 1252,
+    "kind": "html-text",
+    "value": "= bounds.west && west"
+  },
+  {
+    "file": "src/data/flights.js",
+    "line": 2701,
+    "kind": "html-text",
+    "value": "= cap) break; if (inF && d2"
+  },
+  {
+    "file": "src/data/flights.js",
+    "line": 2707,
+    "kind": "html-text",
+    "value": "= cap) break; if (!inF && d2"
+  },
+  {
+    "file": "src/data/flights.js",
+    "line": 3268,
+    "kind": "text",
+    "value": "CS · FL · kts"
+  },
+  {
+    "file": "src/data/layerState.js",
+    "line": 263,
+    "kind": "label",
+    "value": "military flight"
+  },
+  {
+    "file": "src/data/manager.js",
+    "line": 1969,
+    "kind": "html-text",
+    "value": "(void|Promise"
+  },
+  {
+    "file": "src/data/manager.js",
+    "line": 2104,
+    "kind": "html-text",
+    "value": ", legend?: Array"
+  },
+  {
+    "file": "src/data/manager.js",
+    "line": 2173,
+    "kind": "textContent",
+    "value": "${item.label} ${this._formatCount(item.count)}"
+  },
+  {
+    "file": "src/data/militaryAwareness.js",
+    "line": 494,
+    "kind": "label",
+    "value": "Military flights"
+  },
+  {
+    "file": "src/data/militaryAwareness.js",
+    "line": 495,
+    "kind": "label",
+    "value": "AIS vessels"
+  },
+  {
+    "file": "src/data/militaryAwareness.js",
+    "line": 498,
+    "kind": "label",
+    "value": "Mapped installations"
+  },
+  {
+    "file": "src/data/militaryAwareness.js",
+    "line": 518,
+    "kind": "aria-label",
+    "value": "Focus ${escapeHtml(accessibleLabel)}"
+  },
+  {
+    "file": "src/data/militaryAwareness.js",
+    "line": 956,
+    "kind": "html-text",
+    "value": "= 0 && index"
+  },
+  {
+    "file": "src/data/militaryAwareness.js",
+    "line": 968,
+    "kind": "aria-label",
+    "value": "Global Context navigation"
+  },
+  {
+    "file": "src/data/militaryAwareness.js",
+    "line": 969,
+    "kind": "title",
+    "value": "Previous — prior visited contact in the 250 km window"
+  },
+  {
+    "file": "src/data/militaryAwareness.js",
+    "line": 971,
+    "kind": "title",
+    "value": "Next — nearest unvisited contact in the 250 km window"
+  },
+  {
+    "file": "src/data/militaryAwareness.js",
+    "line": 994,
+    "kind": "html-text",
+    "value": "Open-source mapped/observed context. Missing broadcasts, unloaded map areas, or unmapped sites are not evidence of absence."
+  },
+  {
+    "file": "src/data/militaryAwareness.js",
+    "line": 1116,
+    "kind": "textContent",
+    "value": "HDG ${String(headingDeg).padStart(3, '0')}°"
+  },
+  {
+    "file": "src/data/militaryAwareness.js",
+    "line": 1172,
+    "kind": "textContent",
+    "value": "${label} · ${formatAwarenessDistance(item.distanceM)} ${bearingText}${courseText}"
+  },
+  {
+    "file": "src/data/militaryFlights.js",
+    "line": 1874,
+    "kind": "html-text",
+    "value": "= cap) break; if (inF && d2"
+  },
+  {
+    "file": "src/data/militaryFlights.js",
+    "line": 1876,
+    "kind": "html-text",
+    "value": "= cap) break; if (!inF && d2"
+  },
+  {
+    "file": "src/data/militaryInstallationData.js",
+    "line": 47,
+    "kind": "html-text",
+    "value": "= -90 && value"
+  },
+  {
+    "file": "src/data/militaryInstallationData.js",
+    "line": 51,
+    "kind": "html-text",
+    "value": "= -180 && value"
+  },
+  {
+    "file": "src/data/militaryInstallations.js",
+    "line": 153,
+    "kind": "html-text",
+    "value": "= box.south && latitude"
+  },
+  {
+    "file": "src/data/militaryInstallations.js",
+    "line": 154,
+    "kind": "html-text",
+    "value": "= box.west && longitude"
+  },
+  {
+    "file": "src/data/militaryInstallations.js",
+    "line": 165,
+    "kind": "html-text",
+    "value": "= box.south && minLat"
+  },
+  {
+    "file": "src/data/militaryInstallations.js",
+    "line": 166,
+    "kind": "html-text",
+    "value": "= box.west && minLon"
+  },
+  {
+    "file": "src/data/neighborhoodPolygons.js",
+    "line": 136,
+    "kind": "html-text",
+    "value": "= c.bbox[1] && lon"
+  },
+  {
+    "file": "src/data/radio.js",
+    "line": 287,
+    "kind": "html-text",
+    "value": "= -90 && station.lat"
+  },
+  {
+    "file": "src/data/radio.js",
+    "line": 288,
+    "kind": "html-text",
+    "value": "= -180 && station.lon"
+  },
+  {
+    "file": "src/data/radio.js",
+    "line": 301,
+    "kind": "html-text",
+    "value": "= 8 && station.bitrate"
+  },
+  {
+    "file": "src/data/radio.js",
+    "line": 370,
+    "kind": "html-text",
+    "value": "= 64 && value"
+  },
+  {
+    "file": "src/data/radio.js",
+    "line": 382,
+    "kind": "html-text",
+    "value": "= 87.5 && value"
+  },
+  {
+    "file": "src/data/radio.js",
+    "line": 811,
+    "kind": "label",
+    "value": "Weather / Emergency"
+  },
+  {
+    "file": "src/data/radio.js",
+    "line": 812,
+    "kind": "label",
+    "value": "Public Safety"
+  },
+  {
+    "file": "src/data/radio.js",
+    "line": 813,
+    "kind": "label",
+    "value": "Aviation / Marine"
+  },
+  {
+    "file": "src/data/radio.js",
+    "line": 814,
+    "kind": "label",
+    "value": "Traffic / Transit"
+  },
+  {
+    "file": "src/data/regionalBrief.js",
+    "line": 101,
+    "kind": "html-text",
+    "value": "= 51 && value"
+  },
+  {
+    "file": "src/data/regionalBrief.js",
+    "line": 102,
+    "kind": "html-text",
+    "value": "= 61 && value"
+  },
+  {
+    "file": "src/data/regionalBrief.js",
+    "line": 103,
+    "kind": "html-text",
+    "value": "= 71 && value"
+  },
+  {
+    "file": "src/data/regionalBrief.js",
+    "line": 104,
+    "kind": "html-text",
+    "value": "= 80 && value"
+  },
+  {
+    "file": "src/data/regionalBrief.js",
+    "line": 105,
+    "kind": "html-text",
+    "value": "= 85 && value"
+  },
+  {
+    "file": "src/data/retryableLoad.js",
+    "line": 30,
+    "kind": "html-text",
+    "value": "(Promise"
+  },
+  {
+    "file": "src/data/rocketLaunches.js",
+    "line": 464,
+    "kind": "html-text",
+    "value": "0) || !cartographic || !Number.isFinite(fovy) || fovy"
+  },
+  {
+    "file": "src/data/rocketLaunches.js",
+    "line": 955,
+    "kind": "html-text",
+    "value": "20 && launch.lat"
+  },
+  {
+    "file": "src/data/rocketLaunches.js",
+    "line": 956,
+    "kind": "html-text",
+    "value": "-140 && launch.lon"
+  },
+  {
+    "file": "src/data/rocketLaunches.js",
+    "line": 1338,
+    "kind": "html-text",
+    "value": "2 && Cesium.Cartesian3.distance(first, last)"
+  },
+  {
+    "file": "src/data/rocketLaunches.js",
+    "line": 1828,
+    "kind": "textContent",
+    "value": "REPLAY ASCENT"
+  },
+  {
+    "file": "src/data/rocketLaunches.js",
+    "line": 1831,
+    "kind": "title",
+    "value": "Replay the estimated ascent with a following camera"
+  },
+  {
+    "file": "src/data/rocketLaunches.js",
+    "line": 1866,
+    "kind": "textContent",
+    "value": "${_replaySpeed.toFixed(_replaySpeed % 1 ? 2 : 0)}×"
+  },
+  {
+    "file": "src/data/rocketLaunches.js",
+    "line": 2314,
+    "kind": "textContent",
+    "value": "${index + 1} / ${_launches.length}"
+  },
+  {
+    "file": "src/data/rocketLaunches.js",
+    "line": 2326,
+    "kind": "textContent",
+    "value": "${_launches.length} / 30D"
+  },
+  {
+    "file": "src/data/rocketLaunches.js",
+    "line": 2330,
+    "kind": "html-text",
+    "value": "NO MISSIONS AVAILABLE IN THE CURRENT 30-DAY WINDOW"
+  },
+  {
+    "file": "src/data/rocketLaunches.js",
+    "line": 2338,
+    "kind": "aria-label",
+    "value": "Select ${escapeMissionText(label)}"
+  },
+  {
+    "file": "src/data/rocketLaunches.js",
+    "line": 2529,
+    "kind": "html-text",
+    "value": "ASCENT PATH ·"
+  },
+  {
+    "file": "src/data/rocketLaunches.js",
+    "line": 2529,
+    "kind": "html-text",
+    "value": "CURRENT DISTANCE FROM EARTH ·"
+  },
+  {
+    "file": "src/data/rocketLaunches.js",
+    "line": 2529,
+    "kind": "aria-label",
+    "value": "Deselect mission"
+  },
+  {
+    "file": "src/data/rocketLaunches.js",
+    "line": 2529,
+    "kind": "html-text",
+    "value": "FINAL POSITION"
+  },
+  {
+    "file": "src/data/rocketLaunches.js",
+    "line": 2529,
+    "kind": "html-text",
+    "value": "LAUNCH SITE ·"
+  },
+  {
+    "file": "src/data/rocketLaunches.js",
+    "line": 2529,
+    "kind": "html-text",
+    "value": "LAUNCH TIME ·"
+  },
+  {
+    "file": "src/data/rocketLaunches.js",
+    "line": 2529,
+    "kind": "title",
+    "value": "Next mission"
+  },
+  {
+    "file": "src/data/rocketLaunches.js",
+    "line": 2529,
+    "kind": "html-text",
+    "value": "ORBIT ·"
+  },
+  {
+    "file": "src/data/rocketLaunches.js",
+    "line": 2529,
+    "kind": "title",
+    "value": "Previous mission"
+  },
+  {
+    "file": "src/data/rocketLaunches.js",
+    "line": 2529,
+    "kind": "html-text",
+    "value": "REPLAY ASCENT"
+  },
+  {
+    "file": "src/data/rocketLaunches.js",
+    "line": 2529,
+    "kind": "html-text",
+    "value": "REPLAY SPEED"
+  },
+  {
+    "file": "src/data/rocketLaunches.js",
+    "line": 2529,
+    "kind": "aria-label",
+    "value": "Replay speed multiplier"
+  },
+  {
+    "file": "src/data/rocketLaunches.js",
+    "line": 2529,
+    "kind": "html-text",
+    "value": "SATELLITE SPEED ·"
+  },
+  {
+    "file": "src/data/rocketLaunches.js",
+    "line": 2529,
+    "kind": "html-text",
+    "value": "SELECTED SPACE MISSION"
+  },
+  {
+    "file": "src/data/rocketLaunches.js",
+    "line": 2529,
+    "kind": "html-text",
+    "value": "SHOW ALL / DESELECT"
+  },
+  {
+    "file": "src/data/rocketLaunches.js",
+    "line": 2529,
+    "kind": "title",
+    "value": "Show all missions"
+  },
+  {
+    "file": "src/data/rocketLaunches.js",
+    "line": 2529,
+    "kind": "html-text",
+    "value": "STAGE / RE-ENTRY / RECOVERY"
+  },
+  {
+    "file": "src/data/rocketLaunches.js",
+    "line": 2529,
+    "kind": "html-text",
+    "value": "STATUS ·"
+  },
+  {
+    "file": "src/data/rocketLaunches.js",
+    "line": 2533,
+    "kind": "aria-label",
+    "value": "Pause replay"
+  },
+  {
+    "file": "src/data/rocketLaunches.js",
+    "line": 2533,
+    "kind": "title",
+    "value": "Pause replay"
+  },
+  {
+    "file": "src/data/rocketLaunches.js",
+    "line": 2534,
+    "kind": "aria-label",
+    "value": "Cancel replay"
+  },
+  {
+    "file": "src/data/rocketLaunches.js",
+    "line": 2534,
+    "kind": "title",
+    "value": "Cancel replay"
+  },
+  {
+    "file": "src/data/rocketLaunches.js",
+    "line": 2680,
+    "kind": "title",
+    "value": "T−${String(state.countdownSeconds).padStart(2, '0')} · ${mission}"
+  },
+  {
+    "file": "src/data/rocketLaunches.js",
+    "line": 2688,
+    "kind": "title",
+    "value": "STAGE RE-ENTRY / RECOVERY · ${mission}"
+  },
+  {
+    "file": "src/data/rocketLaunches.js",
+    "line": 2691,
+    "kind": "title",
+    "value": "ORBIT REPLAY · ${mission}"
+  },
+  {
+    "file": "src/data/rocketLaunches.js",
+    "line": 2694,
+    "kind": "title",
+    "value": "PAUSED · ${title}"
+  },
+  {
+    "file": "src/data/rocketLaunches.js",
+    "line": 2819,
+    "kind": "html-text",
+    "value": "= cutoff && date"
+  },
+  {
+    "file": "src/data/rocketLaunches.js",
+    "line": 3042,
+    "kind": "text",
+    "value": "STAGE RE-ENTRY"
+  },
+  {
+    "file": "src/data/rocketLaunches.js",
+    "line": 3146,
+    "kind": "text",
+    "value": "${name} ${formatMissionEventTime(liveTime)}"
+  },
+  {
+    "file": "src/data/routePlausible.js",
+    "line": 64,
+    "kind": "html-text",
+    "value": "greatCircleKm(latDeg, lonDeg, pt.lat, pt.lon)"
+  },
+  {
+    "file": "src/data/satellites.js",
+    "line": 2136,
+    "kind": "html-text",
+    "value": ", legend: Array"
+  },
+  {
+    "file": "src/data/satellites.js",
+    "line": 2148,
+    "kind": "title",
+    "value": "Add the full Starlink broadband shell (thousands of extra points)"
+  },
+  {
+    "file": "src/data/satellites.js",
+    "line": 2149,
+    "kind": "title",
+    "value": "Loading the Starlink shell…"
+  },
+  {
+    "file": "src/data/satellites.js",
+    "line": 2150,
+    "kind": "title",
+    "value": "Starlink ${_denseError || 'load failed'} — click to retry"
+  },
+  {
+    "file": "src/data/satellites.js",
+    "line": 2151,
+    "kind": "title",
+    "value": "Showing the full Starlink shell — click for the core catalog only"
+  },
+  {
+    "file": "src/data/scenePick.js",
+    "line": 47,
+    "kind": "html-text",
+    "value": "= MIN_PICK_MAGNITUDE_M && magnitude"
+  },
+  {
+    "file": "src/data/trafficQueue.js",
+    "line": 86,
+    "kind": "html-text",
+    "value": "0 && remaining"
+  },
+  {
+    "file": "src/firstRunExperience.js",
+    "line": 475,
+    "kind": "textContent",
+    "value": "Could not open that mission${detail}. Retry or explore manually."
+  },
+  {
+    "file": "src/firstRunExperience.js",
+    "line": 491,
+    "kind": "textContent",
+    "value": "This browser is blocking storage, so that could not be saved."
+  },
+  {
+    "file": "src/hud.js",
+    "line": 148,
+    "kind": "html-text",
+    "value": "TOP SECRET // SI-TK // NOFORN"
+  },
+  {
+    "file": "src/hud.js",
+    "line": 150,
+    "kind": "html-text",
+    "value": "PAGE 1/1"
+  },
+  {
+    "file": "src/hud.js",
+    "line": 156,
+    "kind": "html-text",
+    "value": "TOP SECRET // SI-TK // NOFORN"
+  },
+  {
+    "file": "src/hud.js",
+    "line": 161,
+    "kind": "html-text",
+    "value": "Awaiting telemetry..."
+  },
+  {
+    "file": "src/hud.js",
+    "line": 177,
+    "kind": "html-text",
+    "value": "MGRS: ---"
+  },
+  {
+    "file": "src/hud.js",
+    "line": 184,
+    "kind": "html-text",
+    "value": "GSD: --m NIIRS: --"
+  },
+  {
+    "file": "src/hud.js",
+    "line": 185,
+    "kind": "html-text",
+    "value": "ALT: --m SUN: --° EL"
+  },
+  {
+    "file": "src/hud.js",
+    "line": 186,
+    "kind": "html-text",
+    "value": "AIS: --"
+  },
+  {
+    "file": "src/hud.js",
+    "line": 192,
+    "kind": "html-text",
+    "value": "COLL: --:--:--Z"
+  },
+  {
+    "file": "src/hud.js",
+    "line": 193,
+    "kind": "html-text",
+    "value": "ONA: --°"
+  },
+  {
+    "file": "src/hud.js",
+    "line": 197,
+    "kind": "html-text",
+    "value": "BAND: PAN"
+  },
+  {
+    "file": "src/hud.js",
+    "line": 198,
+    "kind": "html-text",
+    "value": "BITS: 11"
+  },
+  {
+    "file": "src/hud.js",
+    "line": 199,
+    "kind": "html-text",
+    "value": "LVL: 1A"
+  },
+  {
+    "file": "src/hud.js",
+    "line": 203,
+    "kind": "html-text",
+    "value": "LAT: -- LON: -- MGRS: ---"
+  },
+  {
+    "file": "src/hud.js",
+    "line": 309,
+    "kind": "textContent",
+    "value": "MGRS: ${formatted}"
+  },
+  {
+    "file": "src/hud.js",
+    "line": 312,
+    "kind": "textContent",
+    "value": "MGRS: ---"
+  },
+  {
+    "file": "src/hud.js",
+    "line": 317,
+    "kind": "textContent",
+    "value": "${latDMS} ${lonDMS}"
+  },
+  {
+    "file": "src/hud.js",
+    "line": 320,
+    "kind": "textContent",
+    "value": "MGRS: ${mgrsLabel} LAT: ${latDMS} LON: ${lonDMS}"
+  },
+  {
+    "file": "src/hud.js",
+    "line": 331,
+    "kind": "textContent",
+    "value": "GSD: ${gsd.toFixed(2)}m NIIRS: ${niirs.toFixed(1)}"
+  },
+  {
+    "file": "src/hud.js",
+    "line": 342,
+    "kind": "textContent",
+    "value": "ALT: ${Math.round(altMslM)}m SUN: ${sunEl.toFixed(1)}° EL"
+  },
+  {
+    "file": "src/hud.js",
+    "line": 351,
+    "kind": "textContent",
+    "value": "COLL: ${h}:${m}:${s}Z"
+  },
+  {
+    "file": "src/hud.js",
+    "line": 359,
+    "kind": "textContent",
+    "value": "ONA: ${ona.toFixed(1)}°"
+  },
+  {
+    "file": "src/hud.js",
+    "line": 487,
+    "kind": "html-text",
+    "value": "= -170 && lon"
+  },
+  {
+    "file": "src/hud.js",
+    "line": 487,
+    "kind": "html-text",
+    "value": "= 5 && lat"
+  },
+  {
+    "file": "src/hud.js",
+    "line": 488,
+    "kind": "html-text",
+    "value": "= -60 && lat"
+  },
+  {
+    "file": "src/hud.js",
+    "line": 488,
+    "kind": "html-text",
+    "value": "= -90 && lon"
+  },
+  {
+    "file": "src/hud.js",
+    "line": 489,
+    "kind": "html-text",
+    "value": "= -25 && lon"
+  },
+  {
+    "file": "src/hud.js",
+    "line": 489,
+    "kind": "html-text",
+    "value": "= 34 && lat"
+  },
+  {
+    "file": "src/hud.js",
+    "line": 490,
+    "kind": "html-text",
+    "value": "= -20 && lon"
+  },
+  {
+    "file": "src/hud.js",
+    "line": 490,
+    "kind": "html-text",
+    "value": "= -35 && lat"
+  },
+  {
+    "file": "src/hud.js",
+    "line": 491,
+    "kind": "html-text",
+    "value": "= 45 && lon"
+  },
+  {
+    "file": "src/hud.js",
+    "line": 491,
+    "kind": "html-text",
+    "value": "= 5 && lat"
+  },
+  {
+    "file": "src/hud.js",
+    "line": 492,
+    "kind": "html-text",
+    "value": "= -50 && lat"
+  },
+  {
+    "file": "src/hud.js",
+    "line": 492,
+    "kind": "html-text",
+    "value": "= 110 && lon"
+  },
+  {
+    "file": "src/main.js",
+    "line": 74,
+    "kind": "textContent",
+    "value": "Configuring viewer..."
+  },
+  {
+    "file": "src/main.js",
+    "line": 156,
+    "kind": "textContent",
+    "value": "Loading Google 3D Tiles..."
+  },
+  {
+    "file": "src/main.js",
+    "line": 170,
+    "kind": "textContent",
+    "value": "Google 3D Tiles unavailable (${tileErrorDetail}). Continuing in fallback mode..."
+  },
+  {
+    "file": "src/main.js",
+    "line": 175,
+    "kind": "textContent",
+    "value": "Initializing systems..."
+  },
+  {
+    "file": "src/main.js",
+    "line": 203,
+    "kind": "textContent",
+    "value": "Flying to Austin, TX..."
+  },
+  {
+    "file": "src/main.js",
+    "line": 206,
+    "kind": "textContent",
+    "value": "Restoring shared view..."
+  },
+  {
+    "file": "src/main.js",
+    "line": 331,
+    "kind": "textContent",
+    "value": "Error: ${describeError(error)}"
+  },
+  {
+    "file": "src/mapStackController.js",
+    "line": 7,
+    "kind": "label",
+    "value": "Google 3D"
+  },
+  {
+    "file": "src/mapStackController.js",
+    "line": 14,
+    "kind": "label",
+    "value": "Bing Aerial"
+  },
+  {
+    "file": "src/mapStackController.js",
+    "line": 22,
+    "kind": "label",
+    "value": "Bing Labels"
+  },
+  {
+    "file": "src/overlays/worldOverlay.js",
+    "line": 926,
+    "kind": "html-text",
+    "value": "hit.x + hit.w || y"
+  },
+  {
+    "file": "src/overlays/worldOverlay.js",
+    "line": 965,
+    "kind": "html-text",
+    "value": "= -padding && x"
+  },
+  {
+    "file": "src/overlays/worldOverlay.js",
+    "line": 966,
+    "kind": "html-text",
+    "value": "= -padding && y"
+  },
+  {
+    "file": "src/overlays/worldOverlay.js",
+    "line": 1994,
+    "kind": "textContent",
+    "value": "Focusing ${item.label}"
+  },
+  {
+    "file": "src/overlays/worldOverlayAllocation.worker.mjs",
+    "line": 742,
+    "kind": "title",
+    "value": "ALLOC01 · FL350 · 451 kts"
+  },
+  {
+    "file": "src/overlays/worldOverlayAllocation.worker.mjs",
+    "line": 845,
+    "kind": "text",
+    "value": "${3 + index} NEWS"
+  },
+  {
+    "file": "src/overlays/worldOverlayTokens.js",
+    "line": 106,
+    "kind": "label",
+    "value": "rgba(255, 216, 128, 0.95)"
+  },
+  {
+    "file": "src/overlays/worldOverlayTokens.js",
+    "line": 123,
+    "kind": "label",
+    "value": "rgba(225, 255, 210, 0.97)"
+  },
+  {
+    "file": "src/overlays/worldOverlayTokens.js",
+    "line": 140,
+    "kind": "label",
+    "value": "rgba(255, 236, 208, 0.98)"
+  },
+  {
+    "file": "src/overlays/worldOverlayTokens.js",
+    "line": 157,
+    "kind": "label",
+    "value": "rgba(200, 250, 255, 0.97)"
+  },
+  {
+    "file": "src/panelStackLayout.js",
+    "line": 95,
+    "kind": "html-text",
+    "value": "0 && allocated / natural"
+  },
+  {
+    "file": "src/scenes/director.js",
+    "line": 489,
+    "kind": "textContent",
+    "value": "No shots yet. Use CAPTURE SHOT to save current look."
+  },
+  {
+    "file": "src/scenes/director.js",
+    "line": 548,
+    "kind": "textContent",
+    "value": "${style.toUpperCase()} · ${mode} · ${shot.durationSec.toFixed(1)}s + ${shot.holdSec.toFixed(1)}s"
+  },
+  {
+    "file": "src/scenes/director.js",
+    "line": 1347,
+    "kind": "textContent",
+    "value": "${pct}%"
+  },
+  {
+    "file": "src/scenes/scenePolicy.js",
+    "line": 142,
+    "kind": "html-text",
+    "value": "|Iterable"
+  },
+  {
+    "file": "src/splitFlap.js",
+    "line": 355,
+    "kind": "html-text",
+    "value": "0.5) || Math.abs(toWidth - fromWidth)"
+  },
+  {
+    "file": "src/styles/anime.js",
+    "line": 9,
+    "kind": "label",
+    "value": "Edge Thickness"
+  },
+  {
+    "file": "src/styles/retro.js",
+    "line": 72,
+    "kind": "html-text",
+    "value": "1.0 || distUV.y"
+  },
+  {
+    "file": "src/styles/surveillance.js",
+    "line": 165,
+    "kind": "html-text",
+    "value": "1.0 || distUV.y"
+  },
+  {
+    "file": "src/styles/surveillance.js",
+    "line": 241,
+    "kind": "html-text",
+    "value": "= 0.0 && labelArea.x"
+  },
+  {
+    "file": "src/styles/surveillance.js",
+    "line": 241,
+    "kind": "html-text",
+    "value": "= 0.0 && labelArea.y"
+  },
+  {
+    "file": "src/styles/surveillance.js",
+    "line": 249,
+    "kind": "html-text",
+    "value": "= 0.0 && gainArea.x"
+  },
+  {
+    "file": "src/styles/surveillance.js",
+    "line": 249,
+    "kind": "html-text",
+    "value": "= 0.0 && gainArea.y"
+  },
+  {
+    "file": "src/styles/thermal.js",
+    "line": 119,
+    "kind": "html-text",
+    "value": "= 0 && ch"
+  },
+  {
+    "file": "src/styles/thermal.js",
+    "line": 245,
+    "kind": "html-text",
+    "value": "= 0.0 && labelArea.x"
+  },
+  {
+    "file": "src/styles/thermal.js",
+    "line": 245,
+    "kind": "html-text",
+    "value": "= 0.0 && labelArea.y"
+  },
+  {
+    "file": "src/styles/thermal.js",
+    "line": 253,
+    "kind": "html-text",
+    "value": "= 0.0 && modeArea.x"
+  },
+  {
+    "file": "src/styles/thermal.js",
+    "line": 253,
+    "kind": "html-text",
+    "value": "= 0.0 && modeArea.y"
+  },
+  {
+    "file": "src/styles/thermal.js",
+    "line": 285,
+    "kind": "html-text",
+    "value": "= 0.0 && dpp.x"
+  },
+  {
+    "file": "src/styles/thermal.js",
+    "line": 285,
+    "kind": "html-text",
+    "value": "= 0.0 && dpp.y"
+  },
+  {
+    "file": "src/styles/thermal.js",
+    "line": 295,
+    "kind": "html-text",
+    "value": "= 0.0 && dgp.x"
+  },
+  {
+    "file": "src/styles/thermal.js",
+    "line": 295,
+    "kind": "html-text",
+    "value": "= 0.0 && dgp.y"
+  },
+  {
+    "file": "src/styles/thermal.js",
+    "line": 307,
+    "kind": "html-text",
+    "value": "= 0.0 && fp.x"
+  },
+  {
+    "file": "src/styles/thermal.js",
+    "line": 307,
+    "kind": "html-text",
+    "value": "= 0.0 && fp.y"
+  },
+  {
+    "file": "src/ui.js",
+    "line": 867,
+    "kind": "title",
+    "value": "${active ? 'Disable' : 'Enable'} cockpit weather effects"
+  },
+  {
+    "file": "src/ui.js",
+    "line": 999,
+    "kind": "title",
+    "value": "Current style: ${names[next]} — click for next"
+  },
+  {
+    "file": "src/ui.js",
+    "line": 1464,
+    "kind": "textContent",
+    "value": "${lat} · ${lon}"
+  },
+  {
+    "file": "src/ui.js",
+    "line": 1470,
+    "kind": "textContent",
+    "value": "${info.layerId === 'military' ? 'MILITARY' : 'COMMERCIAL'} · ${feedState} · COURSE ALIGNED"
+  },
+  {
+    "file": "src/ui.js",
+    "line": 1517,
+    "kind": "textContent",
+    "value": "DEST ${String(Math.round(destinationBearing)).padStart(3, '0')}°"
+  },
+  {
+    "file": "src/ui.js",
+    "line": 1562,
+    "kind": "textContent",
+    "value": "CONTACT LOST · LAST KNOWN READOUT · NOT AN ALL-CLEAR"
+  },
+  {
+    "file": "src/ui.js",
+    "line": 1631,
+    "kind": "textContent",
+    "value": "BRG —"
+  },
+  {
+    "file": "src/ui.js",
+    "line": 1633,
+    "kind": "textContent",
+    "value": "${relative < 0 ? 'L' : 'R'} ${String(Math.round(Math.abs(relative))).padStart(3, '0')}°"
+  },
+  {
+    "file": "src/ui.js",
+    "line": 1679,
+    "kind": "textContent",
+    "value": "${this.briefPageIndex + 1} / ${count}"
+  },
+  {
+    "file": "src/ui.js",
+    "line": 1729,
+    "kind": "textContent",
+    "value": "POSITION UNAVAILABLE"
+  },
+  {
+    "file": "src/ui.js",
+    "line": 1734,
+    "kind": "textContent",
+    "value": "${lat} · ${lon}"
+  },
+  {
+    "file": "src/ui.js",
+    "line": 1791,
+    "kind": "textContent",
+    "value": "RESOLVING REGION"
+  },
+  {
+    "file": "src/ui.js",
+    "line": 1792,
+    "kind": "textContent",
+    "value": "REGION UNAVAILABLE"
+  },
+  {
+    "file": "src/ui.js",
+    "line": 1815,
+    "kind": "textContent",
+    "value": "${article.domain || 'SOURCE'} · ${formatCockpitBriefAge(article.publishedAt)}"
+  },
+  {
+    "file": "src/ui.js",
+    "line": 1848,
+    "kind": "textContent",
+    "value": "${String(payload?.newsSource || 'REGIONAL NEWS').toUpperCase()} · LOCATION QUERY"
+  },
+  {
+    "file": "src/ui.js",
+    "line": 1972,
+    "kind": "title",
+    "value": "${expanded ? 'Collapse' : 'Expand'} contact panel"
+  },
+  {
+    "file": "src/ui.js",
+    "line": 1991,
+    "kind": "title",
+    "value": "${expanded ? 'Collapse' : 'Expand'} briefing panel"
+  },
+  {
+    "file": "src/ui.js",
+    "line": 2514,
+    "kind": "textContent",
+    "value": "${pct}%"
+  },
+  {
+    "file": "src/ui.js",
+    "line": 2527,
+    "kind": "textContent",
+    "value": "${pct}%"
+  },
+  {
+    "file": "src/ui.js",
+    "line": 2552,
+    "kind": "textContent",
+    "value": "${pct}%"
+  },
+  {
+    "file": "src/ui.js",
+    "line": 3237,
+    "kind": "textContent",
+    "value": "${clamped}%"
+  },
+  {
+    "file": "src/ui.js",
+    "line": 3408,
+    "kind": "textContent",
+    "value": "${pct}%"
+  },
+  {
+    "file": "src/ui.js",
+    "line": 3418,
+    "kind": "textContent",
+    "value": "${pct}%"
+  },
+  {
+    "file": "src/ui.js",
+    "line": 3446,
+    "kind": "textContent",
+    "value": "${pct}%"
+  },
+  {
+    "file": "src/ui.js",
+    "line": 3548,
+    "kind": "textContent",
+    "value": "${pct}%"
+  },
+  {
+    "file": "src/ui.js",
+    "line": 3562,
+    "kind": "textContent",
+    "value": "${fadePct}%"
+  },
+  {
+    "file": "src/ui.js",
+    "line": 3564,
+    "kind": "textContent",
+    "value": "${outsideOpacityPct}%"
+  },
+  {
+    "file": "src/ui.js",
+    "line": 3593,
+    "kind": "textContent",
+    "value": "${tuning.densityPct}%"
+  },
+  {
+    "file": "src/ui.js",
+    "line": 3688,
+    "kind": "textContent",
+    "value": "${sharpenPct}%"
+  },
+  {
+    "file": "src/ui.js",
+    "line": 3727,
+    "kind": "textContent",
+    "value": "${pct}%"
+  },
+  {
+    "file": "src/ui.js",
+    "line": 3751,
+    "kind": "textContent",
+    "value": "${sharpenPct}%"
+  },
+  {
+    "file": "src/ui.js",
+    "line": 3772,
+    "kind": "textContent",
+    "value": "${density}%"
+  },
+  {
+    "file": "src/ui.js",
+    "line": 3892,
+    "kind": "textContent",
+    "value": "${loaded}/${total}"
+  },
+  {
+    "file": "src/ui.js",
+    "line": 3901,
+    "kind": "textContent",
+    "value": "${total}/${total}"
+  },
+  {
+    "file": "src/ui.js",
+    "line": 5317,
+    "kind": "title",
+    "value": "${action} Cockpit display options"
+  },
+  {
+    "file": "src/ui.js",
+    "line": 5323,
+    "kind": "title",
+    "value": "${action} Cockpit Radio controls"
+  },
+  {
+    "file": "src/ui.js",
+    "line": 5498,
+    "kind": "textContent",
+    "value": "OFF AIR"
+  },
+  {
+    "file": "src/ui.js",
+    "line": 5499,
+    "kind": "textContent",
+    "value": "STATION UNAVAILABLE"
+  },
+  {
+    "file": "src/ui.js",
+    "line": 5637,
+    "kind": "textContent",
+    "value": "${value}%"
+  },
+  {
+    "file": "src/ui.js",
+    "line": 5651,
+    "kind": "textContent",
+    "value": "${value}%"
+  },
+  {
+    "file": "src/ui.js",
+    "line": 5656,
+    "kind": "textContent",
+    "value": "${value}%"
+  },
+  {
+    "file": "src/ui.js",
+    "line": 5849,
+    "kind": "title",
+    "value": "${action} compact Radio controls"
+  },
+  {
+    "file": "src/ui.js",
+    "line": 5931,
+    "kind": "textContent",
+    "value": "● ${category.label} (${category.count})"
+  },
+  {
+    "file": "src/ui.js",
+    "line": 6021,
+    "kind": "textContent",
+    "value": "${Math.round(state.volume * 100)}%"
+  },
+  {
+    "file": "src/ui.js",
+    "line": 6028,
+    "kind": "textContent",
+    "value": "${Math.round(state.volume * 100)}%"
+  },
+  {
+    "file": "src/ui.js",
+    "line": 6035,
+    "kind": "textContent",
+    "value": "${Math.round(state.volume * 100)}%"
+  },
+  {
+    "file": "src/ui.js",
+    "line": 6077,
+    "kind": "textContent",
+    "value": "${uncertainMessage || unavailable || lifecycleMessage || state.error || messages[state.audioState] || 'Ready'}${tuningSuffix}${voiceSuffix}${catalogSuffix}${outsideFilter}"
+  },
+  {
+    "file": "src/ui.js",
+    "line": 6332,
+    "kind": "textContent",
+    "value": "SOURCE · UNKNOWN"
+  },
+  {
+    "file": "src/ui.js",
+    "line": 6338,
+    "kind": "textContent",
+    "value": "FRAME · LOADING"
+  },
+  {
+    "file": "src/ui.js",
+    "line": 6343,
+    "kind": "textContent",
+    "value": "FRAME · UNAVAILABLE"
+  },
+  {
+    "file": "src/ui.js",
+    "line": 6349,
+    "kind": "textContent",
+    "value": "${kind} · ${status}"
+  },
+  {
+    "file": "src/ui.js",
+    "line": 6387,
+    "kind": "textContent",
+    "value": "${field.label}"
+  },
+  {
+    "file": "src/ui.js",
+    "line": 6544,
+    "kind": "textContent",
+    "value": "${camera.city} · ${camera.name}"
+  },
+  {
+    "file": "src/ui.js",
+    "line": 6613,
+    "kind": "textContent",
+    "value": "${activeCamera.city} · HDG ${Math.round(activeCamera.headingDeg)}° · FOV ${Math.round(activeCamera.fovDeg)}° · RANGE ${Math.round(activeCamera.rangeM)}m · ${projLabel}${calBadge ?"
+  },
+  {
+    "file": "src/ui.js",
+    "line": 6619,
+    "kind": "textContent",
+    "value": "Enable CCTV to load camera intersections"
+  },
+  {
+    "file": "src/ui.js",
+    "line": 7224,
+    "kind": "html-text",
+    "value": "stackRect.left && rect.left"
+  },
+  {
+    "file": "src/ui.js",
+    "line": 7413,
+    "kind": "title",
+    "value": "${action} ${panelName}"
+  },
+  {
+    "file": "src/ui.js",
+    "line": 7417,
+    "kind": "title",
+    "value": "${action} Radio"
+  },
+  {
+    "file": "src/ui.js",
+    "line": 7427,
+    "kind": "title",
+    "value": "${action} ${panelName}"
+  },
+  {
+    "file": "src/ui.js",
+    "line": 8012,
+    "kind": "textContent",
+    "value": "${pct}%"
+  },
+  {
+    "file": "src/ui.js",
+    "line": 8657,
+    "kind": "textContent",
+    "value": "${pct}%"
+  },
+  {
+    "file": "src/ui.js",
+    "line": 8682,
+    "kind": "textContent",
+    "value": "${pct}%"
+  },
+  {
+    "file": "src/ui.js",
+    "line": 8690,
+    "kind": "textContent",
+    "value": "${pct}%"
+  },
+  {
+    "file": "src/ui.js",
+    "line": 8788,
+    "kind": "textContent",
+    "value": "${sharpenPct}%"
+  },
+  {
+    "file": "src/ui.js",
+    "line": 8807,
+    "kind": "textContent",
+    "value": "${density}%"
+  },
+  {
+    "file": "src/ui.js",
+    "line": 9567,
+    "kind": "html-text",
+    "value": "&#x21BB;"
+  },
+  {
+    "file": "src/voice/gevActions.js",
+    "line": 1201,
+    "kind": "label",
+    "value": "United States"
+  },
+  {
+    "file": "src/voice/gevActions.js",
+    "line": 1202,
+    "kind": "label",
+    "value": "United States"
+  },
+  {
+    "file": "src/voice/gevActions.js",
+    "line": 1203,
+    "kind": "label",
+    "value": "United States"
+  },
+  {
+    "file": "src/voice/gevActions.js",
+    "line": 1204,
+    "kind": "label",
+    "value": "United States"
+  },
+  {
+    "file": "src/voice/gevActions.js",
+    "line": 1257,
+    "kind": "label",
+    "value": "${latitude.toFixed(3)}, ${longitude.toFixed(3)}"
+  },
+  {
+    "file": "src/voice/gevActions.js",
+    "line": 2283,
+    "kind": "label",
+    "value": "${latitude.toFixed(4)}, ${longitude.toFixed(4)}"
+  },
+  {
+    "file": "src/voice/gevRealtime.js",
+    "line": 1417,
+    "kind": "text",
+    "value": "Current God's Eye View viewport screenshot. Read any clearly visible street, building, and place labels in the image and combine them with the structured nearbyPlaces, streetLabels, and scene context. Do not invent labels that are not legible."
+  },
+  {
+    "file": "src/voice/gevRealtime.js",
+    "line": 1793,
+    "kind": "title",
+    "value": "Estimated session cost on ${state.modelId} — ${state.responses} response(s)."
+  },
+  {
+    "file": "src/voice/gevRealtime.js",
+    "line": 2428,
+    "kind": "text",
+    "value": "${text.slice(0, maxLength - 1)}…"
+  },
+  {
+    "file": "src/voice/gevRealtime.js",
+    "line": 2555,
+    "kind": "html-text",
+    "value": "AI AGENT"
+  },
+  {
+    "file": "src/voice/gevRealtime.js",
+    "line": 2558,
+    "kind": "title",
+    "value": "Voice model tier — applies next session"
+  },
+  {
+    "file": "src/voice/gevRealtime.js",
+    "line": 2559,
+    "kind": "title",
+    "value": "Estimated session cost"
+  },
+  {
+    "file": "src/voice/gevRealtime.js",
+    "line": 2562,
+    "kind": "aria-label",
+    "value": "Voice control — hold Space to speak; click to toggle voice"
+  },
+  {
+    "file": "src/voice/gevRealtime.js",
+    "line": 2570,
+    "kind": "html-text",
+    "value": "VOICE STANDBY"
+  },
+  {
+    "file": "src/voice/gevRealtime.js",
+    "line": 2573,
+    "kind": "html-text",
+    "value": "VOICE CONTROL"
+  },
+  {
+    "file": "src/voice/gevRealtime.js",
+    "line": 2574,
+    "kind": "html-text",
+    "value": "Hold Space to speak · click mic to toggle voice"
+  },
+  {
+    "file": "src/voice/gevRealtime.js",
+    "line": 2578,
+    "kind": "html-text",
+    "value": "VOICE SYSTEM ERROR"
+  },
+  {
+    "file": "src/voice/gevRealtime.js",
+    "line": 2582,
+    "kind": "html-text",
+    "value": "Check microphone permission and network access, then try again."
+  },
+  {
+    "file": "src/weatherEffectsMath.js",
+    "line": 38,
+    "kind": "html-text",
+    "value": "= 51 && code"
+  },
+  {
+    "file": "src/weatherEffectsMath.js",
+    "line": 39,
+    "kind": "html-text",
+    "value": "= 61 && code"
+  },
+  {
+    "file": "src/weatherEffectsMath.js",
+    "line": 39,
+    "kind": "html-text",
+    "value": "= 80 && code"
+  },
+  {
+    "file": "src/weatherEffectsMath.js",
+    "line": 40,
+    "kind": "html-text",
+    "value": "= 71 && code"
+  },
+  {
+    "file": "src/weatherEffectsMath.js",
+    "line": 40,
+    "kind": "html-text",
+    "value": "= 85 && code"
+  }
+]

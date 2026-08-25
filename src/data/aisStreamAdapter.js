@@ -353,7 +353,7 @@ export function createAisStreamAdapter(options) {
       return;
     }
     if (!socket) {
-      failGeneration(owner, generation, { kind: 'transport', message: 'socket factory returned nothing' });
+      failGeneration(owner, generation, { kind: 'transport', message: 'фабрика сокетов ничего не вернула' });
       return;
     }
     sockets.set(generation, socket);
@@ -367,7 +367,7 @@ export function createAisStreamAdapter(options) {
       abort(socket, 'unsupported-transport');
       failGeneration(owner, generation, {
         kind: 'transport',
-        message: 'AIS socket does not expose ws emitter semantics',
+        message: 'AIS-сокет не предоставляет интерфейс событий WebSocket',
       });
       return;
     }

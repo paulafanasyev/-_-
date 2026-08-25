@@ -1414,7 +1414,7 @@ export class GevRealtimeController {
         content: [
           {
             type: 'input_text',
-            text: "Current God's Eye View viewport screenshot. Read any clearly visible street, building, and place labels in the image and combine them with the structured nearbyPlaces, streetLabels, and scene context. Do not invent labels that are not legible.",
+            text: "Текущий снимок экрана God's Eye View. Прочитайте только чётко видимые названия улиц, зданий и мест на изображении и сопоставьте их со структурированными данными nearbyPlaces, streetLabels и контекстом сцены. Не придумывайте нечитаемые названия.",
           },
           {
             type: 'input_image',
@@ -1445,7 +1445,7 @@ export class GevRealtimeController {
       : detail;
     const primaryDetail = status === 'error'
       ? 'VOICE UNAVAILABLE'
-      : (resolvedDetail || (status === 'idle' ? 'VOICE STANDBY' : 'VOICE ACTIVE'));
+      : (resolvedDetail || (status === 'idle' ? 'ГОЛОСОВОЙ РЕЖИМ ОЖИДАНИЯ' : 'VOICE ACTIVE'));
     this.ui.detail.textContent = primaryDetail;
     this.ui.detail.title = primaryDetail;
     if (this.ui.errorDetail) {
@@ -1791,7 +1791,7 @@ export class GevRealtimeController {
       this.ui.costValue.textContent = state.display;
       this.ui.costValue.dataset.level = state.level;
       this.ui.costValue.title =
-        `Estimated session cost on ${state.modelId} — ${state.responses} response(s). ` +
+        `Расчётная стоимость сеанса для ${state.modelId} — ответов: ${state.responses}. ` +
         `Warns at ${formatCostUsd(state.warnUsd)}, ends the session at ${formatCostUsd(state.capUsd)}.`
         + (state.note ? ` ${state.note}` : '');
     }
@@ -2510,7 +2510,7 @@ export function resolveVoiceVisualizerSpeaker(currentSpeaker, nextSpeaker, keepC
 export function resolveVoiceControlHint(pushToTalkMode, pushToTalkKeyHeld) {
   return pushToTalkMode && pushToTalkKeyHeld
     ? 'Release Space to send'
-    : 'Hold Space to speak · click mic to toggle voice';
+    : 'Удерживайте пробел для речи · нажмите микрофон для переключения';
 }
 
 /**
@@ -2552,14 +2552,14 @@ function createVoiceControl({ reset = false } = {}) {
     root.dataset.speaker = 'idle';
     root.innerHTML = `
       <div class="gev-voice-heading">
-        <div class="gev-voice-kicker">AI AGENT</div>
+        <div class="gev-voice-kicker">ИИ-АГЕНТ</div>
         <div id="gev-voice-status">OFF</div>
         <div class="gev-voice-cost">
-          <button id="gev-voice-tier" class="gev-voice-tier-btn" type="button" aria-pressed="false" title="Voice model tier — applies next session">STD</button>
-          <span id="gev-voice-cost-value" class="gev-voice-cost-value" data-level="ok" title="Estimated session cost">~$0.00</span>
+          <button id="gev-voice-tier" class="gev-voice-tier-btn" type="button" aria-pressed="false" title="Уровень голосовой модели — применяется в следующем сеансе">STD</button>
+          <span id="gev-voice-cost-value" class="gev-voice-cost-value" data-level="ok" title="Расчётная стоимость сеанса">~$0.00</span>
         </div>
       </div>
-      <button id="gev-voice-button" type="button" aria-label="Voice control — hold Space to speak; click to toggle voice" aria-describedby="gev-voice-help">
+      <button id="gev-voice-button" type="button" aria-label="Голосовое управление — удерживайте пробел для речи; нажмите микрофон для переключения" aria-describedby="gev-voice-help">
         <span class="gev-mic-orbit"><img src="/mic.svg" alt="" /></span>
         <span class="gev-mic-label">ON/OFF</span>
       </button>
@@ -2567,19 +2567,19 @@ function createVoiceControl({ reset = false } = {}) {
         ${Array.from({ length: 15 }, (_, index) => `<span style="--bar:${index}"></span>`).join('')}
       </div>
       <div class="gev-voice-readout">
-        <div id="gev-voice-detail">VOICE STANDBY</div>
+        <div id="gev-voice-detail">ГОЛОСОВОЙ РЕЖИМ ОЖИДАНИЯ</div>
       </div>
       <div id="gev-voice-help" class="gev-voice-help-tray" role="tooltip">
-        <span class="gev-voice-help-kicker">VOICE CONTROL</span>
-        <span class="gev-voice-help-detail">Hold Space to speak · click mic to toggle voice</span>
+        <span class="gev-voice-help-kicker">ГОЛОСОВОЕ УПРАВЛЕНИЕ</span>
+        <span class="gev-voice-help-detail">Удерживайте пробел для речи · нажмите микрофон для переключения</span>
       </div>
       <div class="gev-voice-error-tray" role="alert" aria-live="assertive">
         <div class="gev-voice-error-header">
-          <span>VOICE SYSTEM ERROR</span>
+          <span>ОШИБКА ГОЛОСОВОЙ СИСТЕМЫ</span>
           <button class="gev-voice-error-dismiss" type="button">DISMISS</button>
         </div>
         <div id="gev-voice-error-detail"></div>
-        <div class="gev-voice-error-hint">Check microphone permission and network access, then try again.</div>
+        <div class="gev-voice-error-hint">Проверьте разрешение на использование микрофона и доступ к сети, затем повторите попытку.</div>
       </div>
     `;
     const commandDock = document.getElementById('command-dock');

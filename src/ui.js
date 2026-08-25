@@ -864,7 +864,7 @@ class CockpitViewController {
       'aria-label',
       `${active ? 'Disable' : 'Enable'} cockpit weather effects`,
     );
-    this.weatherToggle.title = `${active ? 'Disable' : 'Enable'} cockpit weather effects`;
+    this.weatherToggle.title = `${active ? 'Отключить' : 'Включить'} эффекты погоды в кабине`;
     if (this.weatherState) this.weatherState.textContent = active ? 'ON' : 'OFF';
   }
 
@@ -996,7 +996,7 @@ class CockpitViewController {
     if (this.visionCurrent) {
       this.visionCurrent.dataset.cockpitVision = next;
       this.visionCurrent.setAttribute('aria-label', `Current cockpit vision style: ${names[next]}. Activate for next style.`);
-      this.visionCurrent.title = `Current style: ${names[next]} — click for next`;
+      this.visionCurrent.title = `Текущий стиль: ${names[next]} — нажмите для следующего`;
     }
     if (this.visionCurrentLabel) this.visionCurrentLabel.textContent = labels[next];
     this.onVisionChange?.(next, this.active, { revealParameters });
@@ -1559,7 +1559,7 @@ class CockpitViewController {
       const enteringLost = this.context.dataset.state !== 'lost';
       this.context.dataset.state = 'lost';
       if (this.contextUncertainty) {
-        this.contextUncertainty.textContent = 'CONTACT LOST · LAST KNOWN READOUT · NOT AN ALL-CLEAR';
+        this.contextUncertainty.textContent = 'КОНТАКТ ПОТЕРЯН · ПОСЛЕДНИЕ ИЗВЕСТНЫЕ ДАННЫЕ · ЭТО НЕ СИГНАЛ О БЕЗОПАСНОСТИ';
       }
       // The cue changes the footer's height; re-run layout once on the way in
       // rather than every frame the contact stays lost.
@@ -1628,7 +1628,7 @@ class CockpitViewController {
       this.contextDirection.classList.toggle('unknown', relative === null);
     }
     if (this.contextBearing) {
-      if (relative === null) this.contextBearing.textContent = 'BRG —';
+      if (relative === null) this.contextBearing.textContent = 'АЗИМУТ —';
       else if (Math.abs(relative) < 8) this.contextBearing.textContent = 'AHEAD';
       else this.contextBearing.textContent = `${relative < 0 ? 'L' : 'R'} ${String(Math.round(Math.abs(relative))).padStart(3, '0')}°`;
     }
@@ -1726,7 +1726,7 @@ class CockpitViewController {
   updateLocalPosition(info) {
     if (!this.localCoordinates) return;
     if (!Number.isFinite(info.latitude) || !Number.isFinite(info.longitude)) {
-      this.localCoordinates.textContent = 'POSITION UNAVAILABLE';
+      this.localCoordinates.textContent = 'ПОЗИЦИЯ НЕДОСТУПНА';
       return;
     }
     const lat = `${Math.abs(info.latitude).toFixed(3)}°${info.latitude >= 0 ? 'N' : 'S'}`;
@@ -1788,8 +1788,8 @@ class CockpitViewController {
         : 'REGIONAL NEWS UNAVAILABLE';
     }
     if (status === 'unavailable') this.newsList?.replaceChildren();
-    if (this.localPlace && status === 'loading') this.localPlace.textContent = 'RESOLVING REGION';
-    if (this.localPlace && status === 'unavailable') this.localPlace.textContent = 'REGION UNAVAILABLE';
+    if (this.localPlace && status === 'loading') this.localPlace.textContent = 'ОПРЕДЕЛЕНИЕ РЕГИОНА';
+    if (this.localPlace && status === 'unavailable') this.localPlace.textContent = 'РЕГИОН НЕДОСТУПЕН';
     this.updateLocalPosition(info);
   }
 
@@ -1969,7 +1969,7 @@ class CockpitViewController {
       const expanded = !this.contextCollapsed;
       this.contextToggle.setAttribute('aria-expanded', String(expanded));
       this.contextToggle.setAttribute('aria-label', `${expanded ? 'Collapse' : 'Expand'} Contact panel`);
-      this.contextToggle.title = `${expanded ? 'Collapse' : 'Expand'} contact panel`;
+      this.contextToggle.title = `${expanded ? 'Свернуть' : 'Развернуть'} панель контакта`;
       const icon = this.contextToggle.querySelector('.material-symbols-outlined');
       if (icon) icon.textContent = expanded ? 'chevron_left' : 'chevron_right';
     }
@@ -1988,7 +1988,7 @@ class CockpitViewController {
       const expanded = !this.signalCollapsed;
       this.signalToggle.setAttribute('aria-expanded', String(expanded));
       this.signalToggle.setAttribute('aria-label', `${expanded ? 'Collapse' : 'Expand'} cockpit briefing panel`);
-      this.signalToggle.title = `${expanded ? 'Collapse' : 'Expand'} briefing panel`;
+      this.signalToggle.title = `${expanded ? 'Свернуть' : 'Развернуть'} панель сводки`;
       const icon = this.signalToggle.querySelector('.material-symbols-outlined');
       if (icon) icon.textContent = expanded ? 'right_panel_close' : 'right_panel_open';
     }
@@ -5314,13 +5314,13 @@ export class StyleManager {
         const action = displayOpen ? 'Collapse' : 'Expand';
         this._cockpitDisplayToggleBtn.textContent = displayOpen ? '▶' : '◀';
         this._cockpitDisplayToggleBtn.setAttribute('aria-label', `${action} Cockpit display options`);
-        this._cockpitDisplayToggleBtn.title = `${action} Cockpit display options`;
+        this._cockpitDisplayToggleBtn.title = `${action} параметры отображения кабины`;
       }
       if (this._cockpitRadioToggleBtn) {
         const action = radioOpen ? 'Collapse' : 'Expand';
         this._cockpitRadioToggleBtn.textContent = radioOpen ? '▶' : '◀';
         this._cockpitRadioToggleBtn.setAttribute('aria-label', `${action} Cockpit Radio controls`);
-        this._cockpitRadioToggleBtn.title = `${action} Cockpit Radio controls`;
+        this._cockpitRadioToggleBtn.title = `${action} управление радио кабины`;
       }
       if (!expanded && returnFocus) {
         (kind === 'display' ? this._cockpitDisplayToggleBtn : this._cockpitRadioToggleBtn)
@@ -5495,8 +5495,8 @@ export class StyleManager {
       if (result && !result.ok) {
         this._radioTunerBandPinnedForNavigation = false;
         if (result.reason === 'station-unavailable') {
-          if (this._radioTunerValue) this._radioTunerValue.textContent = 'OFF AIR';
-          if (this._radioTunerStation) this._radioTunerStation.textContent = 'STATION UNAVAILABLE';
+          if (this._radioTunerValue) this._radioTunerValue.textContent = 'В ЭФИРЕ НЕТ СИГНАЛА';
+          if (this._radioTunerStation) this._radioTunerStation.textContent = 'СТАНЦИЯ НЕДОСТУПНА';
           this._radioTunerSlider?.setAttribute(
             'aria-valuetext',
             'Station unavailable after directory refresh',
@@ -5846,7 +5846,7 @@ export class StyleManager {
     this._contextRadioToggleBtn.setAttribute('aria-expanded', String(compactOpen));
     const action = compactOpen ? 'Close' : 'Open';
     this._contextRadioToggleBtn.setAttribute('aria-label', `${action} compact Radio controls`);
-    this._contextRadioToggleBtn.title = `${action} compact Radio controls`;
+    this._contextRadioToggleBtn.title = `${action} компактное управление радио`;
   }
 
   /** Render Radio state without making playback or Context decisions. */
@@ -6329,18 +6329,18 @@ export class StyleManager {
   _syncCctvSourceBadge(activeCamera, enabled) {
     if (!this._cctvSourceBadge) return;
     if (!enabled || !activeCamera) {
-      this._cctvSourceBadge.textContent = 'SOURCE · UNKNOWN';
+      this._cctvSourceBadge.textContent = 'ИСТОЧНИК · НЕИЗВЕСТЕН';
       this._cctvSourceBadge.dataset.frameState = 'idle';
       return;
     }
     const hasDisplayedFrame = this._cctvFrameWrap?.classList.contains('has-frame');
     if (this._cctvFrame?.dataset.loading === 'true' && !hasDisplayedFrame) {
-      this._cctvSourceBadge.textContent = 'FRAME · LOADING';
+      this._cctvSourceBadge.textContent = 'КАДР · ЗАГРУЗКА';
       this._cctvSourceBadge.dataset.frameState = 'loading';
       return;
     }
     if (this._cctvFrame?.dataset.error === 'true' && !hasDisplayedFrame) {
-      this._cctvSourceBadge.textContent = 'FRAME · UNAVAILABLE';
+      this._cctvSourceBadge.textContent = 'КАДР · НЕДОСТУПЕН';
       this._cctvSourceBadge.dataset.frameState = 'error';
       return;
     }
@@ -6616,7 +6616,7 @@ export class StyleManager {
           ? `${cameras.length} cameras loaded · click a camera to activate`
           : `${cameras.length} cameras loaded · enable CCTV to activate`;
       } else {
-        this._cctvMeta.textContent = 'Enable CCTV to load camera intersections';
+        this._cctvMeta.textContent = 'Включите CCTV, чтобы загрузить камеры на перекрёстках';
       }
     }
 
@@ -7414,7 +7414,7 @@ export class StyleManager {
       btn.setAttribute('aria-label', `${action} ${panelName}`);
       if (panelEl.id === 'radio-panel') {
         const action = collapsed ? 'Expand' : 'Collapse';
-        btn.title = `${action} Radio`;
+        btn.title = `${action} радио`;
         btn.setAttribute('aria-label', `${action} Radio section`);
       }
     });

@@ -491,11 +491,11 @@ function evaluateSubject(subject, sourceStates = collectSourceStates()) {
     radiusM: AWARENESS_RADIUS_M,
     cohorts: [
       { id: 'flights', label: 'Flights', source: flightsState.stats.source || SOURCE_LABEL.flights, summary: summarizeAwarenessCohortForNavigation(flights, flightsState) },
-      { id: 'military', label: 'Military flights', source: militaryState.stats.source || SOURCE_LABEL.military, summary: summarizeAwarenessCohortForNavigation(military, militaryState) },
-      { id: 'ais-live-vessels', label: 'AIS vessels', source: vesselsState.stats.source || SOURCE_LABEL['ais-live-vessels'], summary: summarizeAwarenessCohortForNavigation(vessels, vesselsState) },
+      { id: 'military', label: 'Военные полёты', source: militaryState.stats.source || SOURCE_LABEL.military, summary: summarizeAwarenessCohortForNavigation(military, militaryState) },
+      { id: 'ais-live-vessels', label: 'Суда AIS', source: vesselsState.stats.source || SOURCE_LABEL['ais-live-vessels'], summary: summarizeAwarenessCohortForNavigation(vessels, vesselsState) },
       {
         id: 'military-installations',
-        label: 'Mapped installations',
+        label: 'Нанесённые на карту объекты',
         source: installationsState.stats.source || SOURCE_LABEL['military-installations'],
         coverage: 'CURRENT VIEWPORT ONLY',
         summary: summarizeInstallationViewport(installations, installationsState),
@@ -515,7 +515,7 @@ function rowHtml(cohort) {
       return `<li><span class="military-awareness-target unavailable" aria-label="Unavailable">${escapeHtml(label)} <span>${formatAwarenessDistance(item.distanceM)}</span></span></li>`;
     }
     const accessibleLabel = label === '—' ? 'Unavailable' : label;
-    return `<li><button type="button" class="military-awareness-target" data-awareness-layer="${escapeHtml(cohort.id)}" data-awareness-id="${escapeHtml(targetId)}" aria-label="Focus ${escapeHtml(accessibleLabel)}">${escapeHtml(label)} <span>${formatAwarenessDistance(item.distanceM)}</span></button></li>`;
+    return `<li><button type="button" class="military-awareness-target" data-awareness-layer="${escapeHtml(cohort.id)}" data-awareness-id="${escapeHtml(targetId)}" aria-label="Фокус на ${escapeHtml(accessibleLabel)}">${escapeHtml(label)} <span>${formatAwarenessDistance(item.distanceM)}</span></button></li>`;
   }).join('');
   const pageCount = Math.max(1, Math.ceil(summary.nearest.length / AWARENESS_PAGE_SIZE));
   const pageLabel = pageCount > 1 ? ` · ${Math.floor(page / AWARENESS_PAGE_SIZE) + 1}/${pageCount}` : '';
@@ -965,10 +965,10 @@ export function findCompatibleHistoryIndex(history, startIndex, direction, {
 
 function navigationControlsHtml() {
   const canPrevious = state.navigationIndex > 0;
-  return `<div class="military-awareness-controls" role="group" aria-label="Global Context navigation">
-    <button type="button" data-awareness-action="previous" title="Previous — prior visited contact in the 250 km window"${canPrevious ? '' : ' disabled'}>PREVIOUS</button>
+  return `<div class="military-awareness-controls" role="group" aria-label="Навигация по глобальному контексту">
+    <button type="button" data-awareness-action="previous" title="Предыдущий — ранее посещённый контакт в радиусе 250 км"${canPrevious ? '' : ' disabled'}>PREVIOUS</button>
     <button type="button" data-awareness-action="focus">FOCUS</button>
-    <button type="button" data-awareness-action="next" title="Next — nearest unvisited contact in the 250 km window"${canNavigateNext() ? '' : ' disabled'}>NEXT</button>
+    <button type="button" data-awareness-action="next" title="Следующий — ближайший непосещённый контакт в радиусе 250 км"${canNavigateNext() ? '' : ' disabled'}>NEXT</button>
   </div>`;
 }
 
@@ -991,7 +991,7 @@ function renderResults() {
   const markup = `<div class="military-awareness-subject">${escapeHtml(subject.label)} · ${formatAwarenessDistance(AWARENESS_RADIUS_M)} FLIGHT / VESSEL WINDOW</div>
     ${navigationControlsHtml()}
     ${cohorts.map(rowHtml).join('')}
-    <p class="military-awareness-note">Open-source mapped/observed context. Missing broadcasts, unloaded map areas, or unmapped sites are not evidence of absence.</p>`;
+    <p class="military-awareness-note">Контекст на основе открытых данных и наблюдений. Отсутствие передачи, незагруженная область карты или объект, отсутствующий на карте, не являются доказательством отсутствия.</p>`;
   panel.hidden = false;
   if (state.panelMarkup !== markup) {
     panel.innerHTML = markup;

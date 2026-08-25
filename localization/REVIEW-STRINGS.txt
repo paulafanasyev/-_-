@@ -1,0 +1,20 @@
+src/annotations/annotationResolver.js:1103 [html-text] approximateDistanceM(a[1], a[0], b[1], b[0])
+src/annotations/annotationResolver.js:1622 [html-text] endpointGapM(c)
+src/data/flights.js:3268 [text] CS · FL · kts
+src/data/rocketLaunches.js:3146 [text] ${name} ${formatMissionEventTime(liveTime)}
+src/data/routePlausible.js:64 [html-text] greatCircleKm(latDeg, lonDeg, pt.lat, pt.lon)
+src/hud.js:150 [html-text] PAGE 1/1
+src/hud.js:177 [html-text] MGRS: ---
+src/hud.js:184 [html-text] GSD: --m NIIRS: --
+src/hud.js:185 [html-text] ALT: --m SUN: --° EL
+src/hud.js:186 [html-text] AIS: --
+src/hud.js:192 [html-text] COLL: --:--:--Z
+src/hud.js:193 [html-text] ONA: --°
+src/hud.js:197 [html-text] BAND: PAN
+src/hud.js:198 [html-text] BITS: 11
+src/hud.js:199 [html-text] LVL: 1A
+src/hud.js:203 [html-text] LAT: -- LON: -- MGRS: ---
+src/overlays/worldOverlayAllocation.worker.mjs:845 [text] ${3 + index} NEWS
+src/scenes/scenePolicy.js:142 [html-text] |Iterable
+src/ui.js:9567 [html-text] &#x21BB;
+src/voice/gevRealtime.js:2428 [text] ${text.slice(0, maxLength - 1)}…

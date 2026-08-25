@@ -91,7 +91,7 @@ export const DATA_CREDITS = [
     key: 'open-meteo',
     html:
       'Cockpit current conditions: ' +
-      '<a href="https://open-meteo.com/en/licence" target="_blank" rel="noopener">Weather data by Open-Meteo.com</a> ' +
+      '<a href="https://open-meteo.com/en/licence" target="_blank" rel="noopener">Данные о погоде предоставлены Open-Meteo.com</a> ' +
       '(CC BY 4.0)',
   },
   {

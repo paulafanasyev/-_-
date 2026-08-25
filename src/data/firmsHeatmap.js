@@ -338,7 +338,7 @@ export function createFirmsHeatmapLayer({
         latitude: strongest.lat,
         longitude: strongest.lon,
         frp: strongest.frp,
-        label: `Fire · FRP ${formatFrp(strongest.frp)} MW`,
+        label: `Пожар · FRP ${formatFrp(strongest.frp)} МВт`,
       };
     },
 
@@ -987,7 +987,7 @@ export function createFirmsHeatmapLayer({
       layerName: name,
       source: 'NASA FIRMS',
       dataSource: _dataSource,
-      label: `Fire · FRP ${formatFrp(fire.frp)} MW`,
+      label: `Пожар · FRP ${formatFrp(fire.frp)} МВт`,
       latitude: fire.lat,
       longitude: fire.lon,
       properties: {

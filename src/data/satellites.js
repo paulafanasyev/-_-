@@ -2145,10 +2145,10 @@ const satellitesLayer = {
     const loading = _denseStatus === 'loading';
     const failed = _denseStatus === 'failed';
     const active = _params.catalog === 'dense' && _denseStatus === 'ready';
-    let title = 'Add the full Starlink broadband shell (thousands of extra points)';
-    if (loading) title = 'Loading the Starlink shell…';
+    let title = 'Добавить полную широкополосную оболочку Starlink (тысячи дополнительных точек)';
+    if (loading) title = 'Загрузка оболочки Starlink…';
     else if (failed) title = `Starlink ${_denseError || 'load failed'} — click to retry`;
-    else if (active) title = 'Showing the full Starlink shell — click for the core catalog only';
+    else if (active) title = 'Показана полная оболочка Starlink — нажмите, чтобы оставить только основной каталог';
     return {
       chips: [{
         id: 'catalog',

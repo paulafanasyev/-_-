@@ -71,7 +71,7 @@ async function init() {
   const loaderStatus = loadingScreen.querySelector('.loader-status');
 
   try {
-    loaderStatus.textContent = 'Configuring viewer...';
+    loaderStatus.textContent = 'Настройка просмотрщика...';
 
     // Set Cesium Ion token for World Terrain
     const cesiumToken = import.meta.env.CESIUM_ION_TOKEN;
@@ -172,7 +172,7 @@ async function init() {
       viewer.scene.globe.show = true;
     }
 
-    loaderStatus.textContent = 'Initializing systems...';
+    loaderStatus.textContent = 'Инициализация систем...';
 
     const mapStackController = new MapStackController(viewer, {
       googleTileset: tileset,
@@ -200,10 +200,10 @@ async function init() {
 
     // If no share link state, do default fly-to Austin
     if (!styleManager.hasShareState) {
-      loaderStatus.textContent = 'Flying to Austin, TX...';
+      loaderStatus.textContent = 'Перелёт в Остин, Техас...';
       flyToAustin(viewer);
     } else {
-      loaderStatus.textContent = 'Restoring shared view...';
+      loaderStatus.textContent = 'Восстановление общего вида...';
     }
 
     // Initialize data layer manager
@@ -328,7 +328,7 @@ async function init() {
 
   } catch (error) {
     console.error("God's Eye View initialization failed:", error);
-    loaderStatus.textContent = `Error: ${describeError(error)}`;
+    loaderStatus.textContent = `Ошибка: ${describeError(error)}`;
     loaderStatus.style.color = '#ff4444';
   }
 }

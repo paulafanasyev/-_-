@@ -472,7 +472,7 @@ export function initFirstRunExperience({
     const detail = Array.isArray(failed) && failed.length ? ` (${failed.join(', ')})` : '';
     if (status) {
       status.dataset.sticky = 'true';
-      status.textContent = `Could not open that mission${detail}. Retry or explore manually.`;
+      status.textContent = `Не удалось открыть эту миссию${detail}. Повторите попытку или изучите её вручную.`;
     }
     setBusy(false);
   };
@@ -488,7 +488,7 @@ export function initFirstRunExperience({
     if (box) box.checked = !wanted;
     if (!status) return;
     status.dataset.sticky = 'true';
-    status.textContent = 'This browser is blocking storage, so that could not be saved.';
+    status.textContent = 'Этот браузер блокирует хранилище, поэтому сохранить данные не удалось.';
   };
 
   function onKeyDown(event) {

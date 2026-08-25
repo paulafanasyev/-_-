@@ -1,0 +1,185 @@
+src/annotations/annotationEngine.js:889 [label] Palace of Fine Arts
+src/annotations/annotationEngine.js:890 [label] The Presidio (former Army base)
+src/annotations/annotationEngine.js:891 [label] ILM / Lucasfilm
+src/annotations/annotationEngine.js:892 [label] next to the Marina
+src/annotations/annotationEngine.js:905 [label] Palace of Fine Arts
+src/annotations/annotationEngine.js:907 [label] next to the Marina
+src/annotations/annotationEngine.js:911 [label] The Presidio — a former Army base
+src/annotations/annotationEngine.js:913 [label] ILM / Lucasfilm
+src/annotations/annotationEngine.js:915 [label] Crissy Field shoreline
+src/data/aisLiveVessels.js:1802 [textContent] AIS: --
+src/data/aisStreamAdapter.js:356 [message] socket factory returned nothing
+src/data/aisStreamAdapter.js:370 [message] AIS socket does not expose ws emitter semantics
+src/data/cctv.js:230 [label] Midtown West @ 34th
+src/data/cctv.js:231 [label] WTC North Plaza
+src/data/cctv.js:232 [label] Times Sq Northeast
+src/data/cctv.js:234 [label] Market & 5th
+src/data/cctv.js:235 [label] SF Financial Core
+src/data/cctv.js:237 [label] Shibuya Crossing
+src/data/cctv.js:238 [label] Ginza Core
+src/data/cctv.js:239 [label] Asakusa North Gate
+src/data/cctv.js:241 [label] City Cluster A1
+src/data/cctv.js:242 [label] Soho Core
+src/data/cctv.js:244 [label] Rue de Rivoli
+src/data/cctv.js:245 [label] Champs-Élysées North
+src/data/cctv.js:247 [label] National Mall Center
+src/data/cctv.js:248 [label] Pentagon South
+src/data/cctv.js:250 [label] DIFC Loop
+src/data/cctv.js:251 [label] Downtown East
+src/data/cctv.js:253 [label] Congress Southbound
+src/data/cctv.js:254 [label] Downtown West
+src/data/cctv.js:571 [html-text] element rather than an
+src/data/dataCredits.js:94 [html-text] Weather data by Open-Meteo.com
+src/data/firmsHeatmap.js:341 [label] Fire · FRP ${formatFrp(strongest.frp)} MW
+src/data/firmsHeatmap.js:990 [label] Fire · FRP ${formatFrp(fire.frp)} MW
+src/data/layerState.js:263 [label] military flight
+src/data/manager.js:2173 [textContent] ${item.label} ${this._formatCount(item.count)}
+src/data/militaryAwareness.js:494 [label] Military flights
+src/data/militaryAwareness.js:495 [label] AIS vessels
+src/data/militaryAwareness.js:498 [label] Mapped installations
+src/data/militaryAwareness.js:518 [aria-label] Focus ${escapeHtml(accessibleLabel)}
+src/data/militaryAwareness.js:968 [aria-label] Global Context navigation
+src/data/militaryAwareness.js:969 [title] Previous — prior visited contact in the 250 km window
+src/data/militaryAwareness.js:971 [title] Next — nearest unvisited contact in the 250 km window
+src/data/militaryAwareness.js:994 [html-text] Open-source mapped/observed context. Missing broadcasts, unloaded map areas, or unmapped sites are not evidence of absence.
+src/data/militaryAwareness.js:1172 [textContent] ${label} · ${formatAwarenessDistance(item.distanceM)} ${bearingText}${courseText}
+src/data/radio.js:811 [label] Weather / Emergency
+src/data/radio.js:812 [label] Public Safety
+src/data/radio.js:813 [label] Aviation / Marine
+src/data/radio.js:814 [label] Traffic / Transit
+src/data/rocketLaunches.js:1828 [textContent] REPLAY ASCENT
+src/data/rocketLaunches.js:1831 [title] Replay the estimated ascent with a following camera
+src/data/rocketLaunches.js:1866 [textContent] ${_replaySpeed.toFixed(_replaySpeed % 1 ? 2 : 0)}×
+src/data/rocketLaunches.js:2314 [textContent] ${index + 1} / ${_launches.length}
+src/data/rocketLaunches.js:2326 [textContent] ${_launches.length} / 30D
+src/data/rocketLaunches.js:2330 [html-text] NO MISSIONS AVAILABLE IN THE CURRENT 30-DAY WINDOW
+src/data/rocketLaunches.js:2338 [aria-label] Select ${escapeMissionText(label)}
+src/data/rocketLaunches.js:2529 [html-text] ASCENT PATH ·
+src/data/rocketLaunches.js:2529 [html-text] CURRENT DISTANCE FROM EARTH ·
+src/data/rocketLaunches.js:2529 [aria-label] Deselect mission
+src/data/rocketLaunches.js:2529 [html-text] FINAL POSITION
+src/data/rocketLaunches.js:2529 [html-text] LAUNCH SITE ·
+src/data/rocketLaunches.js:2529 [html-text] LAUNCH TIME ·
+src/data/rocketLaunches.js:2529 [title] Next mission
+src/data/rocketLaunches.js:2529 [html-text] ORBIT ·
+src/data/rocketLaunches.js:2529 [title] Previous mission
+src/data/rocketLaunches.js:2529 [html-text] REPLAY ASCENT
+src/data/rocketLaunches.js:2529 [html-text] REPLAY SPEED
+src/data/rocketLaunches.js:2529 [aria-label] Replay speed multiplier
+src/data/rocketLaunches.js:2529 [html-text] SATELLITE SPEED ·
+src/data/rocketLaunches.js:2529 [html-text] SELECTED SPACE MISSION
+src/data/rocketLaunches.js:2529 [html-text] SHOW ALL / DESELECT
+src/data/rocketLaunches.js:2529 [title] Show all missions
+src/data/rocketLaunches.js:2529 [html-text] STAGE / RE-ENTRY / RECOVERY
+src/data/rocketLaunches.js:2529 [html-text] STATUS ·
+src/data/rocketLaunches.js:2533 [aria-label] Pause replay
+src/data/rocketLaunches.js:2533 [title] Pause replay
+src/data/rocketLaunches.js:2534 [aria-label] Cancel replay
+src/data/rocketLaunches.js:2534 [title] Cancel replay
+src/data/rocketLaunches.js:2688 [title] STAGE RE-ENTRY / RECOVERY · ${mission}
+src/data/rocketLaunches.js:2691 [title] ORBIT REPLAY · ${mission}
+src/data/rocketLaunches.js:2694 [title] PAUSED · ${title}
+src/data/rocketLaunches.js:3042 [text] STAGE RE-ENTRY
+src/data/satellites.js:2148 [title] Add the full Starlink broadband shell (thousands of extra points)
+src/data/satellites.js:2149 [title] Loading the Starlink shell…
+src/data/satellites.js:2151 [title] Showing the full Starlink shell — click for the core catalog only
+src/firstRunExperience.js:475 [textContent] Could not open that mission${detail}. Retry or explore manually.
+src/firstRunExperience.js:491 [textContent] This browser is blocking storage, so that could not be saved.
+src/hud.js:148 [html-text] TOP SECRET // SI-TK // NOFORN
+src/hud.js:156 [html-text] TOP SECRET // SI-TK // NOFORN
+src/hud.js:161 [html-text] Awaiting telemetry...
+src/hud.js:309 [textContent] MGRS: ${formatted}
+src/hud.js:312 [textContent] MGRS: ---
+src/hud.js:317 [textContent] ${latDMS} ${lonDMS}
+src/hud.js:320 [textContent] MGRS: ${mgrsLabel} LAT: ${latDMS} LON: ${lonDMS}
+src/hud.js:331 [textContent] GSD: ${gsd.toFixed(2)}m NIIRS: ${niirs.toFixed(1)}
+src/hud.js:351 [textContent] COLL: ${h}:${m}:${s}Z
+src/hud.js:359 [textContent] ONA: ${ona.toFixed(1)}°
+src/main.js:74 [textContent] Configuring viewer...
+src/main.js:175 [textContent] Initializing systems...
+src/main.js:203 [textContent] Flying to Austin, TX...
+src/main.js:206 [textContent] Restoring shared view...
+src/main.js:331 [textContent] Error: ${describeError(error)}
+src/mapStackController.js:14 [label] Bing Aerial
+src/mapStackController.js:22 [label] Bing Labels
+src/overlays/worldOverlay.js:1994 [textContent] Focusing ${item.label}
+src/overlays/worldOverlayAllocation.worker.mjs:742 [title] ALLOC01 · FL350 · 451 kts
+src/overlays/worldOverlayTokens.js:106 [label] rgba(255, 216, 128, 0.95)
+src/overlays/worldOverlayTokens.js:123 [label] rgba(225, 255, 210, 0.97)
+src/overlays/worldOverlayTokens.js:140 [label] rgba(255, 236, 208, 0.98)
+src/overlays/worldOverlayTokens.js:157 [label] rgba(200, 250, 255, 0.97)
+src/scenes/director.js:489 [textContent] No shots yet. Use CAPTURE SHOT to save current look.
+src/scenes/director.js:548 [textContent] ${style.toUpperCase()} · ${mode} · ${shot.durationSec.toFixed(1)}s + ${shot.holdSec.toFixed(1)}s
+src/scenes/director.js:1347 [textContent] ${pct}%
+src/styles/anime.js:9 [label] Edge Thickness
+src/ui.js:867 [title] ${active ? 'Disable' : 'Enable'} cockpit weather effects
+src/ui.js:999 [title] Current style: ${names[next]} — click for next
+src/ui.js:1464 [textContent] ${lat} · ${lon}
+src/ui.js:1562 [textContent] CONTACT LOST · LAST KNOWN READOUT · NOT AN ALL-CLEAR
+src/ui.js:1631 [textContent] BRG —
+src/ui.js:1679 [textContent] ${this.briefPageIndex + 1} / ${count}
+src/ui.js:1729 [textContent] POSITION UNAVAILABLE
+src/ui.js:1734 [textContent] ${lat} · ${lon}
+src/ui.js:1791 [textContent] RESOLVING REGION
+src/ui.js:1792 [textContent] REGION UNAVAILABLE
+src/ui.js:1972 [title] ${expanded ? 'Collapse' : 'Expand'} contact panel
+src/ui.js:1991 [title] ${expanded ? 'Collapse' : 'Expand'} briefing panel
+src/ui.js:2514 [textContent] ${pct}%
+src/ui.js:2527 [textContent] ${pct}%
+src/ui.js:2552 [textContent] ${pct}%
+src/ui.js:3237 [textContent] ${clamped}%
+src/ui.js:3408 [textContent] ${pct}%
+src/ui.js:3418 [textContent] ${pct}%
+src/ui.js:3446 [textContent] ${pct}%
+src/ui.js:3548 [textContent] ${pct}%
+src/ui.js:3562 [textContent] ${fadePct}%
+src/ui.js:3564 [textContent] ${outsideOpacityPct}%
+src/ui.js:3593 [textContent] ${tuning.densityPct}%
+src/ui.js:3688 [textContent] ${sharpenPct}%
+src/ui.js:3727 [textContent] ${pct}%
+src/ui.js:3751 [textContent] ${sharpenPct}%
+src/ui.js:3772 [textContent] ${density}%
+src/ui.js:3892 [textContent] ${loaded}/${total}
+src/ui.js:3901 [textContent] ${total}/${total}
+src/ui.js:5317 [title] ${action} Cockpit display options
+src/ui.js:5323 [title] ${action} Cockpit Radio controls
+src/ui.js:5498 [textContent] OFF AIR
+src/ui.js:5499 [textContent] STATION UNAVAILABLE
+src/ui.js:5637 [textContent] ${value}%
+src/ui.js:5651 [textContent] ${value}%
+src/ui.js:5656 [textContent] ${value}%
+src/ui.js:5849 [title] ${action} compact Radio controls
+src/ui.js:5931 [textContent] ● ${category.label} (${category.count})
+src/ui.js:6332 [textContent] SOURCE · UNKNOWN
+src/ui.js:6338 [textContent] FRAME · LOADING
+src/ui.js:6343 [textContent] FRAME · UNAVAILABLE
+src/ui.js:6349 [textContent] ${kind} · ${status}
+src/ui.js:6387 [textContent] ${field.label}
+src/ui.js:6544 [textContent] ${camera.city} · ${camera.name}
+src/ui.js:6619 [textContent] Enable CCTV to load camera intersections
+src/ui.js:7413 [title] ${action} ${panelName}
+src/ui.js:7417 [title] ${action} Radio
+src/ui.js:7427 [title] ${action} ${panelName}
+src/ui.js:8012 [textContent] ${pct}%
+src/ui.js:8657 [textContent] ${pct}%
+src/ui.js:8682 [textContent] ${pct}%
+src/ui.js:8690 [textContent] ${pct}%
+src/ui.js:8788 [textContent] ${sharpenPct}%
+src/ui.js:8807 [textContent] ${density}%
+src/voice/gevActions.js:1201 [label] United States
+src/voice/gevActions.js:1202 [label] United States
+src/voice/gevActions.js:1203 [label] United States
+src/voice/gevActions.js:1204 [label] United States
+src/voice/gevActions.js:1257 [label] ${latitude.toFixed(3)}, ${longitude.toFixed(3)}
+src/voice/gevActions.js:2283 [label] ${latitude.toFixed(4)}, ${longitude.toFixed(4)}
+src/voice/gevRealtime.js:1417 [text] Current God's Eye View viewport screenshot. Read any clearly visible street, building, and place labels in the image and combine them with the structured nearbyPlaces, streetLabels, and scene context. Do not invent labels that are not legible.
+src/voice/gevRealtime.js:1793 [title] Estimated session cost on ${state.modelId} — ${state.responses} response(s).
+src/voice/gevRealtime.js:2555 [html-text] AI AGENT
+src/voice/gevRealtime.js:2558 [title] Voice model tier — applies next session
+src/voice/gevRealtime.js:2559 [title] Estimated session cost
+src/voice/gevRealtime.js:2562 [aria-label] Voice control — hold Space to speak; click to toggle voice
+src/voice/gevRealtime.js:2570 [html-text] VOICE STANDBY
+src/voice/gevRealtime.js:2573 [html-text] VOICE CONTROL
+src/voice/gevRealtime.js:2574 [html-text] Hold Space to speak · click mic to toggle voice
+src/voice/gevRealtime.js:2578 [html-text] VOICE SYSTEM ERROR
+src/voice/gevRealtime.js:2582 [html-text] Check microphone permission and network access, then try again.

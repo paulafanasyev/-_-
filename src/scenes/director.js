@@ -486,7 +486,7 @@ export class SceneDirector {
     if (!scene || scene.shots.length === 0) {
       const empty = document.createElement('div');
       empty.className = 'scene-shot-empty';
-      empty.textContent = 'No shots yet. Use CAPTURE SHOT to save current look.';
+      empty.textContent = 'Снимков пока нет. Используйте «СОХРАНИТЬ СНИМОК», чтобы сохранить текущий вид.';
       this._sceneShotList.appendChild(empty);
       return;
     }

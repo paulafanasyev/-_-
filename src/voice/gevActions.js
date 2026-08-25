@@ -1198,10 +1198,10 @@ export async function controlCctv(dataManager, args = {}, styleManager = null) {
 }
 
 const RADIO_COUNTRY_CENTERS = new Map([
-  ['us', { lat: 39.8, lon: -98.6, country: 'US', label: 'United States' }],
-  ['usa', { lat: 39.8, lon: -98.6, country: 'US', label: 'United States' }],
-  ['united states', { lat: 39.8, lon: -98.6, country: 'US', label: 'United States' }],
-  ['united states of america', { lat: 39.8, lon: -98.6, country: 'US', label: 'United States' }],
+  ['us', { lat: 39.8, lon: -98.6, country: 'US', label: 'Соединённые Штаты' }],
+  ['usa', { lat: 39.8, lon: -98.6, country: 'US', label: 'Соединённые Штаты' }],
+  ['united states', { lat: 39.8, lon: -98.6, country: 'US', label: 'Соединённые Штаты' }],
+  ['united states of america', { lat: 39.8, lon: -98.6, country: 'US', label: 'Соединённые Штаты' }],
 ]);
 
 /** Resolve curated cities and common country requests without moving the camera. */

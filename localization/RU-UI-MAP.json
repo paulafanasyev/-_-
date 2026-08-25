@@ -1,0 +1,682 @@
+{
+  "src/annotations/annotationEngine.js:889:label": {
+    "source": "Palace of Fine Arts",
+    "ru": "Дворец изящных искусств"
+  },
+  "src/annotations/annotationEngine.js:890:label": {
+    "source": "The Presidio (former Army base)",
+    "ru": "Президио (бывшая военная база)"
+  },
+  "src/annotations/annotationEngine.js:891:label": {
+    "source": "ILM / Lucasfilm",
+    "ru": "ILM / Lucasfilm"
+  },
+  "src/annotations/annotationEngine.js:892:label": {
+    "source": "next to the Marina",
+    "ru": "рядом с Мариной"
+  },
+  "src/annotations/annotationEngine.js:905:label": {
+    "source": "Palace of Fine Arts",
+    "ru": "Дворец изящных искусств"
+  },
+  "src/annotations/annotationEngine.js:907:label": {
+    "source": "next to the Marina",
+    "ru": "рядом с Мариной"
+  },
+  "src/annotations/annotationEngine.js:911:label": {
+    "source": "The Presidio — a former Army base",
+    "ru": "Президио — бывшая военная база"
+  },
+  "src/annotations/annotationEngine.js:913:label": {
+    "source": "ILM / Lucasfilm",
+    "ru": "ILM / Lucasfilm"
+  },
+  "src/annotations/annotationEngine.js:915:label": {
+    "source": "Crissy Field shoreline",
+    "ru": "побережье Крисси-Филд"
+  },
+  "src/data/aisLiveVessels.js:1802:textContent": {
+    "source": "AIS: --",
+    "ru": "AIS: --"
+  },
+  "src/data/aisStreamAdapter.js:356:message": {
+    "source": "socket factory returned nothing",
+    "ru": "фабрика сокетов ничего не вернула"
+  },
+  "src/data/aisStreamAdapter.js:370:message": {
+    "source": "AIS socket does not expose ws emitter semantics",
+    "ru": "AIS-сокет не предоставляет интерфейс событий WebSocket"
+  },
+  "src/data/cctv.js:230:label": {
+    "source": "Midtown West @ 34th",
+    "ru": "Мидтаун-Уэст @ 34-я улица"
+  },
+  "src/data/cctv.js:231:label": {
+    "source": "WTC North Plaza",
+    "ru": "Северная площадь WTC"
+  },
+  "src/data/cctv.js:232:label": {
+    "source": "Times Sq Northeast",
+    "ru": "Северо-восток Таймс-сквер"
+  },
+  "src/data/cctv.js:234:label": {
+    "source": "Market & 5th",
+    "ru": "Маркет и 5-я улица"
+  },
+  "src/data/cctv.js:235:label": {
+    "source": "SF Financial Core",
+    "ru": "Финансовый центр Сан-Франциско"
+  },
+  "src/data/cctv.js:237:label": {
+    "source": "Shibuya Crossing",
+    "ru": "перекрёсток Сибуя"
+  },
+  "src/data/cctv.js:238:label": {
+    "source": "Ginza Core",
+    "ru": "центр Гиндзы"
+  },
+  "src/data/cctv.js:239:label": {
+    "source": "Asakusa North Gate",
+    "ru": "северные ворота Асакусы"
+  },
+  "src/data/cctv.js:241:label": {
+    "source": "City Cluster A1",
+    "ru": "Городской кластер A1"
+  },
+  "src/data/cctv.js:242:label": {
+    "source": "Soho Core",
+    "ru": "Центр Сохо"
+  },
+  "src/data/cctv.js:244:label": {
+    "source": "Rue de Rivoli",
+    "ru": "улица Риволи"
+  },
+  "src/data/cctv.js:245:label": {
+    "source": "Champs-Élysées North",
+    "ru": "Север Елисейских полей"
+  },
+  "src/data/cctv.js:247:label": {
+    "source": "National Mall Center",
+    "ru": "Центр Национальной аллеи"
+  },
+  "src/data/cctv.js:248:label": {
+    "source": "Pentagon South",
+    "ru": "Юг Пентагона"
+  },
+  "src/data/cctv.js:250:label": {
+    "source": "DIFC Loop",
+    "ru": "Петля DIFC"
+  },
+  "src/data/cctv.js:251:label": {
+    "source": "Downtown East",
+    "ru": "Восточный центр города"
+  },
+  "src/data/cctv.js:253:label": {
+    "source": "Congress Southbound",
+    "ru": "Конгресс — южное направление"
+  },
+  "src/data/cctv.js:254:label": {
+    "source": "Downtown West",
+    "ru": "Западный центр города"
+  },
+  "src/data/cctv.js:571:html-text": {
+    "source": "element rather than an",
+    "ru": null
+  },
+  "src/data/dataCredits.js:94:html-text": {
+    "source": "Weather data by Open-Meteo.com",
+    "ru": "Данные о погоде предоставлены Open-Meteo.com"
+  },
+  "src/data/firmsHeatmap.js:341:label": {
+    "source": "Fire · FRP ${formatFrp(strongest.frp)} MW",
+    "ru": "Пожар · FRP ${formatFrp(strongest.frp)} МВт"
+  },
+  "src/data/firmsHeatmap.js:990:label": {
+    "source": "Fire · FRP ${formatFrp(fire.frp)} MW",
+    "ru": "Пожар · FRP ${formatFrp(fire.frp)} МВт"
+  },
+  "src/data/layerState.js:263:label": {
+    "source": "military flight",
+    "ru": "военный полёт"
+  },
+  "src/data/manager.js:2173:textContent": {
+    "source": "${item.label} ${this._formatCount(item.count)}",
+    "ru": null
+  },
+  "src/data/militaryAwareness.js:494:label": {
+    "source": "Military flights",
+    "ru": "Военные полёты"
+  },
+  "src/data/militaryAwareness.js:495:label": {
+    "source": "AIS vessels",
+    "ru": "Суда AIS"
+  },
+  "src/data/militaryAwareness.js:498:label": {
+    "source": "Mapped installations",
+    "ru": "Нанесённые на карту объекты"
+  },
+  "src/data/militaryAwareness.js:518:aria-label": {
+    "source": "Focus ${escapeHtml(accessibleLabel)}",
+    "ru": "Фокус на ${escapeHtml(accessibleLabel)}"
+  },
+  "src/data/militaryAwareness.js:968:aria-label": {
+    "source": "Global Context navigation",
+    "ru": "Навигация по глобальному контексту"
+  },
+  "src/data/militaryAwareness.js:969:title": {
+    "source": "Previous — prior visited contact in the 250 km window",
+    "ru": "Предыдущий — ранее посещённый контакт в радиусе 250 км"
+  },
+  "src/data/militaryAwareness.js:971:title": {
+    "source": "Next — nearest unvisited contact in the 250 km window",
+    "ru": "Следующий — ближайший непосещённый контакт в радиусе 250 км"
+  },
+  "src/data/militaryAwareness.js:994:html-text": {
+    "source": "Open-source mapped/observed context. Missing broadcasts, unloaded map areas, or unmapped sites are not evidence of absence.",
+    "ru": "Контекст на основе открытых данных и наблюдений. Отсутствие передачи, незагруженная область карты или объект, отсутствующий на карте, не являются доказательством отсутствия."
+  },
+  "src/data/militaryAwareness.js:1172:textContent": {
+    "source": "${label} · ${formatAwarenessDistance(item.distanceM)} ${bearingText}${courseText}",
+    "ru": "${label} · ${formatAwarenessDistance(item.distanceM)} ${bearingText}${courseText}"
+  },
+  "src/data/radio.js:811:label": {
+    "source": "Weather / Emergency",
+    "ru": "Погода / чрезвычайные ситуации"
+  },
+  "src/data/radio.js:812:label": {
+    "source": "Public Safety",
+    "ru": "Общественная безопасность"
+  },
+  "src/data/radio.js:813:label": {
+    "source": "Aviation / Marine",
+    "ru": "Авиация / морской транспорт"
+  },
+  "src/data/radio.js:814:label": {
+    "source": "Traffic / Transit",
+    "ru": "Дорожное движение / транспорт"
+  },
+  "src/data/rocketLaunches.js:1828:textContent": {
+    "source": "REPLAY ASCENT",
+    "ru": "ПОВТОР ВЗЛЁТА"
+  },
+  "src/data/rocketLaunches.js:1831:title": {
+    "source": "Replay the estimated ascent with a following camera",
+    "ru": "Повторить расчётную траекторию взлёта с камерой сопровождения"
+  },
+  "src/data/rocketLaunches.js:1866:textContent": {
+    "source": "${_replaySpeed.toFixed(_replaySpeed % 1 ? 2 : 0)}×",
+    "ru": null
+  },
+  "src/data/rocketLaunches.js:2314:textContent": {
+    "source": "${index + 1} / ${_launches.length}",
+    "ru": null
+  },
+  "src/data/rocketLaunches.js:2326:textContent": {
+    "source": "${_launches.length} / 30D",
+    "ru": null
+  },
+  "src/data/rocketLaunches.js:2330:html-text": {
+    "source": "NO MISSIONS AVAILABLE IN THE CURRENT 30-DAY WINDOW",
+    "ru": "НЕТ ДОСТУПНЫХ МИССИЙ В ТЕКУЩЕМ 30-ДНЕВНОМ ОКНЕ"
+  },
+  "src/data/rocketLaunches.js:2338:aria-label": {
+    "source": "Select ${escapeMissionText(label)}",
+    "ru": "Выбрать ${escapeMissionText(label)}"
+  },
+  "src/data/rocketLaunches.js:2529:html-text": {
+    "source": "STATUS ·",
+    "ru": "СТАТУС ·"
+  },
+  "src/data/rocketLaunches.js:2529:aria-label": {
+    "source": "Replay speed multiplier",
+    "ru": "Множитель скорости повтора"
+  },
+  "src/data/rocketLaunches.js:2529:title": {
+    "source": "Show all missions",
+    "ru": "Показать все миссии"
+  },
+  "src/data/rocketLaunches.js:2533:aria-label": {
+    "source": "Pause replay",
+    "ru": "Приостановить повтор"
+  },
+  "src/data/rocketLaunches.js:2533:title": {
+    "source": "Pause replay",
+    "ru": "Приостановить повтор"
+  },
+  "src/data/rocketLaunches.js:2534:aria-label": {
+    "source": "Cancel replay",
+    "ru": "Отменить повтор"
+  },
+  "src/data/rocketLaunches.js:2534:title": {
+    "source": "Cancel replay",
+    "ru": "Отменить повтор"
+  },
+  "src/data/rocketLaunches.js:2688:title": {
+    "source": "STAGE RE-ENTRY / RECOVERY · ${mission}",
+    "ru": "ЭТАП · ВХОД В АТМОСФЕРУ / ВОССТАНОВЛЕНИЕ · ${mission}"
+  },
+  "src/data/rocketLaunches.js:2691:title": {
+    "source": "ORBIT REPLAY · ${mission}",
+    "ru": "ПОВТОР ОРБИТЫ · ${mission}"
+  },
+  "src/data/rocketLaunches.js:2694:title": {
+    "source": "PAUSED · ${title}",
+    "ru": "ПАУЗА · ${title}"
+  },
+  "src/data/rocketLaunches.js:3042:text": {
+    "source": "STAGE RE-ENTRY",
+    "ru": "ЭТАП · ВХОД В АТМОСФЕРУ"
+  },
+  "src/data/satellites.js:2148:title": {
+    "source": "Add the full Starlink broadband shell (thousands of extra points)",
+    "ru": "Добавить полную широкополосную оболочку Starlink (тысячи дополнительных точек)"
+  },
+  "src/data/satellites.js:2149:title": {
+    "source": "Loading the Starlink shell…",
+    "ru": "Загрузка оболочки Starlink…"
+  },
+  "src/data/satellites.js:2151:title": {
+    "source": "Showing the full Starlink shell — click for the core catalog only",
+    "ru": "Показана полная оболочка Starlink — нажмите, чтобы оставить только основной каталог"
+  },
+  "src/firstRunExperience.js:475:textContent": {
+    "source": "Could not open that mission${detail}. Retry or explore manually.",
+    "ru": "Не удалось открыть эту миссию${detail}. Повторите попытку или изучите её вручную."
+  },
+  "src/firstRunExperience.js:491:textContent": {
+    "source": "This browser is blocking storage, so that could not be saved.",
+    "ru": "Этот браузер блокирует хранилище, поэтому сохранить данные не удалось."
+  },
+  "src/hud.js:148:html-text": {
+    "source": "TOP SECRET // SI-TK // NOFORN",
+    "ru": "СОВЕРШЕННО СЕКРЕТНО // SI-TK // NOFORN"
+  },
+  "src/hud.js:156:html-text": {
+    "source": "TOP SECRET // SI-TK // NOFORN",
+    "ru": "СОВЕРШЕННО СЕКРЕТНО // SI-TK // NOFORN"
+  },
+  "src/hud.js:161:html-text": {
+    "source": "Awaiting telemetry...",
+    "ru": "Ожидание телеметрии..."
+  },
+  "src/hud.js:309:textContent": {
+    "source": "MGRS: ${formatted}",
+    "ru": "MGRS: ${formatted}"
+  },
+  "src/hud.js:312:textContent": {
+    "source": "MGRS: ---",
+    "ru": "MGRS: ---"
+  },
+  "src/hud.js:317:textContent": {
+    "source": "${latDMS} ${lonDMS}",
+    "ru": null
+  },
+  "src/hud.js:320:textContent": {
+    "source": "MGRS: ${mgrsLabel} LAT: ${latDMS} LON: ${lonDMS}",
+    "ru": "MGRS: ${mgrsLabel} ШИР: ${latDMS} ДОЛ: ${lonDMS}"
+  },
+  "src/hud.js:331:textContent": {
+    "source": "GSD: ${gsd.toFixed(2)}m NIIRS: ${niirs.toFixed(1)}",
+    "ru": "GSD: ${gsd.toFixed(2)} м NIIRS: ${niirs.toFixed(1)}"
+  },
+  "src/hud.js:351:textContent": {
+    "source": "COLL: ${h}:${m}:${s}Z",
+    "ru": "СБЛИЖЕНИЕ: ${h}:${m}:${s}Z"
+  },
+  "src/hud.js:359:textContent": {
+    "source": "ONA: ${ona.toFixed(1)}°",
+    "ru": "ONA: ${ona.toFixed(1)}°"
+  },
+  "src/main.js:74:textContent": {
+    "source": "Configuring viewer...",
+    "ru": "Настройка просмотрщика..."
+  },
+  "src/main.js:175:textContent": {
+    "source": "Initializing systems...",
+    "ru": "Инициализация систем..."
+  },
+  "src/main.js:203:textContent": {
+    "source": "Flying to Austin, TX...",
+    "ru": "Перелёт в Остин, Техас..."
+  },
+  "src/main.js:206:textContent": {
+    "source": "Restoring shared view...",
+    "ru": "Восстановление общего вида..."
+  },
+  "src/main.js:331:textContent": {
+    "source": "Error: ${describeError(error)}",
+    "ru": "Ошибка: ${describeError(error)}"
+  },
+  "src/mapStackController.js:14:label": {
+    "source": "Bing Aerial",
+    "ru": "Bing — спутниковый вид"
+  },
+  "src/mapStackController.js:22:label": {
+    "source": "Bing Labels",
+    "ru": "Bing — подписи"
+  },
+  "src/overlays/worldOverlay.js:1994:textContent": {
+    "source": "Focusing ${item.label}",
+    "ru": "Фокус на ${item.label}"
+  },
+  "src/overlays/worldOverlayAllocation.worker.mjs:742:title": {
+    "source": "ALLOC01 · FL350 · 451 kts",
+    "ru": null
+  },
+  "src/overlays/worldOverlayTokens.js:106:label": {
+    "source": "rgba(255, 216, 128, 0.95)",
+    "ru": null
+  },
+  "src/overlays/worldOverlayTokens.js:123:label": {
+    "source": "rgba(225, 255, 210, 0.97)",
+    "ru": null
+  },
+  "src/overlays/worldOverlayTokens.js:140:label": {
+    "source": "rgba(255, 236, 208, 0.98)",
+    "ru": null
+  },
+  "src/overlays/worldOverlayTokens.js:157:label": {
+    "source": "rgba(200, 250, 255, 0.97)",
+    "ru": null
+  },
+  "src/scenes/director.js:489:textContent": {
+    "source": "No shots yet. Use CAPTURE SHOT to save current look.",
+    "ru": "Снимков пока нет. Используйте «СОХРАНИТЬ СНИМОК», чтобы сохранить текущий вид."
+  },
+  "src/scenes/director.js:548:textContent": {
+    "source": "${style.toUpperCase()} · ${mode} · ${shot.durationSec.toFixed(1)}s + ${shot.holdSec.toFixed(1)}s",
+    "ru": null
+  },
+  "src/scenes/director.js:1347:textContent": {
+    "source": "${pct}%",
+    "ru": null
+  },
+  "src/styles/anime.js:9:label": {
+    "source": "Edge Thickness",
+    "ru": "Толщина границы"
+  },
+  "src/ui.js:867:title": {
+    "source": "${active ? 'Disable' : 'Enable'} cockpit weather effects",
+    "ru": "${active ? 'Отключить' : 'Включить'} эффекты погоды в кабине"
+  },
+  "src/ui.js:999:title": {
+    "source": "Current style: ${names[next]} — click for next",
+    "ru": "Текущий стиль: ${names[next]} — нажмите для следующего"
+  },
+  "src/ui.js:1464:textContent": {
+    "source": "${lat} · ${lon}",
+    "ru": null
+  },
+  "src/ui.js:1562:textContent": {
+    "source": "CONTACT LOST · LAST KNOWN READOUT · NOT AN ALL-CLEAR",
+    "ru": "КОНТАКТ ПОТЕРЯН · ПОСЛЕДНИЕ ИЗВЕСТНЫЕ ДАННЫЕ · ЭТО НЕ СИГНАЛ О БЕЗОПАСНОСТИ"
+  },
+  "src/ui.js:1631:textContent": {
+    "source": "BRG —",
+    "ru": "АЗИМУТ —"
+  },
+  "src/ui.js:1679:textContent": {
+    "source": "${this.briefPageIndex + 1} / ${count}",
+    "ru": null
+  },
+  "src/ui.js:1729:textContent": {
+    "source": "POSITION UNAVAILABLE",
+    "ru": "ПОЗИЦИЯ НЕДОСТУПНА"
+  },
+  "src/ui.js:1734:textContent": {
+    "source": "${lat} · ${lon}",
+    "ru": null
+  },
+  "src/ui.js:1791:textContent": {
+    "source": "RESOLVING REGION",
+    "ru": "ОПРЕДЕЛЕНИЕ РЕГИОНА"
+  },
+  "src/ui.js:1792:textContent": {
+    "source": "REGION UNAVAILABLE",
+    "ru": "РЕГИОН НЕДОСТУПЕН"
+  },
+  "src/ui.js:1972:title": {
+    "source": "${expanded ? 'Collapse' : 'Expand'} contact panel",
+    "ru": "${expanded ? 'Свернуть' : 'Развернуть'} панель контакта"
+  },
+  "src/ui.js:1991:title": {
+    "source": "${expanded ? 'Collapse' : 'Expand'} briefing panel",
+    "ru": "${expanded ? 'Свернуть' : 'Развернуть'} панель сводки"
+  },
+  "src/ui.js:2514:textContent": {
+    "source": "${pct}%",
+    "ru": null
+  },
+  "src/ui.js:2527:textContent": {
+    "source": "${pct}%",
+    "ru": null
+  },
+  "src/ui.js:2552:textContent": {
+    "source": "${pct}%",
+    "ru": null
+  },
+  "src/ui.js:3237:textContent": {
+    "source": "${clamped}%",
+    "ru": null
+  },
+  "src/ui.js:3408:textContent": {
+    "source": "${pct}%",
+    "ru": null
+  },
+  "src/ui.js:3418:textContent": {
+    "source": "${pct}%",
+    "ru": null
+  },
+  "src/ui.js:3446:textContent": {
+    "source": "${pct}%",
+    "ru": null
+  },
+  "src/ui.js:3548:textContent": {
+    "source": "${pct}%",
+    "ru": null
+  },
+  "src/ui.js:3562:textContent": {
+    "source": "${fadePct}%",
+    "ru": null
+  },
+  "src/ui.js:3564:textContent": {
+    "source": "${outsideOpacityPct}%",
+    "ru": null
+  },
+  "src/ui.js:3593:textContent": {
+    "source": "${tuning.densityPct}%",
+    "ru": null
+  },
+  "src/ui.js:3688:textContent": {
+    "source": "${sharpenPct}%",
+    "ru": null
+  },
+  "src/ui.js:3727:textContent": {
+    "source": "${pct}%",
+    "ru": null
+  },
+  "src/ui.js:3751:textContent": {
+    "source": "${sharpenPct}%",
+    "ru": null
+  },
+  "src/ui.js:3772:textContent": {
+    "source": "${density}%",
+    "ru": null
+  },
+  "src/ui.js:3892:textContent": {
+    "source": "${loaded}/${total}",
+    "ru": null
+  },
+  "src/ui.js:3901:textContent": {
+    "source": "${total}/${total}",
+    "ru": null
+  },
+  "src/ui.js:5317:title": {
+    "source": "${action} Cockpit display options",
+    "ru": "${action} параметры отображения кабины"
+  },
+  "src/ui.js:5323:title": {
+    "source": "${action} Cockpit Radio controls",
+    "ru": "${action} управление радио кабины"
+  },
+  "src/ui.js:5498:textContent": {
+    "source": "OFF AIR",
+    "ru": "В ЭФИРЕ НЕТ СИГНАЛА"
+  },
+  "src/ui.js:5499:textContent": {
+    "source": "STATION UNAVAILABLE",
+    "ru": "СТАНЦИЯ НЕДОСТУПНА"
+  },
+  "src/ui.js:5637:textContent": {
+    "source": "${value}%",
+    "ru": null
+  },
+  "src/ui.js:5651:textContent": {
+    "source": "${value}%",
+    "ru": null
+  },
+  "src/ui.js:5656:textContent": {
+    "source": "${value}%",
+    "ru": null
+  },
+  "src/ui.js:5849:title": {
+    "source": "${action} compact Radio controls",
+    "ru": "${action} компактное управление радио"
+  },
+  "src/ui.js:5931:textContent": {
+    "source": "● ${category.label} (${category.count})",
+    "ru": "● ${category.label} (${category.count})"
+  },
+  "src/ui.js:6332:textContent": {
+    "source": "SOURCE · UNKNOWN",
+    "ru": "ИСТОЧНИК · НЕИЗВЕСТЕН"
+  },
+  "src/ui.js:6338:textContent": {
+    "source": "FRAME · LOADING",
+    "ru": "КАДР · ЗАГРУЗКА"
+  },
+  "src/ui.js:6343:textContent": {
+    "source": "FRAME · UNAVAILABLE",
+    "ru": "КАДР · НЕДОСТУПЕН"
+  },
+  "src/ui.js:6349:textContent": {
+    "source": "${kind} · ${status}",
+    "ru": null
+  },
+  "src/ui.js:6387:textContent": {
+    "source": "${field.label}",
+    "ru": null
+  },
+  "src/ui.js:6544:textContent": {
+    "source": "${camera.city} · ${camera.name}",
+    "ru": null
+  },
+  "src/ui.js:6619:textContent": {
+    "source": "Enable CCTV to load camera intersections",
+    "ru": "Включите CCTV, чтобы загрузить камеры на перекрёстках"
+  },
+  "src/ui.js:7413:title": {
+    "source": "${action} ${panelName}",
+    "ru": null
+  },
+  "src/ui.js:7417:title": {
+    "source": "${action} Radio",
+    "ru": "${action} радио"
+  },
+  "src/ui.js:7427:title": {
+    "source": "${action} ${panelName}",
+    "ru": null
+  },
+  "src/ui.js:8012:textContent": {
+    "source": "${pct}%",
+    "ru": null
+  },
+  "src/ui.js:8657:textContent": {
+    "source": "${pct}%",
+    "ru": null
+  },
+  "src/ui.js:8682:textContent": {
+    "source": "${pct}%",
+    "ru": null
+  },
+  "src/ui.js:8690:textContent": {
+    "source": "${pct}%",
+    "ru": null
+  },
+  "src/ui.js:8788:textContent": {
+    "source": "${sharpenPct}%",
+    "ru": null
+  },
+  "src/ui.js:8807:textContent": {
+    "source": "${density}%",
+    "ru": null
+  },
+  "src/voice/gevActions.js:1201:label": {
+    "source": "United States",
+    "ru": "Соединённые Штаты"
+  },
+  "src/voice/gevActions.js:1202:label": {
+    "source": "United States",
+    "ru": "Соединённые Штаты"
+  },
+  "src/voice/gevActions.js:1203:label": {
+    "source": "United States",
+    "ru": "Соединённые Штаты"
+  },
+  "src/voice/gevActions.js:1204:label": {
+    "source": "United States",
+    "ru": "Соединённые Штаты"
+  },
+  "src/voice/gevActions.js:1257:label": {
+    "source": "${latitude.toFixed(3)}, ${longitude.toFixed(3)}",
+    "ru": null
+  },
+  "src/voice/gevActions.js:2283:label": {
+    "source": "${latitude.toFixed(4)}, ${longitude.toFixed(4)}",
+    "ru": null
+  },
+  "src/voice/gevRealtime.js:1417:text": {
+    "source": "Current God's Eye View viewport screenshot. Read any clearly visible street, building, and place labels in the image and combine them with the structured nearbyPlaces, streetLabels, and scene context. Do not invent labels that are not legible.",
+    "ru": "Текущий снимок экрана God's Eye View. Прочитайте только чётко видимые названия улиц, зданий и мест на изображении и сопоставьте их со структурированными данными nearbyPlaces, streetLabels и контекстом сцены. Не придумывайте нечитаемые названия."
+  },
+  "src/voice/gevRealtime.js:1793:title": {
+    "source": "Estimated session cost on ${state.modelId} — ${state.responses} response(s).",
+    "ru": "Расчётная стоимость сеанса для ${state.modelId} — ответов: ${state.responses}."
+  },
+  "src/voice/gevRealtime.js:2555:html-text": {
+    "source": "AI AGENT",
+    "ru": "ИИ-АГЕНТ"
+  },
+  "src/voice/gevRealtime.js:2558:title": {
+    "source": "Voice model tier — applies next session",
+    "ru": "Уровень голосовой модели — применяется в следующем сеансе"
+  },
+  "src/voice/gevRealtime.js:2559:title": {
+    "source": "Estimated session cost",
+    "ru": "Расчётная стоимость сеанса"
+  },
+  "src/voice/gevRealtime.js:2562:aria-label": {
+    "source": "Voice control — hold Space to speak; click to toggle voice",
+    "ru": "Голосовое управление — удерживайте пробел для речи; нажмите микрофон для переключения"
+  },
+  "src/voice/gevRealtime.js:2570:html-text": {
+    "source": "VOICE STANDBY",
+    "ru": "ГОЛОСОВОЙ РЕЖИМ ОЖИДАНИЯ"
+  },
+  "src/voice/gevRealtime.js:2573:html-text": {
+    "source": "VOICE CONTROL",
+    "ru": "ГОЛОСОВОЕ УПРАВЛЕНИЕ"
+  },
+  "src/voice/gevRealtime.js:2574:html-text": {
+    "source": "Hold Space to speak · click mic to toggle voice",
+    "ru": "Удерживайте пробел для речи · нажмите микрофон для переключения"
+  },
+  "src/voice/gevRealtime.js:2578:html-text": {
+    "source": "VOICE SYSTEM ERROR",
+    "ru": "ОШИБКА ГОЛОСОВОЙ СИСТЕМЫ"
+  },
+  "src/voice/gevRealtime.js:2582:html-text": {
+    "source": "Check microphone permission and network access, then try again.",
+    "ru": "Проверьте разрешение на использование микрофона и доступ к сети, затем повторите попытку."
+  }
+}

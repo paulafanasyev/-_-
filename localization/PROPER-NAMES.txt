@@ -1,0 +1,18 @@
+src/data/aisStreamAdapter.js:75 [message] AISStream rejected the API key (HTTP ${status})
+src/data/aisStreamAdapter.js:80 [message] AISStream rate-limited this key (HTTP 429)
+src/data/aisStreamAdapter.js:85 [message] AISStream upgrade failed (HTTP ${status})
+src/data/dataCredits.js:62 [html-text] Launch Library 2 — The Space Devs
+src/data/dataCredits.js:73 [html-text] © OpenStreetMap contributors
+src/data/dataCredits.js:80 [html-text] © OpenStreetMap contributors
+src/data/dataCredits.js:87 [html-text] © OpenStreetMap contributors
+src/data/dataCredits.js:101 [html-text] Google News RSS
+src/data/dataCredits.js:108 [html-text] GDELT Project
+src/data/dataCredits.js:127 [html-text] Powered by TfL Open Data
+src/data/dataCredits.js:138 [html-text] Radio Browser
+src/data/dataCredits.js:145 [html-text] Re:Earth Terrain
+src/data/dataCredits.js:153 [html-text] © OpenStreetMap contributors
+src/data/dataCredits.js:160 [html-text] © OpenStreetMap contributors
+src/data/dataCredits.js:201 [html-text] Natural Earth
+src/main.js:156 [textContent] Loading Google 3D Tiles...
+src/main.js:170 [textContent] Google 3D Tiles unavailable (${tileErrorDetail}). Continuing in fallback mode...
+src/mapStackController.js:7 [label] Google 3D

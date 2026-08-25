@@ -1,0 +1,111 @@
+src/annotations/annotationEngine.js:630 [html-text] a && b && Math.abs(a.lon - b.lon)
+src/annotations/screenAnnotationRenderer.js:283 [html-text] 2 * w || win.y
+src/cameraVerbs.js:951 [html-text] PITCH_MAX || next
+src/cameraVerbs.js:1088 [html-text] 1 zooms out (radius grows),
+src/celestialRing.js:461 [html-text] 0) || !cartographic || !Number.isFinite(fovy) || fovy
+src/cockpitMath.js:309 [html-text] = laneRight || rect.bottom
+src/contextModePolicy.js:216 [html-text] , userRemoved?: Set
+src/contextModePolicy.js:320 [html-text] , userAdded?: Iterable
+src/contextModePolicy.js:320 [html-text] , userRemoved?: Iterable
+src/data/aisLiveVessels.js:211 [html-text] , acceptedRows: Array
+src/data/cctv.js:148 [html-text] , source: 'manual', savedAt:
+src/data/cctv.js:2790 [html-text] = -marginX && screen.x
+src/data/cctv.js:2791 [html-text] = -marginY && screen.y
+src/data/cctvLod.js:245 [html-text] |Set
+src/data/detection.js:1225 [html-text] width + halfW || sy
+src/data/detectionRenderDemand.js:124 [html-text] = 0 && age
+src/data/firmsCsv.js:126 [html-text] 12 || day
+src/data/firmsCsv.js:151 [html-text] = oldest && ms
+src/data/firmsHeatmap.js:1138 [html-text] lastWidth * 1.3 || width
+src/data/firmsHeatmap.js:1139 [html-text] lastHeight * 1.3 || height
+src/data/firmsHeatmap.js:1242 [html-text] = bounds.west || lon
+src/data/firmsHeatmap.js:1243 [html-text] = bounds.west && lon
+src/data/firmsHeatmap.js:1251 [html-text] = bounds.west || west
+src/data/firmsHeatmap.js:1252 [html-text] = bounds.west && west
+src/data/flights.js:2701 [html-text] = cap) break; if (inF && d2
+src/data/flights.js:2707 [html-text] = cap) break; if (!inF && d2
+src/data/manager.js:1969 [html-text] (void|Promise
+src/data/manager.js:2104 [html-text] , legend?: Array
+src/data/militaryAwareness.js:956 [html-text] = 0 && index
+src/data/militaryAwareness.js:1116 [textContent] HDG ${String(headingDeg).padStart(3, '0')}°
+src/data/militaryFlights.js:1874 [html-text] = cap) break; if (inF && d2
+src/data/militaryFlights.js:1876 [html-text] = cap) break; if (!inF && d2
+src/data/militaryInstallationData.js:47 [html-text] = -90 && value
+src/data/militaryInstallationData.js:51 [html-text] = -180 && value
+src/data/militaryInstallations.js:153 [html-text] = box.south && latitude
+src/data/militaryInstallations.js:154 [html-text] = box.west && longitude
+src/data/militaryInstallations.js:165 [html-text] = box.south && minLat
+src/data/militaryInstallations.js:166 [html-text] = box.west && minLon
+src/data/neighborhoodPolygons.js:136 [html-text] = c.bbox[1] && lon
+src/data/radio.js:287 [html-text] = -90 && station.lat
+src/data/radio.js:288 [html-text] = -180 && station.lon
+src/data/radio.js:301 [html-text] = 8 && station.bitrate
+src/data/radio.js:370 [html-text] = 64 && value
+src/data/radio.js:382 [html-text] = 87.5 && value
+src/data/regionalBrief.js:101 [html-text] = 51 && value
+src/data/regionalBrief.js:102 [html-text] = 61 && value
+src/data/regionalBrief.js:103 [html-text] = 71 && value
+src/data/regionalBrief.js:104 [html-text] = 80 && value
+src/data/regionalBrief.js:105 [html-text] = 85 && value
+src/data/retryableLoad.js:30 [html-text] (Promise
+src/data/rocketLaunches.js:464 [html-text] 0) || !cartographic || !Number.isFinite(fovy) || fovy
+src/data/rocketLaunches.js:955 [html-text] 20 && launch.lat
+src/data/rocketLaunches.js:956 [html-text] -140 && launch.lon
+src/data/rocketLaunches.js:1338 [html-text] 2 && Cesium.Cartesian3.distance(first, last)
+src/data/rocketLaunches.js:2680 [title] T−${String(state.countdownSeconds).padStart(2, '0')} · ${mission}
+src/data/rocketLaunches.js:2819 [html-text] = cutoff && date
+src/data/satellites.js:2136 [html-text] , legend: Array
+src/data/satellites.js:2150 [title] Starlink ${_denseError || 'load failed'} — click to retry
+src/data/scenePick.js:47 [html-text] = MIN_PICK_MAGNITUDE_M && magnitude
+src/data/trafficQueue.js:86 [html-text] 0 && remaining
+src/hud.js:342 [textContent] ALT: ${Math.round(altMslM)}m SUN: ${sunEl.toFixed(1)}° EL
+src/hud.js:487 [html-text] = -170 && lon
+src/hud.js:487 [html-text] = 5 && lat
+src/hud.js:488 [html-text] = -60 && lat
+src/hud.js:488 [html-text] = -90 && lon
+src/hud.js:489 [html-text] = -25 && lon
+src/hud.js:489 [html-text] = 34 && lat
+src/hud.js:490 [html-text] = -20 && lon
+src/hud.js:490 [html-text] = -35 && lat
+src/hud.js:491 [html-text] = 45 && lon
+src/hud.js:491 [html-text] = 5 && lat
+src/hud.js:492 [html-text] = -50 && lat
+src/hud.js:492 [html-text] = 110 && lon
+src/overlays/worldOverlay.js:926 [html-text] hit.x + hit.w || y
+src/overlays/worldOverlay.js:965 [html-text] = -padding && x
+src/overlays/worldOverlay.js:966 [html-text] = -padding && y
+src/panelStackLayout.js:95 [html-text] 0 && allocated / natural
+src/splitFlap.js:355 [html-text] 0.5) || Math.abs(toWidth - fromWidth)
+src/styles/retro.js:72 [html-text] 1.0 || distUV.y
+src/styles/surveillance.js:165 [html-text] 1.0 || distUV.y
+src/styles/surveillance.js:241 [html-text] = 0.0 && labelArea.x
+src/styles/surveillance.js:241 [html-text] = 0.0 && labelArea.y
+src/styles/surveillance.js:249 [html-text] = 0.0 && gainArea.x
+src/styles/surveillance.js:249 [html-text] = 0.0 && gainArea.y
+src/styles/thermal.js:119 [html-text] = 0 && ch
+src/styles/thermal.js:245 [html-text] = 0.0 && labelArea.x
+src/styles/thermal.js:245 [html-text] = 0.0 && labelArea.y
+src/styles/thermal.js:253 [html-text] = 0.0 && modeArea.x
+src/styles/thermal.js:253 [html-text] = 0.0 && modeArea.y
+src/styles/thermal.js:285 [html-text] = 0.0 && dpp.x
+src/styles/thermal.js:285 [html-text] = 0.0 && dpp.y
+src/styles/thermal.js:295 [html-text] = 0.0 && dgp.x
+src/styles/thermal.js:295 [html-text] = 0.0 && dgp.y
+src/styles/thermal.js:307 [html-text] = 0.0 && fp.x
+src/styles/thermal.js:307 [html-text] = 0.0 && fp.y
+src/ui.js:1470 [textContent] ${info.layerId === 'military' ? 'MILITARY' : 'COMMERCIAL'} · ${feedState} · COURSE ALIGNED
+src/ui.js:1517 [textContent] DEST ${String(Math.round(destinationBearing)).padStart(3, '0')}°
+src/ui.js:1633 [textContent] ${relative < 0 ? 'L' : 'R'} ${String(Math.round(Math.abs(relative))).padStart(3, '0')}°
+src/ui.js:1815 [textContent] ${article.domain || 'SOURCE'} · ${formatCockpitBriefAge(article.publishedAt)}
+src/ui.js:1848 [textContent] ${String(payload?.newsSource || 'REGIONAL NEWS').toUpperCase()} · LOCATION QUERY
+src/ui.js:6021 [textContent] ${Math.round(state.volume * 100)}%
+src/ui.js:6028 [textContent] ${Math.round(state.volume * 100)}%
+src/ui.js:6035 [textContent] ${Math.round(state.volume * 100)}%
+src/ui.js:6077 [textContent] ${uncertainMessage || unavailable || lifecycleMessage || state.error || messages[state.audioState] || 'Ready'}${tuningSuffix}${voiceSuffix}${catalogSuffix}${outsideFilter}
+src/ui.js:6613 [textContent] ${activeCamera.city} · HDG ${Math.round(activeCamera.headingDeg)}° · FOV ${Math.round(activeCamera.fovDeg)}° · RANGE ${Math.round(activeCamera.rangeM)}m · ${projLabel}${calBadge ?
+src/ui.js:7224 [html-text] stackRect.left && rect.left
+src/weatherEffectsMath.js:38 [html-text] = 51 && code
+src/weatherEffectsMath.js:39 [html-text] = 61 && code
+src/weatherEffectsMath.js:39 [html-text] = 80 && code
+src/weatherEffectsMath.js:40 [html-text] = 71 && code
+src/weatherEffectsMath.js:40 [html-text] = 85 && code
