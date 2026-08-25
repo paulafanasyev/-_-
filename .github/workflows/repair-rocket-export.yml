@@ -9,7 +9,6 @@ permissions:
 
 jobs:
   repair:
-    if: github.actor == 'github-actions[bot]' || github.actor == 'paulafanasyev'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -43,7 +42,7 @@ jobs:
         run: npm ci
       - name: Run full test suite
         run: npm test
-      - name: Commit repair and remove one-shot workflow
+      - name: Commit repair
         shell: bash
         run: |
           set -euo pipefail
