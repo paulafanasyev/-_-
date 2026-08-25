@@ -1,0 +1,526 @@
+src/annotations/annotationEngine.js:630: a && b && Math.abs(a.lon - b.lon)
+src/annotations/annotationResolver.js:1103: approximateDistanceM(a[1], a[0], b[1], b[0])
+src/annotations/annotationResolver.js:1622: endpointGapM(c)
+src/annotations/annotationResolver.js:1667: Math.abs(a.lon - b.lon)
+src/annotations/annotationResolver.js:88: Promise
+src/annotations/screenAnnotationRenderer.js:283: 2 * w || win.y
+src/cameraVerbs.js:1088: 1 zooms out (radius grows),
+src/cameraVerbs.js:951: PITCH_MAX || next
+src/cctvFocusPolicy.js:43: Promise
+src/celestialRing.js:405: light_mode
+src/celestialRing.js:409: dark_mode
+src/celestialRing.js:461: 0) || !cartographic || !Number.isFinite(fovy) || fovy
+src/celestialRing.test.mjs:75: 0 && projected.opacity
+src/cockpitMarkup.test.mjs:221: Clear selected data layers
+src/cockpitMarkup.test.mjs:222: Reset to full globe view
+src/cockpitMarkup.test.mjs:22: Exit cockpit view
+src/cockpitMarkup.test.mjs:35: Reset cockpit to full globe view
+src/cockpitMarkup.test.mjs:63: TRACK
+src/cockpitMarkup.test.mjs:693: navigation
+src/cockpitMarkup.test.mjs:713: Enable cockpit weather effects
+src/cockpitMarkup.test.mjs:715: OFF
+src/cockpitMarkup.test.mjs:723: Contact cockpit summary
+src/cockpitMarkup.test.mjs:724: CONTACT
+src/cockpitMarkup.test.mjs:725: Contact navigation
+src/cockpitMarkup.test.mjs:726: Previous — prior visited contact in the 250 km window
+src/cockpitMarkup.test.mjs:727: Next — nearest unvisited contact in the 250 km window
+src/cockpitMarkup.test.mjs:728: Collapse Contact panel
+src/cockpitMarkup.test.mjs:729: GLOBAL CONTEXT
+src/cockpitMarkup.test.mjs:72: NORMAL
+src/cockpitMarkup.test.mjs:745: CONTACTS
+src/cockpitMarkup.test.mjs:746: CONTACTS
+src/cockpitMarkup.test.mjs:747: Cycles the nearest contacts of whatever type you select — planes, vessels, installations\. Satellites track independently\.
+src/cockpitMarkup.test.mjs:748: FLIGHTS
+src/cockpitMarkup.test.mjs:773: CYCLE OFF
+src/cockpitMarkup.test.mjs:775: CYCLE OFF
+src/cockpitMarkup.test.mjs:91: radar
+src/cockpitMath.js:309: = laneRight || rect.bottom
+src/contextModePolicy.js:120: Promise
+src/contextModePolicy.js:216: , userRemoved?: Set
+src/contextModePolicy.js:320: , userAdded?: Iterable
+src/contextModePolicy.js:320: , userRemoved?: Iterable
+src/data/aircraftClass.test.mjs:54: = 0.75 && CLASS_SCALE_3D[kind]
+src/data/aisLiveVessels.js:1802: AIS: --
+src/data/aisLiveVessels.js:211: , acceptedRows: Array
+src/data/aisLiveVessels.test.mjs:1479: 40 && rotterdam
+src/data/aisLiveVessels.test.mjs:1480: -32 && houston
+src/data/aisLiveVessels.test.mjs:697: 0.25 && color.alpha
+src/data/aisLiveVessels.test.mjs:703: 0.25 && color.alpha
+src/data/analystEngine.test.mjs:200: 200 && km
+src/data/cctv.js:148: , source: 'manual', savedAt:
+src/data/cctv.js:1661: or
+src/data/cctv.js:2666: entry.distKm
+src/data/cctv.js:2790: = -marginX && screen.x
+src/data/cctv.js:2791: = -marginY && screen.y
+src/data/cctv.js:571: element rather than an
+src/data/cctv.js:641: Math.abs(probe[key] - DEFAULT_CAMERA_CALIBRATION[key])
+src/data/cctv.test.mjs:1277: = 0 && sig
+src/data/cctv.test.mjs:180: = 4 && progressInvocations
+src/data/cctvCards.test.mjs:80: Main & 5th
+src/data/cctvLod.js:245: |Set
+src/data/cctvViewshed.test.mjs:103: = 0 && idx
+src/data/cctvViewshed.test.mjs:34: = 0 && hue
+src/data/dataCredits.js:101: Google News RSS
+src/data/dataCredits.js:108: GDELT Project
+src/data/dataCredits.js:115: data.austintexas.gov
+src/data/dataCredits.js:121: cwwp2.dot.ca.gov
+src/data/dataCredits.js:127: Powered by TfL Open Data
+src/data/dataCredits.js:138: Radio Browser
+src/data/dataCredits.js:145: Re:Earth Terrain
+src/data/dataCredits.js:153: © OpenStreetMap contributors
+src/data/dataCredits.js:160: © OpenStreetMap contributors
+src/data/dataCredits.js:168: earthdata.nasa.gov/firms
+src/data/dataCredits.js:175: submarinecablemap.com
+src/data/dataCredits.js:192: TomTom
+src/data/dataCredits.js:201: Natural Earth
+src/data/dataCredits.js:35: opensky-network.org
+src/data/dataCredits.js:42: adsb.lol
+src/data/dataCredits.js:49: AISStream.io
+src/data/dataCredits.js:55: celestrak.org
+src/data/dataCredits.js:62: Launch Library 2 — The Space Devs
+src/data/dataCredits.js:73: © OpenStreetMap contributors
+src/data/dataCredits.js:80: © OpenStreetMap contributors
+src/data/dataCredits.js:87: © OpenStreetMap contributors
+src/data/dataCredits.js:94: Weather data by Open-Meteo.com
+src/data/detection.js:1225: width + halfW || sy
+src/data/detectionHost.test.mjs:632: AMBIENT-CONTINUES
+src/data/detectionPolicy.test.mjs:117: = 0 && floor
+src/data/detectionRenderDemand.js:124: = 0 && age
+src/data/detectionRenderDemand.test.mjs:229: = 0 && offset
+src/data/earthquakes.js:69: M${mag.toFixed(1)}
+src/data/firmsCsv.js:126: 12 || day
+src/data/firmsCsv.js:151: = oldest && ms
+src/data/firmsCsv.test.mjs:30: = -90 && record.lat
+src/data/firmsCsv.test.mjs:31: = -180 && record.lon
+src/data/firmsCsv.test.mjs:91: Service unavailable
+src/data/firmsHeatmap.js:1138: lastWidth * 1.3 || width
+src/data/firmsHeatmap.js:1139: lastHeight * 1.3 || height
+src/data/firmsHeatmap.js:1242: = bounds.west || lon
+src/data/firmsHeatmap.js:1243: = bounds.west && lon
+src/data/firmsHeatmap.js:1251: = bounds.west || west
+src/data/firmsHeatmap.js:1252: = bounds.west && west
+src/data/firmsHeatmap.js:1459: FIRE · ${formatFrp(fire.frp)} MW
+src/data/firmsHeatmap.js:1494: ▲ ${formatFrp(fire.frp)} MW
+src/data/firmsHeatmap.js:1523: ${cell.count} ${noun}
+src/data/firmsHorizonCull.test.mjs:288: still normalized
+src/data/flights.js:2701: = cap) break; if (inF && d2
+src/data/flights.js:2707: = cap) break; if (!inF && d2
+src/data/flights.test.mjs:1294: (Math.abs(h - (300 + i + GROUND_FLOOR_LIFT_M))
+src/data/flights.test.mjs:147: WARM
+src/data/flights.test.mjs:173: OLD
+src/data/flights.test.mjs:349: N12345 · FL350 · 486 kts
+src/data/flights.test.mjs:638: OLD
+src/data/flowTiles.test.mjs:35: = 0 && s.trafficLevel
+src/data/flowTiles.test.mjs:44: = -98.0 && lon
+src/data/flowTiles.test.mjs:45: = 30.0 && lat
+src/data/flowTiles.test.mjs:52: s.trafficLevel
+src/data/focusDeemphasis.test.mjs:163: 0.5 && middle
+src/data/focusDeemphasis.test.mjs:54: 0.25 && releaseMid
+src/data/focusDeemphasis.test.mjs:74: 0.25 && release.factor
+src/data/geoid.test.mjs:106: 10 && displayed
+src/data/geoid.test.mjs:119: 9950 && cruise
+src/data/groundFloor.test.mjs:337: = 30 && c.lat
+src/data/groundSnap.js:162: Array
+src/data/groundSnap.js:270: Array
+src/data/iconOrientation.test.mjs:167: 0 && value
+src/data/iconOrientation.test.mjs:324: 0 && value
+src/data/iconOrientation.test.mjs:393: 0 && shipped
+src/data/iconOrientation.test.mjs:457: 0.002 && HORIZON_FEATHER_RAD
+src/data/installationProxy.test.mjs:76: = -90 && polar.north
+src/data/installationProxy.test.mjs:77: = -180 && polar.east
+src/data/issPass.test.mjs:20: = 0 && pass.riseAzDeg
+src/data/localGeojson.test.mjs:160: DFW-1
+src/data/localGeojson.test.mjs:168: Barrage Bin el Ouidane
+src/data/localGeojson.test.mjs:175: Amazon Web Services
+src/data/manager.js:1969: (void|Promise
+src/data/manager.js:2104: , legend?: Array
+src/data/manager.js:2173: ${item.label} ${this._formatCount(item.count)}
+src/data/manager.test.mjs:2822: toggle the dense catalog
+src/data/militaryAwareness.js:1116: HDG ${String(headingDeg).padStart(3, '0')}°
+src/data/militaryAwareness.js:1172: ${label} · ${formatAwarenessDistance(item.distanceM)}\n${bearingText}${courseText}
+src/data/militaryAwareness.js:515: Unavailable
+src/data/militaryAwareness.js:518: Focus ${escapeHtml(accessibleLabel)}
+src/data/militaryAwareness.js:956: = 0 && index
+src/data/militaryAwareness.js:968: Global Context navigation
+src/data/militaryAwareness.js:969: PREVIOUS
+src/data/militaryAwareness.js:969: Previous — prior visited contact in the 250 km window
+src/data/militaryAwareness.js:970: FOCUS
+src/data/militaryAwareness.js:971: NEXT
+src/data/militaryAwareness.js:971: Next — nearest unvisited contact in the 250 km window
+src/data/militaryAwareness.js:994: Open-source mapped/observed context. Missing broadcasts, unloaded map areas, or unmapped sites are not evidence of absence.
+src/data/militaryAwareness.test.mjs:1557: CONTEXT ONLY
+src/data/militaryAwareness.test.mjs:2709: = 100 && awarenessRefreshIntervalMs(true)
+src/data/militaryFlights.js:1874: = cap) break; if (inF && d2
+src/data/militaryFlights.js:1876: = cap) break; if (!inF && d2
+src/data/militaryFlights.test.mjs:128: WARM
+src/data/militaryFlights.test.mjs:153: OLD
+src/data/militaryFlights.test.mjs:318: RCH451
+src/data/militaryInstallationData.js:47: = -90 && value
+src/data/militaryInstallationData.js:51: = -180 && value
+src/data/militaryInstallations.js:153: = box.south && latitude
+src/data/militaryInstallations.js:154: = box.west && longitude
+src/data/militaryInstallations.js:165: = box.south && minLat
+src/data/militaryInstallations.js:166: = box.west && minLon
+src/data/militaryInstallations.test.mjs:29: 111000 && oneDegree
+src/data/militaryInstallations.test.mjs:36: 21000 && acrossDateline
+src/data/modelScale.test.mjs:420: = WORLD_RADIUS_MIN_M && worldRadius
+src/data/modelScale.test.mjs:450: 1 / 1.5 && ratio
+src/data/modelScale.test.mjs:472: = REAL_RADIUS_MIN_M && radius
+src/data/naturalEarthRegions.test.mjs:119: 100000 && r.areaKm2
+src/data/naturalEarthRegions.test.mjs:14: 150_000 && alps.areaKm2
+src/data/naturalEarthRegions.test.mjs:19: = 700_000 && rockies.areaKm2
+src/data/naturalEarthRegions.test.mjs:35: 8_000_000 && sahara.areaKm2
+src/data/naturalEarthRegions.test.mjs:39: 2_000_000 && andes.areaKm2
+src/data/naturalEarthRegions.test.mjs:43: 300_000 && himalayas.areaKm2
+src/data/naturalEarthRegions.test.mjs:52: 1_200_000 && gom.areaKm2
+src/data/naturalEarthRegions.test.mjs:72: = -180 && lon
+src/data/naturalEarthRegions.test.mjs:73: = -90 && lat
+src/data/naturalEarthRegions.test.mjs:90: = -180 && lon
+src/data/naturalEarthRegions.test.mjs:91: = -90 && lat
+src/data/neighborhoodPolygons.js:136: = c.bbox[1] && lon
+src/data/neighborhoodPolygons.js:28: Promise
+src/data/neighborhoodPolygons.test.mjs:36: = SF_BOUNDS.west && lon
+src/data/neighborhoodPolygons.test.mjs:37: = SF_BOUNDS.south && lat
+src/data/neighborhoodPolygons.test.mjs:60: = SF_BOUNDS.west && rlon
+src/data/neighborhoodPolygons.test.mjs:61: = SF_BOUNDS.south && rlat
+src/data/radio.js:287: = -90 && station.lat
+src/data/radio.js:288: = -180 && station.lon
+src/data/radio.js:301: = 8 && station.bitrate
+src/data/radio.js:370: = 64 && value
+src/data/radio.js:382: = 87.5 && value
+src/data/regionalBrief.js:101: = 51 && value
+src/data/regionalBrief.js:102: = 61 && value
+src/data/regionalBrief.js:103: = 71 && value
+src/data/regionalBrief.js:104: = 80 && value
+src/data/regionalBrief.js:105: = 85 && value
+src/data/regionalBrief.test.mjs:23: Regional update
+src/data/regionalBrief.test.mjs:24: Regional   update
+src/data/regionalBrief.test.mjs:25: Unsafe
+src/data/regionalBrief.test.mjs:26: Second story
+src/data/regionalBrief.test.mjs:61: 11000 && distance
+src/data/retryableLoad.js:30: (Promise
+src/data/retryableLoad.js:35: Promise
+src/data/rocketLaunches.js:1338: 2 && Cesium.Cartesian3.distance(first, last)
+src/data/rocketLaunches.js:1828: REPLAY ASCENT
+src/data/rocketLaunches.js:1831: Replay the estimated ascent with a following camera
+src/data/rocketLaunches.js:1866: ${_replaySpeed.toFixed(_replaySpeed % 1 ? 2 : 0)}×
+src/data/rocketLaunches.js:2314: ${index + 1} / ${_launches.length}
+src/data/rocketLaunches.js:2326: ${_launches.length} / 30D
+src/data/rocketLaunches.js:2330: NO MISSIONS AVAILABLE IN THE CURRENT 30-DAY WINDOW
+src/data/rocketLaunches.js:2338: Select ${escapeMissionText(label)}
+src/data/rocketLaunches.js:2529: ASCENT PATH ·
+src/data/rocketLaunches.js:2529: CURRENT DISTANCE FROM EARTH ·
+src/data/rocketLaunches.js:2529: DESTINATION
+src/data/rocketLaunches.js:2529: Deselect mission
+src/data/rocketLaunches.js:2529: FINAL POSITION
+src/data/rocketLaunches.js:2529: FOCUS
+src/data/rocketLaunches.js:2529: LAUNCH SITE ·
+src/data/rocketLaunches.js:2529: LAUNCH TIME ·
+src/data/rocketLaunches.js:2529: MISSION
+src/data/rocketLaunches.js:2529: NAME
+src/data/rocketLaunches.js:2529: NEXT
+src/data/rocketLaunches.js:2529: Next mission
+src/data/rocketLaunches.js:2529: ORBIT ·
+src/data/rocketLaunches.js:2529: PAYLOAD
+src/data/rocketLaunches.js:2529: PREV
+src/data/rocketLaunches.js:2529: Previous mission
+src/data/rocketLaunches.js:2529: REPLAY ASCENT
+src/data/rocketLaunches.js:2529: REPLAY SPEED
+src/data/rocketLaunches.js:2529: Replay speed multiplier
+src/data/rocketLaunches.js:2529: SATELLITE SPEED ·
+src/data/rocketLaunches.js:2529: SELECTED SPACE MISSION
+src/data/rocketLaunches.js:2529: SHOW ALL / DESELECT
+src/data/rocketLaunches.js:2529: STAGE
+src/data/rocketLaunches.js:2529: STAGE / RE-ENTRY / RECOVERY
+src/data/rocketLaunches.js:2529: STATUS
+src/data/rocketLaunches.js:2529: STATUS ·
+src/data/rocketLaunches.js:2529: Show all missions
+src/data/rocketLaunches.js:2529: TYPE
+src/data/rocketLaunches.js:2533: Pause replay
+src/data/rocketLaunches.js:2534: Cancel replay
+src/data/rocketLaunches.js:2680: T−${String(state.countdownSeconds).padStart(2, '0')} · ${mission}
+src/data/rocketLaunches.js:2688: STAGE RE-ENTRY / RECOVERY · ${mission}
+src/data/rocketLaunches.js:2691: ORBIT REPLAY · ${mission}
+src/data/rocketLaunches.js:2694: PAUSED · ${title}
+src/data/rocketLaunches.js:2819: = cutoff && date
+src/data/rocketLaunches.js:464: 0) || !cartographic || !Number.isFinite(fovy) || fovy
+src/data/rocketLaunches.js:955: 20 && launch.lat
+src/data/rocketLaunches.js:956: -140 && launch.lon
+src/data/rocketLaunches.test.mjs:236: 100 && smoothed.x
+src/data/rocketLaunches.test.mjs:784: FALCON 9
+src/data/rocketLaunches.test.mjs:844: = 8 && slow
+src/data/routePlausible.js:64: greatCircleKm(latDeg, lonDeg, pt.lat, pt.lon)
+src/data/satelliteClass.test.mjs:126: = 35 && hueOf(color)
+src/data/satelliteClass.test.mjs:322: 502 Bad Gateway
+src/data/satellites.js:2136: , legend: Array
+src/data/satellites.js:2148: Add the full Starlink broadband shell (thousands of extra points)
+src/data/satellites.js:2149: Loading the Starlink shell…
+src/data/satellites.js:2150: Starlink ${_denseError || 'load failed'} — click to retry
+src/data/satellites.js:2151: Showing the full Starlink shell — click for the core catalog only
+src/data/satellites.js:317: ISS
+src/data/satellitesTrackedRefresh.test.mjs:168: OLD
+src/data/satellitesTrackedRefresh.test.mjs:219: OLD
+src/data/scenePick.js:47: = MIN_PICK_MAGNITUDE_M && magnitude
+src/data/telegeographySubmarineCables.test.mjs:459: = 700 && tipCarto.height
+src/data/terrainHeightsProxy.js:153: Promise
+src/data/tomtomTiles.test.mjs:83: = 1 && tiles.length
+src/data/tr3bRegistry.test.mjs:151: OLD
+src/data/trackedModelRegime.test.mjs:497: 50 && taxiM
+src/data/trackedModelRegime.test.mjs:555: 50 && rollM
+src/data/trackedReadout.test.mjs:113: ISS
+src/data/trackedReadout.test.mjs:132: UAL123
+src/data/trackedReadout.test.mjs:182: FORT TEST
+src/data/trackedReadout.test.mjs:43: UAL123
+src/data/trackedReadout.test.mjs:48: RCH123
+src/data/trackedReadout.test.mjs:82: SWA143
+src/data/trafficBounds.test.mjs:56: NADIR.lon && c.lon
+src/data/trafficQueue.js:86: 0 && remaining
+src/data/vesselLabels.test.mjs:63: AMBIENT
+src/data/vesselLabels.test.mjs:75: SELECTED
+src/firstRunExperience.js:249: Promise
+src/firstRunExperience.js:250: Promise
+src/firstRunExperience.js:251: Promise
+src/firstRunExperience.js:36: ENVIRONMENTAL
+src/firstRunExperience.js:37: EARTH WATCH
+src/firstRunExperience.js:38: ACTIVE EVENTS
+src/firstRunExperience.js:475: Could not open that mission${detail}. Retry or explore manually.
+src/firstRunExperience.js:491: This browser is blocking storage, so that could not be saved.
+src/firstRunExperience.test.mjs:561: '), envTile.indexOf('
+src/hud.js:148: TOP SECRET // SI-TK // NOFORN
+src/hud.js:150: PAGE 1/1
+src/hud.js:156: TOP SECRET // SI-TK // NOFORN
+src/hud.js:158: NORMAL
+src/hud.js:160: SUMMARY
+src/hud.js:161: Awaiting telemetry...
+src/hud.js:168: REC
+src/hud.js:177: MGRS: ---
+src/hud.js:184: GSD: --m  NIIRS: --
+src/hud.js:185: ALT: --m   SUN: --° EL
+src/hud.js:186: AIS: --
+src/hud.js:192: COLL: --:--:--Z
+src/hud.js:193: ONA: --°
+src/hud.js:197: BAND: PAN
+src/hud.js:198: BITS: 11
+src/hud.js:199: LVL: 1A
+src/hud.js:203: LAT: --  LON: --  MGRS: ---
+src/hud.js:309: MGRS: ${formatted}
+src/hud.js:312: MGRS: ---
+src/hud.js:317: ${latDMS} ${lonDMS}
+src/hud.js:320: MGRS: ${mgrsLabel}  LAT: ${latDMS}  LON: ${lonDMS}
+src/hud.js:331: GSD: ${gsd.toFixed(2)}m  NIIRS: ${niirs.toFixed(1)}
+src/hud.js:342: ALT: ${Math.round(altMslM)}m   SUN: ${sunEl.toFixed(1)}° EL
+src/hud.js:351: COLL: ${h}:${m}:${s}Z
+src/hud.js:359: ONA: ${ona.toFixed(1)}°
+src/hud.js:487: = -170 && lon
+src/hud.js:487: = 5 && lat
+src/hud.js:488: = -60 && lat
+src/hud.js:488: = -90 && lon
+src/hud.js:489: = -25 && lon
+src/hud.js:489: = 34 && lat
+src/hud.js:490: = -20 && lon
+src/hud.js:490: = -35 && lat
+src/hud.js:491: = 45 && lon
+src/hud.js:491: = 5 && lat
+src/hud.js:492: = -50 && lat
+src/hud.js:492: = 110 && lon
+src/locations.test.mjs:136: -60 && plan.pitchDeg
+src/locations.test.mjs:440: 0.3 && flown.widthDeg
+src/locations.test.mjs:443: = -180 && flown.west
+src/locations.test.mjs:444: = -180 && flown.east
+src/locations.test.mjs:459: = -180 && flown.west
+src/locations.test.mjs:460: = -180 && flown.east
+src/main.js:156: Loading Google 3D Tiles...
+src/main.js:170: Google 3D Tiles unavailable (${tileErrorDetail}). Continuing in fallback mode...
+src/main.js:175: Initializing systems...
+src/main.js:203: Flying to Austin, TX...
+src/main.js:206: Restoring shared view...
+src/main.js:331: Error: ${describeError(error)}
+src/main.js:74: Configuring viewer...
+src/mapStackChips.test.mjs:208: OSM
+src/mapStackChips.test.mjs:221: Cesium ion token required
+src/mapStackChips.test.mjs:226: Hybrid is unavailable
+src/mapStackChips.test.mjs:335: Map source
+src/mapStackChips.test.mjs:338: MAP SOURCE
+src/overlays/worldOverlay.js:1994: Focusing ${item.label}
+src/overlays/worldOverlay.js:926: hit.x + hit.w || y
+src/overlays/worldOverlay.js:965: = -padding && x
+src/overlays/worldOverlay.js:966: = -padding && y
+src/overlays/worldOverlay.test.mjs:1038: Focus unchanged
+src/overlays/worldOverlay.test.mjs:1665: Main & Fifth
+src/overlays/worldOverlay.test.mjs:1713: AMBIENT
+src/overlays/worldOverlay.test.mjs:1721: PINNED
+src/overlays/worldOverlay.test.mjs:1743: ABOVE
+src/overlays/worldOverlay.test.mjs:1751: BELOW
+src/overlays/worldOverlay.test.mjs:1781: ALTITUDE
+src/overlays/worldOverlay.test.mjs:1827: SCALED
+src/overlays/worldOverlay.test.mjs:1854: ACTIVE
+src/overlays/worldOverlay.test.mjs:1863: AMBIENT
+src/overlays/worldOverlay.test.mjs:1892: AMBIENT
+src/overlays/worldOverlay.test.mjs:1906: TRACKED
+src/overlays/worldOverlay.test.mjs:1934: WIDE FIRST PROTECTED CARD
+src/overlays/worldOverlay.test.mjs:1948: MEDIUM THIRD
+src/overlays/worldOverlay.test.mjs:633: 0 && firstAlpha
+src/overlays/worldOverlay.test.mjs:663: ALPHA
+src/overlays/worldOverlayAllocation.worker.mjs:313: TRK ${1000 + index}
+src/overlays/worldOverlayAllocation.worker.mjs:407: ▲ ${50 + fireIndex} MW
+src/overlays/worldOverlayAllocation.worker.mjs:477: ▲ ${50 + fireIndex} MW
+src/overlays/worldOverlayAllocation.worker.mjs:549: ALLOC01
+src/overlays/worldOverlayAllocation.worker.mjs:742: ALLOC01 · FL350 · 451 kts
+src/overlays/worldOverlayAllocation.worker.mjs:755: RCH451
+src/overlays/worldOverlayDraw.test.mjs:349: CAMERA 12
+src/overlays/worldOverlayDraw.test.mjs:386: Main & Fifth Avenue
+src/overlays/worldOverlayDraw.test.mjs:427: UAL123
+src/overlays/worldOverlayDraw.test.mjs:457: FIRE · 1520 MW
+src/overlays/worldOverlayDraw.test.mjs:491: UAL123
+src/overlays/worldOverlayDraw.test.mjs:511: UAL124
+src/overlays/worldOverlayDraw.test.mjs:592: 0 && SKY_PLATE_SCALE
+src/overlays/worldOverlayTokens.js:15: rgba(232, 240, 244, 0.96)
+src/panelStackLayout.js:95: 0 && allocated / natural
+src/panelStackLayout.test.mjs:279: DISPLAY
+src/radioMarkup.test.mjs:214: contextStart && radioStart
+src/radioMarkup.test.mjs:216: Radio playback
+src/radioMarkup.test.mjs:219: Compact Radio controls
+src/radioMarkup.test.mjs:222: open_in_full
+src/radioMarkup.test.mjs:223: Close compact Radio controls
+src/radioMarkup.test.mjs:226: Cockpit compact Radio controls
+src/routeCinematics.test.mjs:207: 0.4 && f.progress
+src/routeCinematics.test.mjs:350: -97.745 && lon
+src/routeCinematics.test.mjs:742: 100 && rising
+src/scenes/director.js:1347: ${pct}%
+src/scenes/director.js:135: Shot ${idx + 1}
+src/scenes/director.js:489: No shots yet. Use CAPTURE SHOT to save current look.
+src/scenes/director.js:527: LOAD
+src/scenes/director.js:534: DEL
+src/scenes/director.js:548: ${style.toUpperCase()} · ${mode} · ${shot.durationSec.toFixed(1)}s + ${shot.holdSec.toFixed(1)}s
+src/scenes/director.js:648: Shot ${scene.shots.length + 1}
+src/scenes/director.js:931: Editable Scene Run
+src/scenes/director.test.mjs:36: Fixture Scene
+src/scenes/director.test.mjs:375: Fixture Scene
+src/scenes/director.test.mjs:378: Shot A
+src/scenes/director.test.mjs:40: Shot A
+src/scenes/director.test.mjs:412: Fixture Scene
+src/scenes/director.test.mjs:415: Shot A
+src/scenes/director.test.mjs:49: Shot B
+src/scenes/recipes.js:132: Omniscience Pullback
+src/scenes/recipes.js:34: Orbital Watch
+src/scenes/recipes.js:67: Thermal Threat Board
+src/scenes/recipes.js:99: City Overload
+src/scenes/recipes.js:9: Global Flights Radar
+src/scenes/scenePolicy.js:142: |Iterable
+src/scopeMask.test.mjs:237: = SCOPE_OUTSIDE_ALPHA && alpha
+src/scopeMask.test.mjs:360: 0 && SCOPE_TERMINUS_QUANTUM
+src/sharelink.celestial.test.mjs:515: offGuardIndex && offBranchClaim
+src/splitFlap.js:355: 0.5) || Math.abs(toWidth - fromWidth)
+src/splitFlap.test.mjs:134: Array.from(cell.to).length
+src/styles/retro.js:72: 1.0 || distUV.y
+src/styles/surveillance.js:165: 1.0 || distUV.y
+src/styles/surveillance.js:241: = 0.0 && labelArea.x
+src/styles/surveillance.js:241: = 0.0 && labelArea.y
+src/styles/surveillance.js:249: = 0.0 && gainArea.x
+src/styles/surveillance.js:249: = 0.0 && gainArea.y
+src/styles/thermal.js:119: = 0 && ch
+src/styles/thermal.js:245: = 0.0 && labelArea.x
+src/styles/thermal.js:245: = 0.0 && labelArea.y
+src/styles/thermal.js:253: = 0.0 && modeArea.x
+src/styles/thermal.js:253: = 0.0 && modeArea.y
+src/styles/thermal.js:285: = 0.0 && dpp.x
+src/styles/thermal.js:285: = 0.0 && dpp.y
+src/styles/thermal.js:295: = 0.0 && dgp.x
+src/styles/thermal.js:295: = 0.0 && dgp.y
+src/styles/thermal.js:307: = 0.0 && fp.x
+src/styles/thermal.js:307: = 0.0 && fp.y
+src/ui.js:10021: SPARSE
+src/ui.js:10024: BALANCED
+src/ui.js:10027: DENSE
+src/ui.js:10030: DETECT
+src/ui.js:1464: ${lat} · ${lon}
+src/ui.js:1470: ${info.layerId === 'military' ? 'MILITARY' : 'COMMERCIAL'} · ${feedState} · COURSE ALIGNED
+src/ui.js:1517: DEST ${String(Math.round(destinationBearing)).padStart(3, '0')}°
+src/ui.js:1562: CONTACT LOST · LAST KNOWN READOUT · NOT AN ALL-CLEAR
+src/ui.js:1631: BRG —
+src/ui.js:1632: AHEAD
+src/ui.js:1633: ${relative < 0 ? 'L' : 'R'} ${String(Math.round(Math.abs(relative))).padStart(3, '0')}°
+src/ui.js:1679: ${this.briefPageIndex + 1} / ${count}
+src/ui.js:1729: POSITION UNAVAILABLE
+src/ui.js:1734: ${lat} · ${lon}
+src/ui.js:1791: RESOLVING REGION
+src/ui.js:1792: REGION UNAVAILABLE
+src/ui.js:1815: ${article.domain || 'SOURCE'} · ${formatCockpitBriefAge(article.publishedAt)}
+src/ui.js:1848: ${String(payload?.newsSource || 'REGIONAL NEWS').toUpperCase()} · LOCATION QUERY
+src/ui.js:1877: chevron_right
+src/ui.js:1953: ${unknownCount} INPUT${unknownCount === 1 ? '' : 'S'} UNKNOWN
+src/ui.js:1972: ${expanded ? 'Collapse' : 'Expand'} contact panel
+src/ui.js:1991: ${expanded ? 'Collapse' : 'Expand'} briefing panel
+src/ui.js:2514: ${pct}%
+src/ui.js:2527: ${pct}%
+src/ui.js:2552: ${pct}%
+src/ui.js:3237: ${clamped}%
+src/ui.js:3408: ${pct}%
+src/ui.js:3418: ${pct}%
+src/ui.js:3446: ${pct}%
+src/ui.js:3548: ${pct}%
+src/ui.js:3562: ${fadePct}%
+src/ui.js:3564: ${outsideOpacityPct}%
+src/ui.js:3593: ${tuning.densityPct}%
+src/ui.js:3688: ${sharpenPct}%
+src/ui.js:3727: ${pct}%
+src/ui.js:3751: ${sharpenPct}%
+src/ui.js:3772: ${density}%
+src/ui.js:3892: ${loaded}/${total}
+src/ui.js:3901: ${total}/${total}
+src/ui.js:5317: ${action} Cockpit display options
+src/ui.js:5323: ${action} Cockpit Radio controls
+src/ui.js:5498: OFF AIR
+src/ui.js:5499: STATION UNAVAILABLE
+src/ui.js:5637: ${value}%
+src/ui.js:5651: ${value}%
+src/ui.js:5656: ${value}%
+src/ui.js:5849: ${action} compact Radio controls
+src/ui.js:5931: ● ${category.label} (${category.count})
+src/ui.js:6021: ${Math.round(state.volume * 100)}%
+src/ui.js:6028: ${Math.round(state.volume * 100)}%
+src/ui.js:6035: ${Math.round(state.volume * 100)}%
+src/ui.js:6077: ${uncertainMessage || unavailable || lifecycleMessage || state.error || messages[state.audioState] || 'Ready'}${tuningSuffix}${voiceSuffix}${catalogSuffix}${outsideFilter}
+src/ui.js:6332: SOURCE · UNKNOWN
+src/ui.js:6338: FRAME · LOADING
+src/ui.js:6343: FRAME · UNAVAILABLE
+src/ui.js:6349: ${kind} · ${status}
+src/ui.js:6387: ${field.label}
+src/ui.js:6544: ${camera.city} · ${camera.name}
+src/ui.js:6613: ${activeCamera.city} · HDG ${Math.round(activeCamera.headingDeg)}° · FOV ${Math.round(activeCamera.fovDeg)}° · RANGE ${Math.round(activeCamera.rangeM)}m · ${projLabel}${calBadge ?
+src/ui.js:6619: Enable CCTV to load camera intersections
+src/ui.js:7224: stackRect.left && rect.left
+src/ui.js:7413: ${action} ${panelName}
+src/ui.js:7417: ${action} Radio
+src/ui.js:7427: ${action} ${panelName}
+src/ui.js:8012: ${pct}%
+src/ui.js:8657: ${pct}%
+src/ui.js:867: ${active ? 'Disable' : 'Enable'} cockpit weather effects
+src/ui.js:8682: ${pct}%
+src/ui.js:8690: ${pct}%
+src/ui.js:8788: ${sharpenPct}%
+src/ui.js:8807: ${density}%
+src/ui.js:9567: &#x21BB;
+src/ui.js:999: Current style: ${names[next]} — click for next
+src/voice/gevActions.js:1820: entry.distance
+src/voice/gevRealtime.js:1470: MIC
+src/voice/gevRealtime.js:1793: Estimated session cost on ${state.modelId} — ${state.responses} response(s).
+src/voice/gevRealtime.js:2555: AI AGENT
+src/voice/gevRealtime.js:2556: OFF
+src/voice/gevRealtime.js:2558: STD
+src/voice/gevRealtime.js:2558: Voice model tier — applies next session
+src/voice/gevRealtime.js:2559: Estimated session cost
+src/voice/gevRealtime.js:2562: Voice control — hold Space to speak; click to toggle voice
+src/voice/gevRealtime.js:2564: ON/OFF
+src/voice/gevRealtime.js:2570: VOICE STANDBY
+src/voice/gevRealtime.js:2573: VOICE CONTROL
+src/voice/gevRealtime.js:2574: Hold Space to speak · click mic to toggle voice
+src/voice/gevRealtime.js:2578: VOICE SYSTEM ERROR
+src/voice/gevRealtime.js:2579: DISMISS
+src/voice/gevRealtime.js:2582: Check microphone permission and network access, then try again.
+src/weatherEffectsMath.js:38: = 51 && code
+src/weatherEffectsMath.js:39: = 61 && code
+src/weatherEffectsMath.js:39: = 80 && code
+src/weatherEffectsMath.js:40: = 71 && code
+src/weatherEffectsMath.js:40: = 85 && code
+src/weatherEffectsMath.test.mjs:23: 0 && profile.cloud

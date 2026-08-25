@@ -96,3 +96,22 @@ npm run dev -- --host localhost --port 4173
 Исходный репозиторий: https://github.com/bilawalsidhu/gods-eye-view
 
 Русский репозиторий: https://github.com/paulafanasyev/-_-
+
+---
+
+# Русская версия
+
+## Разработчик русской версии
+
+**Афанасьев Павел**
+
+- Телефон: +84834012046
+- WhatsApp: +79148289946
+- Email: xongphavietnam@gmail.com
+- Telegram: @PaulPavel_it_dev
+- Репозиторий русской версии: https://github.com/paulafanasyev/-_-
+
+Материалы локализации находятся в `localization/`.
+
+> Русская версия сохраняет оригинальную лицензию и авторство исходного проекта.
+> Внутренние идентификаторы, API, URL и программная логика не переводятся.

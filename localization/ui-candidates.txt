@@ -1,0 +1,125 @@
+src/data/aisLiveVessels.js:1802: AIS: --
+src/data/earthquakes.js:69: M${mag.toFixed(1)}
+src/data/firmsHeatmap.js:1459: FIRE · ${formatFrp(fire.frp)} MW
+src/data/firmsHeatmap.js:1494: ▲ ${formatFrp(fire.frp)} MW
+src/data/firmsHeatmap.js:1523: ${cell.count} ${noun}
+src/data/manager.js:2173: ${item.label} ${this._formatCount(item.count)}
+src/data/militaryAwareness.js:1172: ${label} · ${formatAwarenessDistance(item.distanceM)}\n${bearingText}${courseText}
+src/data/militaryAwareness.js:518: Focus ${escapeHtml(accessibleLabel)}
+src/data/militaryAwareness.js:968: Global Context navigation
+src/data/militaryAwareness.js:969: Previous — prior visited contact in the 250 km window
+src/data/militaryAwareness.js:971: Next — nearest unvisited contact in the 250 km window
+src/data/rocketLaunches.js:1828: REPLAY ASCENT
+src/data/rocketLaunches.js:1831: Replay the estimated ascent with a following camera
+src/data/rocketLaunches.js:1866: ${_replaySpeed.toFixed(_replaySpeed % 1 ? 2 : 0)}×
+src/data/rocketLaunches.js:2314: ${index + 1} / ${_launches.length}
+src/data/rocketLaunches.js:2326: ${_launches.length} / 30D
+src/data/rocketLaunches.js:2338: Select ${escapeMissionText(label)}
+src/data/rocketLaunches.js:2529: Deselect mission
+src/data/rocketLaunches.js:2529: Next mission
+src/data/rocketLaunches.js:2529: Previous mission
+src/data/rocketLaunches.js:2529: Replay speed multiplier
+src/data/rocketLaunches.js:2529: Show all missions
+src/data/rocketLaunches.js:2533: Pause replay
+src/data/rocketLaunches.js:2534: Cancel replay
+src/data/rocketLaunches.js:2688: STAGE RE-ENTRY / RECOVERY · ${mission}
+src/data/rocketLaunches.js:2691: ORBIT REPLAY · ${mission}
+src/data/rocketLaunches.js:2694: PAUSED · ${title}
+src/data/satellites.js:2148: Add the full Starlink broadband shell (thousands of extra points)
+src/data/satellites.js:2149: Loading the Starlink shell…
+src/data/satellites.js:2151: Showing the full Starlink shell — click for the core catalog only
+src/firstRunExperience.js:37: EARTH WATCH
+src/firstRunExperience.js:38: ACTIVE EVENTS
+src/firstRunExperience.js:475: Could not open that mission${detail}. Retry or explore manually.
+src/firstRunExperience.js:491: This browser is blocking storage, so that could not be saved.
+src/hud.js:309: MGRS: ${formatted}
+src/hud.js:312: MGRS: ---
+src/hud.js:317: ${latDMS} ${lonDMS}
+src/hud.js:320: MGRS: ${mgrsLabel}  LAT: ${latDMS}  LON: ${lonDMS}
+src/hud.js:331: GSD: ${gsd.toFixed(2)}m  NIIRS: ${niirs.toFixed(1)}
+src/hud.js:342: ALT: ${Math.round(altMslM)}m   SUN: ${sunEl.toFixed(1)}° EL
+src/hud.js:351: COLL: ${h}:${m}:${s}Z
+src/hud.js:359: ONA: ${ona.toFixed(1)}°
+src/main.js:156: Loading Google 3D Tiles...
+src/main.js:170: Google 3D Tiles unavailable (${tileErrorDetail}). Continuing in fallback mode...
+src/main.js:175: Initializing systems...
+src/main.js:203: Flying to Austin, TX...
+src/main.js:206: Restoring shared view...
+src/main.js:331: Error: ${describeError(error)}
+src/main.js:74: Configuring viewer...
+src/overlays/worldOverlay.js:1994: Focusing ${item.label}
+src/overlays/worldOverlayAllocation.worker.mjs:313: TRK ${1000 + index}
+src/overlays/worldOverlayAllocation.worker.mjs:407: ▲ ${50 + fireIndex} MW
+src/overlays/worldOverlayAllocation.worker.mjs:477: ▲ ${50 + fireIndex} MW
+src/overlays/worldOverlayAllocation.worker.mjs:742: ALLOC01 · FL350 · 451 kts
+src/overlays/worldOverlayTokens.js:15: rgba(232, 240, 244, 0.96)
+src/scenes/director.js:1347: ${pct}%
+src/scenes/director.js:135: Shot ${idx + 1}
+src/scenes/director.js:489: No shots yet. Use CAPTURE SHOT to save current look.
+src/scenes/director.js:548: ${style.toUpperCase()} · ${mode} · ${shot.durationSec.toFixed(1)}s + ${shot.holdSec.toFixed(1)}s
+src/scenes/director.js:648: Shot ${scene.shots.length + 1}
+src/scenes/director.js:931: Editable Scene Run
+src/scenes/recipes.js:132: Omniscience Pullback
+src/scenes/recipes.js:34: Orbital Watch
+src/scenes/recipes.js:67: Thermal Threat Board
+src/scenes/recipes.js:99: City Overload
+src/scenes/recipes.js:9: Global Flights Radar
+src/ui.js:1464: ${lat} · ${lon}
+src/ui.js:1562: CONTACT LOST · LAST KNOWN READOUT · NOT AN ALL-CLEAR
+src/ui.js:1631: BRG —
+src/ui.js:1679: ${this.briefPageIndex + 1} / ${count}
+src/ui.js:1729: POSITION UNAVAILABLE
+src/ui.js:1734: ${lat} · ${lon}
+src/ui.js:1791: RESOLVING REGION
+src/ui.js:1792: REGION UNAVAILABLE
+src/ui.js:2514: ${pct}%
+src/ui.js:2527: ${pct}%
+src/ui.js:2552: ${pct}%
+src/ui.js:3237: ${clamped}%
+src/ui.js:3408: ${pct}%
+src/ui.js:3418: ${pct}%
+src/ui.js:3446: ${pct}%
+src/ui.js:3548: ${pct}%
+src/ui.js:3562: ${fadePct}%
+src/ui.js:3564: ${outsideOpacityPct}%
+src/ui.js:3593: ${tuning.densityPct}%
+src/ui.js:3688: ${sharpenPct}%
+src/ui.js:3727: ${pct}%
+src/ui.js:3751: ${sharpenPct}%
+src/ui.js:3772: ${density}%
+src/ui.js:3892: ${loaded}/${total}
+src/ui.js:3901: ${total}/${total}
+src/ui.js:5317: ${action} Cockpit display options
+src/ui.js:5323: ${action} Cockpit Radio controls
+src/ui.js:5498: OFF AIR
+src/ui.js:5499: STATION UNAVAILABLE
+src/ui.js:5637: ${value}%
+src/ui.js:5651: ${value}%
+src/ui.js:5656: ${value}%
+src/ui.js:5849: ${action} compact Radio controls
+src/ui.js:5931: ● ${category.label} (${category.count})
+src/ui.js:6021: ${Math.round(state.volume * 100)}%
+src/ui.js:6028: ${Math.round(state.volume * 100)}%
+src/ui.js:6035: ${Math.round(state.volume * 100)}%
+src/ui.js:6332: SOURCE · UNKNOWN
+src/ui.js:6338: FRAME · LOADING
+src/ui.js:6343: FRAME · UNAVAILABLE
+src/ui.js:6349: ${kind} · ${status}
+src/ui.js:6387: ${field.label}
+src/ui.js:6544: ${camera.city} · ${camera.name}
+src/ui.js:6613: ${activeCamera.city} · HDG ${Math.round(activeCamera.headingDeg)}° · FOV ${Math.round(activeCamera.fovDeg)}° · RANGE ${Math.round(activeCamera.rangeM)}m · ${projLabel}${calBadge ?
+src/ui.js:6619: Enable CCTV to load camera intersections
+src/ui.js:7413: ${action} ${panelName}
+src/ui.js:7417: ${action} Radio
+src/ui.js:7427: ${action} ${panelName}
+src/ui.js:8012: ${pct}%
+src/ui.js:8657: ${pct}%
+src/ui.js:8682: ${pct}%
+src/ui.js:8690: ${pct}%
+src/ui.js:8788: ${sharpenPct}%
+src/ui.js:8807: ${density}%
+src/ui.js:999: Current style: ${names[next]} — click for next
+src/voice/gevRealtime.js:1793: Estimated session cost on ${state.modelId} — ${state.responses} response(s).
+src/voice/gevRealtime.js:2558: Voice model tier — applies next session
+src/voice/gevRealtime.js:2559: Estimated session cost
+src/voice/gevRealtime.js:2562: Voice control — hold Space to speak; click to toggle voice
