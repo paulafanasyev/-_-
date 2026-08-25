@@ -1,10 +1,6 @@
-Generated from commit bac53e53479c1ca4ca110549a8fe529635f3756f
-Run: 32836988288
+Generated from commit d33161db83e86c464aa7239ec86ea0c26bd83880
+Run: 32837942074
 
-not ok 96 - the Contact panel never hides itself out from under its own NEXT button
-not ok 392 - a socket without ws emitter semantics is rejected, not silently mis-read
-not ok 1056 - share tracking policies pin each owner, key, label, and acquisition deadline
-not ok 75 - src/data/militaryAwareness.test.mjs
-not ok 1495 - real mission build, select, refresh, deselect, disable, and destroy paths publish no native labels
-not ok 1913 - accessible actions announce only accepted focus and expose selected state
-not ok 2275 - voice control help tray reflects the push-to-talk key state
+not ok 1186 - a vessel feed still connecting after the lifecycle settles reads as unknown, not an all-clear
+not ok 1187 - a settled vessel feed reporting a real empty viewport recovers to 0
+not ok 2352 - voice control help tray reflects the push-to-talk key state

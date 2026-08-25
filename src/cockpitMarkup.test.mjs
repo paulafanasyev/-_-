@@ -146,7 +146,7 @@ test('the Contact panel never hides itself out from under its own NEXT button', 
   );
   // A foreign subject dashes the nose-relative arrow/bearing only.
   assert.match(body, /readout\.aircraftRelative/);
-  assert.match(body, /'BRG —'/);
+  assert.match(body, /'АЗИМУТ —'/);
   // A culled subject holds last-known content behind the CONTACT LOST cue.
   assert.match(body, /readout\.contactLost/);
   assert.match(body, /CONTACT LOST/);

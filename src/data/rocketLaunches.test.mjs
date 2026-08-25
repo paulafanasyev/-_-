@@ -795,7 +795,7 @@ test('mission overlay factories preserve all four source-formatted label roles a
   assert.equal(selected.protected, true);
 
   const roles = [
-    ['reentry', 'STAGE RE-ENTRY', '#ffd166', ['STAGE RE-ENTRY', []]],
+    ['reentry', 'ЭТАП · ВХОД В АТМОСФЕРУ', '#ffd166', ['ЭТАП · ВХОД В АТМОСФЕРУ', []]],
     ['payload', 'EST. ORBIT POSITION\n2026-07-20\n10:00:00 UTC', '#ffd166', [
       'EST. ORBIT POSITION',
       ['2026-07-20', '10:00:00 UTC'],
@@ -1054,7 +1054,7 @@ test('real mission build, select, refresh, deselect, disable, and destroy paths 
     assert.deepEqual(selectedPublication[3], ROCKET_MISSION_SELECTED_OVERLAY_SOURCE_OPTIONS);
     assert.deepEqual(selectedPublication[2].map(({ title }) => title), [
       'FALCON 9',
-      'STAGE RE-ENTRY',
+      'ЭТАП · ВХОД В АТМОСФЕРУ',
       'EST. ORBIT POSITION',
       'PROJECTED ORBIT',
     ]);

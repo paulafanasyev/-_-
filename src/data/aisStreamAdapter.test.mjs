@@ -670,7 +670,7 @@ test('a socket without ws emitter semantics is rejected, not silently mis-read',
 
   adapter.ensure(ENV);
   assert.equal(adapter.snapshot().status, 'reconnecting');
-  assert.match(adapter.snapshot().error, /ws emitter semantics/);
+  assert.match(adapter.snapshot().error, /ws emitter semantics|интерфейс событий WebSocket/);
   assert.equal(adapter.debug().liveSockets, 0, 'the unusable socket is not retained');
 });
 

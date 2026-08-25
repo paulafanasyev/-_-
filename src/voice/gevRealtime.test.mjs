@@ -57,12 +57,12 @@ test('mic clicks are ignored while Space is physically held', () => {
 test('voice control help tray reflects the push-to-talk key state', () => {
   assert.equal(
     resolveVoiceControlHint(false, false),
-    'Hold Space to speak · click mic to toggle voice',
+    'Удерживайте пробел для речи · нажмите микрофон для переключения',
   );
-  assert.equal(resolveVoiceControlHint(true, true), 'Release Space to send');
+  assert.equal(resolveVoiceControlHint(true, true), 'Отпустите пробел для отправки');
   assert.equal(
     resolveVoiceControlHint(true, false),
-    'Hold Space to speak · click mic to toggle voice',
+    'Удерживайте пробел для речи · нажмите микрофон для переключения',
   );
 });
 

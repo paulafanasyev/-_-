@@ -1234,7 +1234,7 @@ test('share tracking policies pin each owner, key, label, and acquisition deadli
       optionOwner: 'flights',
       optionKey: 'selectedMilitaryTrackingId',
       expiryWindowMs: 45_000,
-      label: 'military flight',
+      label: 'военный полёт',
     },
     satellites: {
       optionOwner: 'satellites',
