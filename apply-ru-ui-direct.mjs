@@ -2,6 +2,7 @@ import fs from 'fs';
 
 const replacements = {
   'src/data/rocketLaunches.js': [
+    ['паузаAt', 'pausedAt'],
     ['Resume replay', 'Продолжить повтор'],
     ['Pause replay', 'Пауза повтора'],
     ['SELECTED SPACE MISSION', 'ВЫБРАННАЯ КОСМИЧЕСКАЯ МИССИЯ'],
