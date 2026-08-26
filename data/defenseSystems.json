@@ -1,0 +1,9 @@
+{
+  "schemaVersion": 1,
+  "purpose": "Abstract balance data; no real-world operational parameters.",
+  "systems": [
+    { "id": "point-defense", "label": "Point Defense", "rating": 0.55 },
+    { "id": "area-defense", "label": "Area Defense", "rating": 0.65 },
+    { "id": "strategic-defense", "label": "Strategic Defense", "rating": 0.75 }
+  ]
+}
