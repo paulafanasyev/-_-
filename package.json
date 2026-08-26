@@ -19,15 +19,18 @@
   },
   "keywords": [
     "cesium",
+    "threejs",
     "3d-globe",
     "geospatial",
     "satellites",
     "voice-control",
-    "visualization"
+    "visualization",
+    "strategy-game"
   ],
   "scripts": {
     "dev": "vite",
     "dev:secure": "./scripts/dev-secure.sh",
+    "start": "node server.js",
     "opensky:import": "./scripts/opensky-import-client.sh",
     "build": "vite build",
     "preview": "vite preview",
@@ -39,9 +42,11 @@
     "@mapbox/vector-tile": "^3.0.0",
     "cesium": "^1.124.0",
     "egm96-universal": "^1.1.1",
+    "express": "^5.1.0",
     "mgrs": "^2.1.0",
     "pbf": "^5.1.2",
-    "satellite.js": "^6.0.2"
+    "satellite.js": "^6.0.2",
+    "three": "^0.179.1"
   },
   "devDependencies": {
     "puppeteer": "^24.37.5",
