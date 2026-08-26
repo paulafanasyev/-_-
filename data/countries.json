@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "purpose": "Display metadata for the strategy-game prototype.",
+  "countries": [
+    { "id": "US", "name": "United States", "capital": "Washington, D.C." },
+    { "id": "RU", "name": "Russia", "capital": "Moscow" },
+    { "id": "CN", "name": "China", "capital": "Beijing" },
+    { "id": "FR", "name": "France", "capital": "Paris" },
+    { "id": "GB", "name": "United Kingdom", "capital": "London" },
+    { "id": "IN", "name": "India", "capital": "New Delhi" },
+    { "id": "PK", "name": "Pakistan", "capital": "Islamabad" },
+    { "id": "IL", "name": "Israel", "capital": "Jerusalem" },
+    { "id": "KP", "name": "North Korea", "capital": "Pyongyang" }
+  ]
+}
